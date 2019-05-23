@@ -360,6 +360,61 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_4" title="谁是协会最强的人" class="md-nav__link">
+    谁是协会最强的人
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="考查要点" class="md-nav__link">
+    考查要点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="解题过程" class="md-nav__link">
+    解题过程
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stream" title="stream" class="md-nav__link">
+    stream
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" title="流量分析" class="md-nav__link">
+    流量分析
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find-others" title="find others" class="md-nav__link">
+    find others
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audio" title="audio" class="md-nav__link">
+    audio
+  </a>
+  
+</li>
+      
       
       
       
@@ -465,6 +520,61 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_4" title="谁是协会最强的人" class="md-nav__link">
+    谁是协会最强的人
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="考查要点" class="md-nav__link">
+    考查要点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="解题过程" class="md-nav__link">
+    解题过程
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stream" title="stream" class="md-nav__link">
+    stream
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" title="流量分析" class="md-nav__link">
+    流量分析
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find-others" title="find others" class="md-nav__link">
+    find others
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audio" title="audio" class="md-nav__link">
+    audio
+  </a>
+  
+</li>
+      
       
       
       
@@ -500,6 +610,120 @@
    <img alt="剪切板" src="../img/Mem_1.png" /></li>
 <li>使用十六进制编辑器打开文件，搜索这段 base64 的头<code>c2NlY3Rm</code>获得完整的 base64，解码获得 flag。</li>
 </ol>
+<h2 id="_4">谁是协会最强的人<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="_5">考查要点<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ol>
+<li>文件拼接</li>
+</ol>
+<h3 id="_6">解题过程<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>打开文件发现是张图片，显示的是 JS 之父（所以放这张图是为提倡开源 ），直接拖进 HxD 看看有什么，拉到最后看到：</p>
+<p><img alt="1" src="../img/1.png" /></p>
+<p>很明显的 base64，解码看见一段代码：
+<img alt="img" src="../img/2.png" /></p>
+<p>名字等于 des，value 就是密文，str 就是解密密钥，可以看到将解密密钥传进函数最后会得到 conclusion，观察函数，可以看到这是 rot13 加密，网上找到解密代码，解密 conclusion 得出 str=“abcdefgh”</p>
+<p>最后 des 解密得出 flag:</p>
+<p>flag{1810fc7a8e865dd5}</p>
+<h2 id="stream">stream<a class="headerlink" href="#stream" title="Permanent link">&para;</a></h2>
+<p><strong>考查要点：</strong> ADS（数据交换流）</p>
+<ol>
+<li>下载题目后是一个 rar 压缩包</li>
+</ol>
+<p><img alt="1558580113993" src="img/%5CUsers%5CZMC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558580113993.png" /></p>
+<ol>
+<li>打开该压缩包发现压缩包损坏</li>
+</ol>
+<p><img alt="1558580199092" src="img/%5CUsers%5CZMC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558580199092.png" /></p>
+<ol>
+<li>使用二进制编辑器打开压缩包，发现 rar 文件头损坏</li>
+</ol>
+<p><img alt="1558580450427" src="img/%5CUsers%5CZMC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558580450427.png" /></p>
+<ol>
+<li>补全 rar 文件头，使用 winrar 进行解压，得到一个文件夹，文件夹中有 flag.txt 文件</li>
+</ol>
+<p><img alt="1558580398504" src="img/%5CUsers%5CZMC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558580398504.png" /></p>
+<p><img alt="1558580483452" src="img/%5CUsers%5CZMC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558580483452.png" /></p>
+<ol>
+<li>根据题意 stream，可以猜测题目考查的是文件流，使用 lads 工具检测文件夹发现存在文件流</li>
+</ol>
+<p><img alt="1558580897227" src="img/%5CUsers%5CZMC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558580897227.png" /></p>
+<ol>
+<li>在命令行中通过 notepad E:\documents\CTF 题目整理\第一届四川大学网络安全技能大赛\f7b44cfafd5c52223d5498196c8a2e7b:realflag.txt 访问真正的 flag 文件</li>
+</ol>
+<p><img alt="1558581082679" src="img/%5CUsers%5CZMC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558581082679.png" /></p>
+<ol>
+<li>得到 flag</li>
+</ol>
+<p><img alt="1558581125894" src="img/%5CUsers%5CZMC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558581125894.png" /></p>
+<h2 id="_7">流量分析<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p><strong>考查要点：</strong> USB 协议</p>
+<ol>
+<li>下载文件后发现是一个流量文件，使用 wireshark 打开</li>
+</ol>
+<p><img alt="1558581818062" src="img/%5CUsers%5CZMC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558581818062.png" /></p>
+<ol>
+<li>使用 tshark 提取 usbdata.txt</li>
+</ol>
+<p><img alt="1558582081793" src="img/%5CUsers%5CZMC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558582081793.png" /></p>
+<ol>
+<li>编写脚本</li>
+</ol>
+<p>mappings = { 0x04:"A", 0x05:"B", 0x06:"C", 0x07:"D", 0x08:"E", 0x09:"F", 0x0A:"G", 0x0B:"H", 0x0C:"I", 0x0D:"J", 0x0E:"K", 0x0F:"L", 0x10:"M", 0x11:"N",0x12:"O", 0x13:"P", 0x14:"Q", 0x15:"R", 0x16:"S", 0x17:"T", 0x18:"U",0x19:"V", 0x1A:"W", 0x1B:"X", 0x1C:"Y", 0x1D:"Z", 0x1E:"1", 0x1F:"2", 0x20:"3", 0x21:"4", 0x22:"5", 0x23:"6", 0x24:"7", 0x25:"8", 0x26:"9", 0x27:"0", 0x28:"\n", 0x2a:"[DEL]", 0X2B:" ", 0x2C:" ", 0x2D:"-", 0x2E:"=", 0x2F:"[", 0x30:"]", 0x31:"\", 0x32:"~", 0x33:";", 0x34:"'", 0x36:",", 0x37:"." }</p>
+<p>nums = []</p>
+<p>keys = open('usbdata.txt')</p>
+<p>for line in keys:</p>
+<p>​ if line[0]!='0' or line[1]!='0' or line[3]!='0' or line[4]!='0' or line[9]!='0' or line[10]!='0' or line[12]!='0' or line[13]!='0' or line[15]!='0' or line[16]!='0' or line[18]!='0' or line[19]!='0' or line[21]!='0' or line[22]!='0':</p>
+<p>​ continue</p>
+<p>​ nums.append(int(line[6:8],16))</p>
+<p>keys.close()</p>
+<p>output = ""</p>
+<p>for n in nums:</p>
+<p>​ if n == 0 :</p>
+<p>​ continue</p>
+<p>​ if n in mappings:</p>
+<p>​ output += mappings[n]</p>
+<p>​ else:</p>
+<p>​ output += '[unknown]'</p>
+<p>​ print( 'output :\n' + output)</p>
+<ol>
+<li>运行脚本，得到 flag</li>
+</ol>
+<p><img alt="1558582316589" src="img/%5CUsers%5CZMC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558582316589.png" /></p>
+<h2 id="find-others">find others<a class="headerlink" href="#find-others" title="Permanent link">&para;</a></h2>
+<p><strong>考查要点：</strong> png 文件头 二维码格式</p>
+<ol>
+<li>下载附件得到一张四分之一二维码</li>
+</ol>
+<p><img alt="part1" src="../img/part1.png" /></p>
+<ol>
+<li>根据题目意思需要得到另外其他三个部分，使用二进制编辑器打开图片，发现有其他三张图片的数据，但是 png 头损坏了，将其补全并提取出来，得到四张图片，拼接起来后反色得到二维码，使用手机扫描获得 flag</li>
+</ol>
+<p><img alt="1558582586326" src="img/%5CUsers%5CZMC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558582586326.png" /></p>
+<ol>
+<li>二维码</li>
+</ol>
+<p><img alt="1557563417" src="../img/1557563417.png" /></p>
+<ol>
+<li>flag</li>
+</ol>
+<p><img alt="flag" src="../img/erweiflag.png" /></p>
+<h2 id="audio">audio<a class="headerlink" href="#audio" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>下载附件，是一个音频文件，试听后发现是摩斯电码的声音</p>
+</li>
+<li>
+<p>可以直接用听的，也可以使用音频编辑软件比如 audition 打开后，将其波形转换成摩斯电码</p>
+</li>
+</ol>
+<p><img alt="1558583131175" src="img/%5CUsers%5CZMC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558583131175.png" /></p>
+<ol>
+<li>转换成摩斯电码</li>
+</ol>
+<p><img alt="1558583157853" src="img/%5CUsers%5CZMC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558583157853.png" /></p>
+<ol>
+<li>使用工具或者在线工具转换成英文</li>
+</ol>
+<p><img alt="1558583192186" src="img/%5CUsers%5CZMC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558583192186.png" /></p>
                 
                   
                 
