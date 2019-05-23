@@ -628,42 +628,42 @@
 <ol>
 <li>下载题目后是一个 rar 压缩包</li>
 </ol>
-<p><img alt="1558580113993" src="img/%5CUsers%5CZMC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558580113993.png" /></p>
+<p><img alt="1558580113993" src="../img/1558580113993.png" /></p>
 <ol>
 <li>打开该压缩包发现压缩包损坏</li>
 </ol>
-<p><img alt="1558580199092" src="img/%5CUsers%5CZMC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558580199092.png" /></p>
+<p><img alt="1558580199092" src="../img/1558580199092.png" /></p>
 <ol>
 <li>使用二进制编辑器打开压缩包，发现 rar 文件头损坏</li>
 </ol>
-<p><img alt="1558580450427" src="img/%5CUsers%5CZMC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558580450427.png" /></p>
+<p><img alt="1558580450427" src="../img/1558580450427.png" /></p>
 <ol>
 <li>补全 rar 文件头，使用 winrar 进行解压，得到一个文件夹，文件夹中有 flag.txt 文件</li>
 </ol>
-<p><img alt="1558580398504" src="img/%5CUsers%5CZMC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558580398504.png" /></p>
-<p><img alt="1558580483452" src="img/%5CUsers%5CZMC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558580483452.png" /></p>
+<p><img alt="1558580398504" src="../img/1558580398504.png" /></p>
+<p><img alt="1558580483452" src="../img/1558580483452.png" /></p>
 <ol>
 <li>根据题意 stream，可以猜测题目考查的是文件流，使用 lads 工具检测文件夹发现存在文件流</li>
 </ol>
-<p><img alt="1558580897227" src="img/%5CUsers%5CZMC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558580897227.png" /></p>
+<p><img alt="1558580897227" src="../img/1558580897227.png" /></p>
 <ol>
 <li>在命令行中通过 notepad E:\documents\CTF 题目整理\第一届四川大学网络安全技能大赛\f7b44cfafd5c52223d5498196c8a2e7b:realflag.txt 访问真正的 flag 文件</li>
 </ol>
-<p><img alt="1558581082679" src="img/%5CUsers%5CZMC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558581082679.png" /></p>
+<p><img alt="1558581082679" src="../img/1558581082679.png" /></p>
 <ol>
 <li>得到 flag</li>
 </ol>
-<p><img alt="1558581125894" src="img/%5CUsers%5CZMC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558581125894.png" /></p>
+<p><img alt="1558581125894" src="../img/1558581125894.png" /></p>
 <h2 id="_7">流量分析<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p><strong>考查要点：</strong> USB 协议</p>
 <ol>
 <li>下载文件后发现是一个流量文件，使用 wireshark 打开</li>
 </ol>
-<p><img alt="1558581818062" src="img/%5CUsers%5CZMC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558581818062.png" /></p>
+<p><img alt="1558581818062" src="../img/1558581818062.png" /></p>
 <ol>
 <li>使用 tshark 提取 usbdata.txt</li>
 </ol>
-<p><img alt="1558582081793" src="img/%5CUsers%5CZMC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558582081793.png" /></p>
+<p><img alt="1558582081793" src="../img/1558582081793.png" /></p>
 <ol>
 <li>编写脚本</li>
 </ol>
@@ -687,7 +687,7 @@
 <ol>
 <li>运行脚本，得到 flag</li>
 </ol>
-<p><img alt="1558582316589" src="img/%5CUsers%5CZMC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558582316589.png" /></p>
+<p><img alt="1558582316589" src="../img/1558582316589.png" /></p>
 <h2 id="find-others">find others<a class="headerlink" href="#find-others" title="Permanent link">&para;</a></h2>
 <p><strong>考查要点：</strong> png 文件头 二维码格式</p>
 <ol>
@@ -697,7 +697,7 @@
 <ol>
 <li>根据题目意思需要得到另外其他三个部分，使用二进制编辑器打开图片，发现有其他三张图片的数据，但是 png 头损坏了，将其补全并提取出来，得到四张图片，拼接起来后反色得到二维码，使用手机扫描获得 flag</li>
 </ol>
-<p><img alt="1558582586326" src="img/%5CUsers%5CZMC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558582586326.png" /></p>
+<p><img alt="1558582586326" src="../img/1558582586326.png" /></p>
 <ol>
 <li>二维码</li>
 </ol>
@@ -715,15 +715,15 @@
 <p>可以直接用听的，也可以使用音频编辑软件比如 audition 打开后，将其波形转换成摩斯电码</p>
 </li>
 </ol>
-<p><img alt="1558583131175" src="img/%5CUsers%5CZMC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558583131175.png" /></p>
+<p><img alt="1558583131175" src="../img/1558583131175.png" /></p>
 <ol>
 <li>转换成摩斯电码</li>
 </ol>
-<p><img alt="1558583157853" src="img/%5CUsers%5CZMC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558583157853.png" /></p>
+<p><img alt="1558583157853" src="../img/1558583157853.png" /></p>
 <ol>
 <li>使用工具或者在线工具转换成英文</li>
 </ol>
-<p><img alt="1558583192186" src="img/%5CUsers%5CZMC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558583192186.png" /></p>
+<p><img alt="1558583192186" src="../img/1558583192186.png" /></p>
                 
                   
                 
