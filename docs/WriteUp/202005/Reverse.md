@@ -1,4 +1,4 @@
-# 2020 geekgame(scuctf) Reverse出题思路&writeup
+# Reverse
 
 ## 真正的签到
 
@@ -41,7 +41,7 @@
     }
   ```
 
-### 法2
+#### 法2
 
 * 前面步骤一直，后面直接angr梭哈
 
@@ -161,7 +161,7 @@ inputs[7] = '3'
 print('scuctf{' + ''.join(inputs) + '}')
 ```
 
-###  法2
+####  法2
 
 ```python
 from z3 import *
