@@ -86,7 +86,7 @@ print(sim.one_found.posix.dumps(0))
       if '6a37460f25c719a4' in secret:
           print (secret[0:16])
   ```
-  
+
 * 注意这里很多选手以为只调用一次，所以直接拿180%98 去处理，算出来的是错的。
 
 ## PY 交易
@@ -141,22 +141,19 @@ print(sim.one_found.posix.dumps(0))
 ```python
 enflag = '×\x8bÙÍ\x8cÓÜî¤ú±¬¤¤úÖíÒ'
 flag = 'th31_scuctf_eXclus1v3'
-ans = 'd1' + '_' * 19
+ans = 'd1' + '*' * 19
 step1 = enflag[9:] + enflag[0:9]
-print(ans)
-print(step1)
-theflag = ''
+theflag =''
 for i in range(0,9):
-theflag += chr(ord(step1[i]) - 20)
+    theflag += chr(ord(step1[i]) - 20)
 theflag += step1[9:]
-print(theflag)
 inputs = list(ans)
 for i in range(0,7):
-inputs[i + 8] = chr(ord(theflag[i]) - ord(flag[i]))
+    inputs[i + 8] = chr(ord(theflag[i]) - ord(flag[i]))
 for i in range(10,15):
-inputs[i - 8] = chr(ord(theflag[i - 3]) - ord(flag[i]))
+    inputs[i - 8] = chr(ord(theflag[i - 3]) - ord(flag[i]))
 for i in range(15,21):
-inputs[i] = chr(ord(theflag[i - 3]) - ord(flag[i - 3]))
+    inputs[i] = chr(ord(theflag[i - 3]) - ord(flag[i - 3]))
 inputs[7] = '3'
 print('scuctf{' + ''.join(inputs) + '}')
 ```
@@ -210,7 +207,7 @@ for i, v in enumerate(inp):
 * 拖入IDA分析，是个标准的平坦化。
 
   ![6](https://cdn.jsdelivr.net/gh/loveminhal/myblog-picgo/blog/20200526001331.png)
-  
+
 * 参考<https://github.com/pcy190/deflat >去除平坦化
 
 * 然后直接F5写解密脚本
@@ -234,22 +231,22 @@ for i, v in enumerate(inp):
   outs = []
   padding = BitVecVal(0, 2)
   for i, v in enumerate(tup):
-  t = Concat(v)
-  s1 = Extract(23, 18, t)
-  s2 = Extract(17, 12, t)
-  s3 = Extract(11, 6, t)
-  s4 = Extract(5, 0, t)
-  outs.append(s1)
-  outs.append(s2)
-  outs.append(s3)
-  outs.append(s4)
-  for v2 in tup[i + 1:]:
-  v2[0] = v2[0] ^ Concat(padding, s1)
-  v2[1] = v2[1] ^ Concat(padding, s2)
-  v2[2] = v2[2] ^ Concat(padding, s3)
+      t = Concat(v)
+      s1 = Extract(23, 18, t)
+      s2 = Extract(17, 12, t)
+      s3 = Extract(11, 6, t)
+      s4 = Extract(5, 0, t)
+      outs.append(s1)
+      outs.append(s2)
+      outs.append(s3)
+      outs.append(s4)
+      for v2 in tup[i + 1:]:
+          v2[0] = v2[0] ^ Concat(padding, s1)
+          v2[1] = v2[1] ^ Concat(padding, s2)
+          v2[2] = v2[2] ^ Concat(padding, s3)
   solve = Solver()
   for i, v in enumerate(dist):
-  solve.add(outs[i] == v)
+      solve.add(outs[i] == v)
   solve.check()
   model = solve.model()
   print(''.join(map(lambda x: chr(model.eval(x, 8).as_long()),
@@ -266,10 +263,10 @@ for i, v in enumerate(inp):
 
 两个题目替换都涉及四段字符如下（把初始密码表拆分为四段）：
 
->	"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
->	"abcdefghijklmnopqrstuvwxyz"
->	"0123456789"
->	"+/"
+>		"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+>		"abcdefghijklmnopqrstuvwxyz"
+>		"0123456789"
+>		"+/"
 
 easy_re是改变了这四段字符压栈顺序。没想到ida太过于智能化，显示结果即是正确压栈顺序。
 
@@ -306,6 +303,7 @@ print(base64.b64decode(str1.translate(str.maketrans(string1, string2))))
   ![5](https://cdn.jsdelivr.net/gh/loveminhal/myblog-picgo/blog/20200526001333.jpg)
 
 * 然后直接解密得到flag
+
 ``` python
 import base64
 str1 = "UoH+U/DJV/YlQdUOU94JPYxJgdHMUWK="
