@@ -1,0 +1,1642 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.0">
+    
+    
+      
+        <title>REVERSE - SCU-CTF HomePage</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.982221ab.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:300,400,400i,700|Source+Code+Pro">
+        <style>body,input{font-family:"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../_static/css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="white" data-md-color-accent="red">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#reverse" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../.." title="SCU-CTF HomePage" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">school</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              SCU-CTF HomePage
+            </span>
+            <span class="md-header-nav__topic">
+              REVERSE
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/scu-ctf/scu-ctf.github.io/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../.." title="Introduction" class="md-tabs__link">
+        Introduction
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../0X401-Wiki/" title="0X401 Wiki" class="md-tabs__link">
+          0X401 Wiki
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../2018/Web/" title="WriteUp" class="md-tabs__link">
+          WriteUp
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../比赛信息/" title="比赛信息" class="md-tabs__link">
+          比赛信息
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../.." title="SCU-CTF HomePage" class="md-nav__button md-logo">
+      
+        <i class="md-icon">school</i>
+      
+    </a>
+    SCU-CTF HomePage
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/scu-ctf/scu-ctf.github.io/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      0X401 Wiki
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        0X401 Wiki
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0X401-Wiki/" title="0X401-Wiki" class="md-nav__link">
+      0X401-Wiki
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      Web
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        Web
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0X401-Wiki/Web/Web/" title="Web" class="md-nav__link">
+      Web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-2" type="checkbox" id="nav-2-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2-2">
+      Java
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-2-2">
+        Java
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0X401-Wiki/Web/java/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-3" type="checkbox" id="nav-2-2-3">
+    
+    <label class="md-nav__link" for="nav-2-2-3">
+      Nodejs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-2-3">
+        Nodejs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0X401-Wiki/Web/nodejs/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-4" type="checkbox" id="nav-2-2-4">
+    
+    <label class="md-nav__link" for="nav-2-2-4">
+      Php
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-2-4">
+        Php
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0X401-Wiki/Web/php/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-5" type="checkbox" id="nav-2-2-5">
+    
+    <label class="md-nav__link" for="nav-2-2-5">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-2-5">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0X401-Wiki/Web/python/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      WriteUp
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        WriteUp
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      2018
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        2018
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../2018/Web/" title="Web" class="md-nav__link">
+      Web
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2" checked>
+    
+    <label class="md-nav__link" for="nav-3-2">
+      201905
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        201905
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Crypto/" title="Crypto" class="md-nav__link">
+      Crypto
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Misc/" title="MISC" class="md-nav__link">
+      MISC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Pwn/" title="PWN" class="md-nav__link">
+      PWN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        REVERSE
+      </label>
+    
+    <a href="./" title="REVERSE" class="md-nav__link md-nav__link--active">
+      REVERSE
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#baby" title="baby" class="md-nav__link">
+    baby
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="考察要点" class="md-nav__link">
+    考察要点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="解题思路" class="md-nav__link">
+    解题思路
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#babydondayoo-wp" title="baby(dondayoo~战队 wp)" class="md-nav__link">
+    baby(dondayoo~战队 wp)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#showme666" title="showme666" class="md-nav__link">
+    showme666
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="考察要点" class="md-nav__link">
+    考察要点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="解题思路" class="md-nav__link">
+    解题思路
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#showme666dondayoo-wp" title="showme666(dondayoo~战队 wp)" class="md-nav__link">
+    showme666(dondayoo~战队 wp)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rcrcrc" title="rcrcrc" class="md-nav__link">
+    rcrcrc
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="考察要点" class="md-nav__link">
+    考察要点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="解题思路" class="md-nav__link">
+    解题思路
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rcrcrcdondayoo-wp" title="rcrcrc(dondayoo~战队 wp)" class="md-nav__link">
+    rcrcrc(dondayoo~战队 wp)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#baha" title="baha" class="md-nav__link">
+    baha
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="考察要点" class="md-nav__link">
+    考察要点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="解题思路" class="md-nav__link">
+    解题思路
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bahadondayoo-wp" title="baha(dondayoo~战队 wp)" class="md-nav__link">
+    baha(dondayoo~战队 wp)
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Web/" title="Web" class="md-nav__link">
+      Web
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      202005
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        202005
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../202005/Misc/" title="Misc" class="md-nav__link">
+      Misc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../202005/Reverse/" title="Reverse" class="md-nav__link">
+      Reverse
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../202005/Web/" title="Web" class="md-nav__link">
+      Web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../202005/pwn/" title="Pwn" class="md-nav__link">
+      Pwn
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      比赛信息
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        比赛信息
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../比赛信息/" title="比赛信息发布" class="md-nav__link">
+      比赛信息发布
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#baby" title="baby" class="md-nav__link">
+    baby
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="考察要点" class="md-nav__link">
+    考察要点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="解题思路" class="md-nav__link">
+    解题思路
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#babydondayoo-wp" title="baby(dondayoo~战队 wp)" class="md-nav__link">
+    baby(dondayoo~战队 wp)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#showme666" title="showme666" class="md-nav__link">
+    showme666
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="考察要点" class="md-nav__link">
+    考察要点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="解题思路" class="md-nav__link">
+    解题思路
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#showme666dondayoo-wp" title="showme666(dondayoo~战队 wp)" class="md-nav__link">
+    showme666(dondayoo~战队 wp)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rcrcrc" title="rcrcrc" class="md-nav__link">
+    rcrcrc
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="考察要点" class="md-nav__link">
+    考察要点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="解题思路" class="md-nav__link">
+    解题思路
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rcrcrcdondayoo-wp" title="rcrcrc(dondayoo~战队 wp)" class="md-nav__link">
+    rcrcrc(dondayoo~战队 wp)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#baha" title="baha" class="md-nav__link">
+    baha
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="考察要点" class="md-nav__link">
+    考察要点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="解题思路" class="md-nav__link">
+    解题思路
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bahadondayoo-wp" title="baha(dondayoo~战队 wp)" class="md-nav__link">
+    baha(dondayoo~战队 wp)
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/scu-ctf/scu-ctf.github.io/edit/master/docs/WriteUp/201905/Reverse.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="reverse">REVERSE<a class="headerlink" href="#reverse" title="Permanent link">&para;</a></h1>
+<h2 id="baby">baby<a class="headerlink" href="#baby" title="Permanent link">&para;</a></h2>
+<h3 id="_1">考察要点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>斐波那契数列</li>
+<li>简单的异或加密</li>
+</ol>
+<h3 id="_2">解题思路<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>主要是提取出 key，然后异或回去就完事了。</p>
+<div class="codehilite"><pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="p">[</span><span class="mh">0x64</span><span class="p">,</span> <span class="mh">0x6f</span><span class="p">,</span> <span class="mh">0x64</span><span class="p">,</span> <span class="mh">0x6f</span><span class="p">,</span> <span class="mh">0x76</span><span class="p">,</span> <span class="mh">0x2c</span><span class="p">,</span> <span class="mh">0x13</span><span class="p">,</span> <span class="mh">0x41</span><span class="p">,</span> <span class="mh">0x6a</span><span class="p">,</span> <span class="mh">0xcf</span><span class="p">,</span> <span class="mh">0x9c</span><span class="p">,</span> <span class="mh">0x26</span><span class="p">,</span> <span class="mh">0x1b</span><span class="p">,</span> <span class="mh">0xeb</span><span class="p">,</span> <span class="mh">0x48</span><span class="p">,</span> <span class="mh">0x6a</span><span class="p">,</span> <span class="mh">0xa</span><span class="p">,</span> <span class="mh">0x2b</span><span class="p">,</span> <span class="mh">0xf3</span><span class="p">,</span> <span class="mh">0x5c</span><span class="p">,</span> <span class="mh">0x83</span><span class="p">,</span> <span class="mh">0x54</span><span class="p">,</span> <span class="mh">0x4e</span><span class="p">,</span> <span class="mh">0x77</span><span class="p">,</span> <span class="mh">0x2e</span><span class="p">,</span> <span class="mh">0x47</span><span class="p">,</span> <span class="mh">0x8c</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">fibbo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+    <span class="k">return</span> <span class="n">a</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">table</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">((</span><span class="n">val</span> <span class="o">^</span> <span class="n">fibbo</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">3</span><span class="p">))</span> <span class="o">&amp;</span> <span class="mh">0xff</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+
+<h2 id="babydondayoo-wp">baby(dondayoo~战队 wp)<a class="headerlink" href="#babydondayoo-wp" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../img/baby_d1.png" />
+Windows 程序，先运行看看
+<img alt="" src="../img/baby_d2.png" />
+乱输一个，直接退出。然后放进 IDA 里分析
+<img alt="" src="../img/baby_d3.png" />
+<img alt="" src="../img/baby_d4.png" />
+看到这里没有 main 函数，搜索一下字符串 Input
+<img alt="" src="../img/baby_d5.png" />
+点开 401030 函数，F5 反汇编，确定这个是 main 函数
+<img alt="" src="../img/baby_d6.png" />
+这段代码可以直接看懂，401180 和 401130 分别是 printf 和 scanf，输入的字符串长度为 30</p>
+<p>接下来 while 循环里做了一个异或操作，再判断是否和内存中的数据相等，相等则输入正确</p>
+<p>变量 v3 是输入的字符串，v4 是 401000 生成的一个数据，进入 401000 分析</p>
+<p><img alt="" src="../img/baby_d7.png" />这是一个递归函数
+一开始没看明白是做什么用的，用 python 对照着写了一下
+<img alt="" src="../img/baby_d8.png" />
+很明显，函数返回斐波那契数列第 n 个值
+所以目标就是让输入的字符串和斐波那契数列进行异或的值与 byte_41C7D4 相等
+<img alt="" src="../img/baby_d9.png" />
+把这段数据 dump 出来，编写 python 脚本</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">libnum</span> <span class="kn">import</span> <span class="n">n2s</span>
+<span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="n">v1</span><span class="o">=</span><span class="n">num</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">num</span><span class="o">==</span><span class="mi">0</span> <span class="ow">or</span> <span class="n">num</span><span class="o">==</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">num</span>
+    <span class="n">v2</span><span class="o">=</span><span class="n">func</span><span class="p">(</span><span class="n">num</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">v2</span><span class="o">+</span><span class="n">func</span><span class="p">(</span><span class="n">v1</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">&amp;</span><span class="mi">2</span><span class="o">**</span><span class="mi">8</span><span class="o">-</span><span class="mi">1</span>
+
+<span class="n">arr</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">):</span>
+    <span class="n">arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">3</span><span class="p">))</span>
+
+<span class="n">c</span><span class="o">=</span><span class="s1">&#39;71 60 70 6B 79 73 59 0E 68 E6 DA 26 17 84 44 28 20 1F 9D 69 C0 53 63 45 1D 35 D9 1C E4 78&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="n">c</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;0x&#39;</span><span class="o">+</span><span class="n">x</span><span class="p">,</span><span class="mi">16</span><span class="p">),</span><span class="n">c</span><span class="p">))</span>
+<span class="n">flag</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="p">:</span>
+    <span class="n">flag</span><span class="o">+=</span><span class="p">(</span><span class="n">n2s</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">^</span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span>
+</pre></div>
+
+<p><img alt="" src="../img/baby_d10.png" /></p>
+<h2 id="showme666">showme666<a class="headerlink" href="#showme666" title="Permanent link">&para;</a></h2>
+<h3 id="_3">考察要点<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ol>
+<li>汇编理解</li>
+<li>gdb 调试</li>
+<li>patch</li>
+</ol>
+<h3 id="_4">解题思路<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>这道题解题思路不唯一
+最简单的是用 gdb 调试时，修改 rip 到 0x4006b6，然后继续运行，就可输出 flag
+<img alt="show666" src="../img/show666.png" />
+然后继续运行即可
+<img alt="show666" src="../img/show6662.png" /></p>
+<h2 id="showme666dondayoo-wp">showme666(dondayoo~战队 wp)<a class="headerlink" href="#showme666dondayoo-wp" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../img/show666_d1.png" />
+先运行程序看看
+<img alt="" src="../img/show666_d2.png" />
+是一个掷骰子程序，必须 5 个都是 6 点才能通过，分析程序类型
+<img alt="" src="../img/show666_d3.png" />
+64 位 ELF 程序，用 IDA64 打开
+<img alt="" src="../img/show666_d4.png" />
+随机数是用时间作为种子生成，不可控制
+<img alt="" src="../img/show666_d5.png" />而且还有反作弊机制，666
+<img alt="" src="../img/show666_d6.png" />
+这一段是最终结果部分，如果掷出 5 个 6 点，会调用 4006B6 函数，进入函数查看
+<img alt="" src="../img/show666_d7.png" />
+其中有 putchar，说明该函数会输入字符，应该就是输出 flag。最重要的是该函数没有参数传入，所以只要动态调试直接将函数地址作为 IP 就能够执行该函数
+<img alt="" src="../img/show666_d8.png" />
+一路执行到底，输出了 flag
+<img alt="" src="../img/show666_d9.png" />要把 flag 换成 scuctf</p>
+<h2 id="rcrcrc">rcrcrc<a class="headerlink" href="#rcrcrc" title="Permanent link">&para;</a></h2>
+<h3 id="_5">考察要点<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ol>
+<li>算法分析</li>
+<li>python 脚本编写</li>
+</ol>
+<h3 id="_6">解题思路<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>这题主要考察逆向分析能力（纸上打个草稿，代码逆着写就行了</p>
+<p>解题脚本如下(C 语言)</p>
+<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">key</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mh">0xF4A956BF</span><span class="p">,</span> <span class="mh">0xBA568F3D</span><span class="p">,</span> <span class="mh">0xD73A7F7C</span><span class="p">,</span> <span class="mh">0x817F532B</span><span class="p">};</span>
+<span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">T</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mh">0xd24aaa79</span><span class="p">,</span> <span class="mh">0x0bf82ac7</span><span class="p">,</span> <span class="mh">0x6d08584c</span><span class="p">,</span> <span class="mh">0x4b7703cf</span><span class="p">,</span> <span class="mh">0xeb5a5436</span><span class="p">,</span> <span class="mh">0x04fc4110</span><span class="p">,</span> <span class="mh">0x07a6c88e</span><span class="p">,</span> <span class="mh">0xcce3bc69</span><span class="p">,</span> <span class="mh">0x67b581db</span><span class="p">,</span> <span class="mh">0x42958bd7</span><span class="p">,</span> <span class="mh">0xfde60589</span><span class="p">,</span> <span class="mh">0xfbc21664</span><span class="p">,</span> <span class="mh">0x56fc110f</span><span class="p">,</span> <span class="mh">0x224189f6</span><span class="p">,</span> <span class="mh">0x0da07f95</span><span class="p">,</span> <span class="mh">0xfb0506e6</span><span class="p">,</span> <span class="mh">0x1b02b4d0</span><span class="p">,</span> <span class="mh">0x4c263256</span><span class="p">,</span> <span class="mh">0x1bf60164</span><span class="p">,</span> <span class="mh">0x79ad7531</span><span class="p">,</span> <span class="mh">0xe0fa6867</span><span class="p">,</span> <span class="mh">0xe06b6073</span><span class="p">,</span> <span class="mh">0xd63b49ce</span><span class="p">,</span> <span class="mh">0xa5d0d5fe</span><span class="p">,</span> <span class="mh">0x89713ab9</span><span class="p">,</span> <span class="mh">0x3258490d</span><span class="p">};</span>
+
+<span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">func</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="p">((</span><span class="n">a</span> <span class="o">&gt;&gt;</span> <span class="p">(</span><span class="n">b</span> <span class="o">&amp;</span> <span class="mh">0x1f</span><span class="p">))</span> <span class="o">|</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="mi">32</span> <span class="o">-</span> <span class="n">b</span> <span class="o">&amp;</span> <span class="mh">0x1f</span><span class="p">)))</span> <span class="o">&amp;</span> <span class="mh">0xffffffff</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="n">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">-=</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">key</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">key</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
+
+        <span class="k">for</span><span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span> <span class="n">j</span> <span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">--</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">b</span> <span class="o">-=</span> <span class="n">T</span><span class="p">[</span><span class="mi">2</span> <span class="o">*</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
+            <span class="n">b</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span> <span class="o">^</span> <span class="n">a</span><span class="p">;</span>
+            <span class="n">a</span> <span class="o">-=</span> <span class="n">T</span><span class="p">[</span><span class="mi">2</span> <span class="o">*</span> <span class="n">i</span><span class="p">];</span>
+            <span class="n">a</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">^</span> <span class="n">b</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">key</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-</span> <span class="mh">0xd24aaa79</span><span class="p">;</span>
+        <span class="n">key</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">b</span> <span class="o">-</span> <span class="mh">0x0bf82ac7</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span> <span class="n">key</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+<h2 id="rcrcrcdondayoo-wp">rcrcrc(dondayoo~战队 wp)<a class="headerlink" href="#rcrcrcdondayoo-wp" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../img/rc_d1.png" />
+Linux 程序，先运行看看
+<img alt="" src="../img/rc_d2.png" />
+程序没有任何输出，随便输入字符，程序退出，IDA64 打开分析
+<img alt="" src="../img/rc_d3.png" />
+main 函数中有 scanf 和几个变量定义，最终判断四个变量值是否正确
+先进入 400894 查看
+<img alt="" src="../img/rc_d4.png" />
+其中 ROL 和部分变量的名字是我自己修改过的，点开 ROL 很容易分析出这是循环左移函数
+<img alt="" src="../img/rc_d5.png" />
+<img alt="" src="../img/rc_d6.png" /><img alt="" src="../img/rc_d7.png" />
+看到<img alt="" src="../img/rc_d8.png" />这样的结构，再结合题目名字，基本上可以断定这是一个 RC5 加密程序，再进入 4006FC 查看
+<img alt="" src="../img/rc_d9.png" />
+可以确定是 RC5 加密，一个分组是 int，也就是 32 位，做 12 轮循环，400894 是密钥扩展函数，4006FC 是加密函数，附两页 ppt
+<img alt="" src="../img/rc_d10.png" />
+<img alt="" src="../img/rc_d11.png" />
+但与一般的 RC5 不同的是，程序每一轮使用的子密钥是一样的
+<img alt="" src="../img/rc_d12.png" />
+循环变量 j 作为密钥数组索引，没有修改
+要进行解密，首先要获得使用的子密钥，在这里无需对密钥扩展函数进行分析，直接在动态调试中从内存 dump 出各个子密钥即可
+<img alt="" src="../img/rc_d13.png" />
+可以得到 4 个子密钥 0xd24aaa79,0x0bf82ac7,0xeb5a5436,0x04fc4110
+按照密钥的使用顺序，编写解密程序</p>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">libnum</span>
+<span class="k">def</span> <span class="nf">ror</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="n">d</span><span class="p">):</span>
+    <span class="n">tmp</span><span class="o">=</span><span class="n">num</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">d</span><span class="o">&amp;</span><span class="mh">0x1f</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">tmp</span><span class="o">|</span><span class="p">((</span><span class="n">num</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="mi">32</span><span class="o">-</span><span class="p">(</span><span class="n">d</span><span class="o">&amp;</span><span class="mh">0x1f</span><span class="p">)))</span><span class="o">&amp;</span><span class="mi">2</span><span class="o">**</span><span class="mi">32</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">s</span><span class="o">=</span><span class="p">[</span><span class="mh">0xd24aaa79</span><span class="p">,</span><span class="mh">0x0bf82ac7</span><span class="p">,</span><span class="mh">0xeb5a5436</span><span class="p">,</span><span class="mh">0x04fc4110</span><span class="p">]</span>
+<span class="n">cipher</span><span class="o">=</span><span class="p">[</span><span class="mh">0xf4a956bf</span><span class="p">,</span><span class="mh">0xba568f3d</span><span class="p">,</span><span class="mh">0xd73a7f7c</span><span class="p">,</span><span class="mh">0x817f532b</span><span class="p">]</span>
+<span class="n">message</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">):</span>
+    <span class="n">ld</span><span class="o">=</span><span class="n">cipher</span><span class="p">[</span><span class="n">r</span><span class="p">]</span>
+    <span class="n">rd</span><span class="o">=</span><span class="n">cipher</span><span class="p">[</span><span class="n">r</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">rnd</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">12</span><span class="p">):</span>
+        <span class="n">rd</span><span class="o">=</span><span class="n">ror</span><span class="p">((</span><span class="n">rd</span><span class="o">-</span><span class="n">s</span><span class="p">[</span><span class="n">r</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span><span class="o">&amp;</span><span class="mi">2</span><span class="o">**</span><span class="mi">32</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">ld</span><span class="p">)</span><span class="o">^</span><span class="n">ld</span>
+        <span class="n">ld</span><span class="o">=</span><span class="n">ror</span><span class="p">((</span><span class="n">ld</span><span class="o">-</span><span class="n">s</span><span class="p">[</span><span class="n">r</span><span class="p">])</span><span class="o">&amp;</span><span class="mi">2</span><span class="o">**</span><span class="mi">32</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">rd</span><span class="p">)</span><span class="o">^</span><span class="n">rd</span>
+    <span class="n">rd</span><span class="o">=</span><span class="p">(</span><span class="n">rd</span><span class="o">-</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">&amp;</span><span class="mi">2</span><span class="o">**</span><span class="mi">32</span><span class="o">-</span><span class="mi">1</span>
+    <span class="n">ld</span><span class="o">=</span><span class="p">(</span><span class="n">ld</span><span class="o">-</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">&amp;</span><span class="mi">2</span><span class="o">**</span><span class="mi">32</span><span class="o">-</span><span class="mi">1</span>
+    <span class="n">message</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">libnum</span><span class="o">.</span><span class="n">n2s</span><span class="p">(</span><span class="n">ld</span><span class="p">))</span>
+    <span class="n">message</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">libnum</span><span class="o">.</span><span class="n">n2s</span><span class="p">(</span><span class="n">rd</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</pre></div>
+
+<p>运行得到
+<img alt="" src="../img/rc_d14.png" />
+似乎不是可读的字符串，但确实都落在 ASCII 范围内，看了半天，注意到 linux 是小端位序，这个结果也是小端方式输出的，实际 flag 应该倒过来
+<code>rc5_fking_boring</code></p>
+<h2 id="baha">baha<a class="headerlink" href="#baha" title="Permanent link">&para;</a></h2>
+<h3 id="_7">考察要点<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ol>
+<li>base64 算法逆向</li>
+<li>爆破哈希算法</li>
+</ol>
+<h3 id="_8">解题思路<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>首先逆向 base64，使用随机数打乱了原始索引表，但是随机数结果使固定的，所以可以生成的新索引表也固定。
+base64 解密脚本如下：</p>
+<div class="codehilite"><pre><span></span><span class="n">key</span> <span class="o">=</span> <span class="s1">&#39;pj+Oh2IXB6dyV5ArzmDtML0ZkeqPgwfvJbaSEHnxUY79K4Go3u/TC1sl8iFQWcNR&#39;</span>
+<span class="n">T</span> <span class="o">=</span> <span class="s1">&#39;kEjTmtB3VtHvgs51kl5v&#39;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">T</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="s1">&#39;=&#39;</span><span class="p">:</span>
+        <span class="n">b</span> <span class="o">+=</span> <span class="s1">&#39;000000&#39;</span>
+        <span class="k">break</span>
+    <span class="n">tmp</span> <span class="o">=</span> <span class="n">key</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">tmp</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">tmp</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">tmp</span><span class="p">)):</span>
+                <span class="n">b</span> <span class="o">+=</span> <span class="s1">&#39;0&#39;</span>
+        <span class="n">b</span> <span class="o">+=</span> <span class="n">tmp</span>
+<span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">),</span><span class="mi">8</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">8</span><span class="p">],</span> <span class="mi">2</span><span class="p">)),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="n">j</span><span class="o">+=</span><span class="mi">1</span>
+</pre></div>
+
+<p>然后是爆破输入为 9 位数字的哈希函数，大佬们太强了，直接把函数复原了，预期解如下</p>
+<div class="codehilite"><pre><span></span><span class="c1">//#include &quot;stdafx.h&quot;</span>
+<span class="cp">#include</span> <span class="cpf">&lt;windows.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="k">typedef</span> <span class="kr">__int64</span> <span class="p">(</span><span class="o">*</span><span class="n">func</span><span class="p">)();</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">//char * hmod = (char *)LoadLibraryA(&quot;C:\\Users\\hgy\\Desktop\\hxb\\reverse_1\\reverse.exe&quot;);</span>
+    <span class="kt">FILE</span> <span class="o">*</span> <span class="n">fp</span><span class="p">;</span>
+    <span class="n">fp</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">&quot;./baha.exe&quot;</span><span class="p">,</span> <span class="s">&quot;rb&quot;</span><span class="p">);</span>
+    <span class="kt">size_t</span> <span class="n">len</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">fseek</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">SEEK_END</span><span class="p">);</span>
+    <span class="n">len</span> <span class="o">=</span> <span class="n">ftell</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span>
+    <span class="n">fseek</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">SEEK_SET</span><span class="p">);</span>
+
+    <span class="kt">char</span> <span class="o">*</span> <span class="n">hmod</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="p">)</span><span class="n">VirtualAllocEx</span><span class="p">(</span><span class="n">GetCurrentProcess</span><span class="p">(),</span> <span class="mi">0</span><span class="p">,</span> <span class="n">len</span><span class="p">,</span> <span class="n">MEM_COMMIT</span><span class="p">,</span> <span class="n">PAGE_EXECUTE_READWRITE</span><span class="p">);</span>
+    <span class="n">fread</span><span class="p">(</span><span class="n">hmod</span><span class="p">,</span> <span class="n">len</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">fp</span><span class="p">);</span>
+    <span class="n">func</span> <span class="n">hash</span> <span class="o">=</span> <span class="p">(</span><span class="n">func</span><span class="p">)</span><span class="o">&amp;</span><span class="n">hmod</span><span class="p">[</span><span class="mh">0x560</span><span class="p">];</span>
+
+    <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">res</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">flag</span><span class="p">[</span><span class="mh">0x30</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;b@sE2019_scucs_&quot;</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="mi">15</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;0&#39;</span><span class="p">;</span> <span class="n">flag</span><span class="p">[</span><span class="mi">15</span><span class="p">]</span> <span class="o">&lt;</span> <span class="sc">&#39;0&#39;</span> <span class="o">+</span> <span class="mi">10</span><span class="p">;</span> <span class="n">flag</span><span class="p">[</span><span class="mi">15</span><span class="p">]</span><span class="o">++</span><span class="p">)</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="mi">16</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;0&#39;</span><span class="p">;</span> <span class="n">flag</span><span class="p">[</span><span class="mi">16</span><span class="p">]</span> <span class="o">&lt;</span> <span class="sc">&#39;0&#39;</span> <span class="o">+</span> <span class="mi">10</span><span class="p">;</span> <span class="n">flag</span><span class="p">[</span><span class="mi">16</span><span class="p">]</span><span class="o">++</span><span class="p">)</span>
+            <span class="k">for</span> <span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="mi">17</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;0&#39;</span><span class="p">;</span> <span class="n">flag</span><span class="p">[</span><span class="mi">17</span><span class="p">]</span> <span class="o">&lt;</span> <span class="sc">&#39;0&#39;</span> <span class="o">+</span> <span class="mi">10</span><span class="p">;</span> <span class="n">flag</span><span class="p">[</span><span class="mi">17</span><span class="p">]</span><span class="o">++</span><span class="p">)</span>
+                <span class="k">for</span> <span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="mi">18</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;0&#39;</span><span class="p">;</span> <span class="n">flag</span><span class="p">[</span><span class="mi">18</span><span class="p">]</span> <span class="o">&lt;</span> <span class="sc">&#39;0&#39;</span> <span class="o">+</span> <span class="mi">10</span><span class="p">;</span> <span class="n">flag</span><span class="p">[</span><span class="mi">18</span><span class="p">]</span><span class="o">++</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="k">for</span> <span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="mi">19</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;0&#39;</span><span class="p">;</span> <span class="n">flag</span><span class="p">[</span><span class="mi">19</span><span class="p">]</span> <span class="o">&lt;</span> <span class="sc">&#39;0&#39;</span> <span class="o">+</span> <span class="mi">10</span><span class="p">;</span> <span class="n">flag</span><span class="p">[</span><span class="mi">19</span><span class="p">]</span><span class="o">++</span><span class="p">)</span>
+                        <span class="k">for</span> <span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;0&#39;</span><span class="p">;</span> <span class="n">flag</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span> <span class="o">&lt;</span> <span class="sc">&#39;0&#39;</span> <span class="o">+</span> <span class="mi">10</span><span class="p">;</span> <span class="n">flag</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span><span class="o">++</span><span class="p">)</span>
+                            <span class="k">for</span> <span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="mi">21</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;0&#39;</span><span class="p">;</span> <span class="n">flag</span><span class="p">[</span><span class="mi">21</span><span class="p">]</span> <span class="o">&lt;</span> <span class="sc">&#39;0&#39;</span> <span class="o">+</span> <span class="mi">10</span><span class="p">;</span> <span class="n">flag</span><span class="p">[</span><span class="mi">21</span><span class="p">]</span><span class="o">++</span><span class="p">)</span>
+                                <span class="k">for</span> <span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="mi">22</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;0&#39;</span><span class="p">;</span> <span class="n">flag</span><span class="p">[</span><span class="mi">22</span><span class="p">]</span> <span class="o">&lt;</span> <span class="sc">&#39;0&#39;</span> <span class="o">+</span> <span class="mi">10</span><span class="p">;</span> <span class="n">flag</span><span class="p">[</span><span class="mi">22</span><span class="p">]</span><span class="o">++</span><span class="p">)</span>
+                                    <span class="k">for</span> <span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="mi">23</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;0&#39;</span><span class="p">;</span> <span class="n">flag</span><span class="p">[</span><span class="mi">23</span><span class="p">]</span> <span class="o">&lt;</span> <span class="sc">&#39;0&#39;</span> <span class="o">+</span> <span class="mi">10</span><span class="p">;</span> <span class="n">flag</span><span class="p">[</span><span class="mi">23</span><span class="p">]</span><span class="o">++</span><span class="p">)</span>
+                                    <span class="p">{</span>
+                                        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">addr</span> <span class="o">=</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="n">flag</span><span class="p">;</span>
+                                        <span class="kr">__asm</span> <span class="p">{</span>
+                                            <span class="n">mov</span> <span class="n">ecx</span><span class="p">,</span> <span class="n">addr</span>
+                                        <span class="p">}</span>
+                                        <span class="n">res</span> <span class="o">=</span> <span class="n">hash</span><span class="p">();</span>
+                                        <span class="k">if</span> <span class="p">(</span><span class="n">res</span> <span class="o">==</span> <span class="mh">0x8181433626e17720</span><span class="p">)</span>
+                                        <span class="p">{</span>
+                                            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;found: %s&quot;</span><span class="p">,</span> <span class="n">flag</span><span class="p">);</span>
+                                            <span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+                                        <span class="p">}</span>
+                                    <span class="p">}</span>
+                    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s -- %#llx</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">flag</span><span class="p">,</span> <span class="n">res</span><span class="p">);</span>
+                <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>这里有个小坑是，哈希函数采用_thiscall 调用的，所以我用的内联汇编给函数传的参数。不过大佬们直接复原了函数，也就没这些问题了 2333.</p>
+<h2 id="bahadondayoo-wp">baha(dondayoo~战队 wp)<a class="headerlink" href="#bahadondayoo-wp" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../img/baha_d1.png" />
+Windows 程序，运行看看
+<img alt="" src="../img/baha_d2.png" />
+两段输入，有错误提示，IDA 打开分析
+<img alt="" src="../img/baha_d3.png" />
+没有 main 符号，搜索字符串 Welcome
+<img alt="" src="../img/baha_d4.png" />
+进入 main 函数查看
+<img alt="" src="../img/baha_d5.png" />
+其中部分变量名和函数名是自己修改过的，程序首先输入两个字符串，然后对第二次输入进行判断，进入 check_is_number 函数查看
+<img alt="" src="../img/baha_d6.png" />
+比较明显的是与 48+9=57，也就是’9’的 ASCII 码，基本上可以得知这个函数是判断是否为数字字符串，但 strlen 还不太清晰
+<img alt="" src="../img/baha_d7.png" />
+注意到这里的右移 6 位，&amp;3F 等操作，再结合 abcdefg 变量
+<img alt="" src="../img/baha_d8.png" />
+能够判断这是一个 base64 编码，而
+<img alt="" src="../img/baha_d9.png" />
+其中的字符串是 base64 编码的结果
+但是直接取出来进行 base64 解码发现并不是可读字符串，注意到<code>sub_401000()</code>
+<img alt="" src="../img/baha_d10.png" />
+这个函数对 base64 编码表进行了打乱，上动态调试，直接 dump 出打乱的编码表
+<img alt="" src="../img/baha_d11.png" />
+编写脚本，查表还原真正的 base64 编码</p>
+<div class="codehilite"><pre><span></span><span class="n">origin</span><span class="o">=</span><span class="s1">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&#39;</span>
+<span class="n">modified</span><span class="o">=</span><span class="s1">&#39;pj+Oh2IXB6dyV5ArzmDtML0ZkeqPgwfvJbaSEHnxUY79K4Go3u/TC1sl8iFQWcNR&#39;</span>
+
+<span class="n">key_enc</span><span class="o">=</span><span class="s1">&#39;kEjTmtB3VtHvgs51kl5v&#39;</span>
+<span class="n">key</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+<span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">key_enc</span><span class="p">:</span>
+    <span class="n">key</span><span class="o">+=</span><span class="n">origin</span><span class="p">[</span><span class="n">modified</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">ch</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</pre></div>
+
+<p><img alt="" src="../img/baha_d12.png" />
+<img alt="" src="../img/baha_d13.png" />这个就是第一次输入的 name，接下来看 phone</p>
+<p><img alt="" src="../img/baha_d14.png" />这一段将 name 和 phone 连接到了一个字符串中，总长度是 24，所以 phone 的长度应该是 9
+然后看最后的判断
+<img alt="" src="../img/baha_d15.png" />
+进入函数查看
+<img alt="" src="../img/baha_d16.png" /><img alt="" src="../img/baha_d17.png" />
+<img alt="" src="../img/baha_d18.png" />
+函数内有三段循环，第一段循环是 32 位常量的异或操作，第二段循环是查表操作，第三段循环特征比较明显，有&gt;&gt;5, ×16，也就是&lt;&lt;4 操作，并且有-0x61c88647= 0x9e3779b9 常量，是一个 tea 加密
+结合题目名字 baha，ba 应该代表 base64，ha 我觉得应该是 hash，那么第二段循环应该是一个 hash 算法，而用查表方式的 hash 算法，一般就是 crc 了。仔细分析代码，首先取出第一个字符，与初始寄存器异或得到索引值，寄存器右移 8 位。通过索引查表得到某个值，再与寄存器异或，寄存器长度是两个双字，所以是一个查表法 crc64
+第一段循环就是生成表的操作，同样直接在动态调试中 dump 出这张表即可
+<img alt="" src="../img/baha_d19.png" />
+有了表后，需要逆向恢复出 9 个字节内容，因为 crc64 的长度是 8 字节，所以第一个字节只能猜测，范围也比较小，在数字字符范围内
+恢复的方法参考了https://blog.csdn.net/dabang_007/article/details/48713659
+因为正向计算时寄存器先逻辑右移 8 位，再与一个 8 字节异或，所以第一个字节与查表得到的值的第一个字节相等，利用这个可以得到表中这一个 8 字节字的索引。得到第一个 8 字节字后，寄存器先与这个字异或，再左移 8 位，然后重复第一次操作，一共可以得到 8 个 8 字节字的索引。
+根据这些索引号，遍历所有的第一个字节，进行一次正向计算，约束后八个字节的输入必须使得查表时的索引号是所期望的值，就能得到每一种符合条件的输入。
+Tea 的解密比较容易，将+改为-，顺序调换即可。
+最后编写脚本</p>
+<div class="codehilite"><pre><span></span><span class="n">origin</span><span class="o">=</span><span class="s1">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&#39;</span>
+<span class="n">modified</span><span class="o">=</span><span class="s1">&#39;pj+Oh2IXB6dyV5ArzmDtML0ZkeqPgwfvJbaSEHnxUY79K4Go3u/TC1sl8iFQWcNR&#39;</span>
+
+<span class="n">key_enc</span><span class="o">=</span><span class="s1">&#39;kEjTmtB3VtHvgs51kl5v&#39;</span>
+<span class="n">key</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+<span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">key_enc</span><span class="p">:</span>
+    <span class="n">key</span><span class="o">+=</span><span class="n">origin</span><span class="p">[</span><span class="n">modified</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">ch</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+<span class="n">name</span><span class="o">=</span><span class="s1">&#39;b@sE2019_scucs_&#39;</span>
+<span class="n">phone</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+<span class="n">num</span><span class="o">=</span><span class="s1">&#39;0123456789&#39;</span>
+<span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mh">0x30358979</span><span class="p">,</span><span class="mh">0x7AD870C8</span><span class="p">,</span><span class="mh">0x606B12F2</span><span class="p">,</span><span class="mh">0xF5B0E190</span><span class="p">,</span><span class="mh">0x505E9B8B</span><span class="p">,</span><span class="mh">0x8F689158</span><span class="p">,</span><span class="mh">0x9841B68F</span><span class="p">,</span><span class="mh">0xC038E573</span><span class="p">,</span><span class="mh">0xA8743FF6</span><span class="p">,</span><span class="mh">0xBAE095BB</span><span class="p">,</span><span class="mh">0xF82AA47D</span><span class="p">,</span><span class="mh">0x358804E3</span><span class="p">,</span><span class="mh">0xC81F2D04</span><span class="p">,</span><span class="mh">0x4F50742B</span><span class="p">,</span><span class="mh">0x6814FE75</span><span class="p">,</span><span class="mh">0xAB28ECB4</span><span class="p">,</span><span class="mh">0x5821770C</span><span class="p">,</span><span class="mh">0xD1F09C7C</span><span class="p">,</span><span class="mh">0x087FEC87</span><span class="p">,</span><span class="mh">0x5E980D24</span><span class="p">,</span><span class="mh">0x384A65FE</span><span class="p">,</span><span class="mh">0x24407DEC</span><span class="p">,</span><span class="mh">0xF05548FA</span><span class="p">,</span><span class="mh">0x6B1009C7</span><span class="p">,</span><span class="mh">0xC060C183</span><span class="p">,</span><span class="mh">0x11C8790F</span><span class="p">,</span><span class="mh">0x903E5A08</span><span class="p">,</span><span class="mh">0x9EA0E857</span><span class="p">,</span><span class="mh">0xA00BD371</span><span class="p">,</span><span class="mh">0xE478989F</span><span class="p">,</span><span class="mh">0x88BE6F81</span><span class="p">,</span><span class="mh">0x7D08FF3B</span><span class="p">,</span><span class="mh">0xB88BE6F8</span><span class="p">,</span><span class="mh">0x07D08FF3</span><span class="p">,</span><span class="mh">0xE8D57D73</span><span class="p">,</span><span class="mh">0x88B81EAB</span><span class="p">,</span><span class="mh">0xD8E0F40A</span><span class="p">,</span><span class="mh">0xF2606E63</span><span class="p">,</span><span class="mh">0x10FFD90E</span><span class="p">,</span><span class="mh">0xBD301A48</span><span class="p">,</span><span class="mh">0x20CA5077</span><span class="p">,</span><span class="mh">0xC7E86A80</span><span class="p">,</span><span class="mh">0x7094CBFC</span><span class="p">,</span><span class="mh">0x4880FBD8</span><span class="p">,</span><span class="mh">0x40A14285</span><span class="p">,</span><span class="mh">0x32588B10</span><span class="p">,</span><span class="mh">0xE0AA91F4</span><span class="p">,</span><span class="mh">0xD620138F</span><span class="p">,</span><span class="mh">0xD09F188D</span><span class="p">,</span><span class="mh">0xACF86347</span><span class="p">,</span><span class="mh">0x80C18306</span><span class="p">,</span><span class="mh">0x2390F21F</span><span class="p">,</span><span class="mh">0xB0F40A7F</span><span class="p">,</span><span class="mh">0x594882D7</span><span class="p">,</span><span class="mh">0x78EB277B</span><span class="p">,</span><span class="mh">0x1618F6FC</span><span class="p">,</span><span class="mh">0x48DEAE02</span><span class="p">,</span><span class="mh">0x6CC08634</span><span class="p">,</span><span class="mh">0x18803589</span><span class="p">,</span><span class="mh">0xE3A8176C</span><span class="p">,</span><span class="mh">0x28B5BCF0</span><span class="p">,</span><span class="mh">0x997067A4</span><span class="p">,</span><span class="mh">0x117CDF02</span><span class="p">,</span><span class="mh">0xFA11FE77</span><span class="p">,</span><span class="mh">0x2149567B</span><span class="p">,</span><span class="mh">0x80C98EBF</span><span class="p">,</span><span class="mh">0x7117CDF0</span><span class="p">,</span><span class="mh">0x0FA11FE7</span><span class="p">,</span><span class="mh">0x41224489</span><span class="p">,</span><span class="mh">0x75796F2F</span><span class="p">,</span><span class="mh">0x893D698D</span><span class="p">,</span><span class="mh">0x3A291B04</span><span class="p">,</span><span class="mh">0xB908E0F4</span><span class="p">,</span><span class="mh">0x40F16BCC</span><span class="p">,</span><span class="mh">0xE9567B7F</span><span class="p">,</span><span class="mh">0xCF99FA94</span><span class="p">,</span><span class="mh">0xD963F206</span><span class="p">,</span><span class="mh">0xB5418A5C</span><span class="p">,</span><span class="mh">0x79682177</span><span class="p">,</span><span class="mh">0x513912C3</span><span class="p">,</span><span class="mh">0x495DA80E</span><span class="p">,</span><span class="mh">0x2BE1620B</span><span class="p">,</span><span class="mh">0x19033385</span><span class="p">,</span><span class="mh">0xA489F353</span><span class="p">,</span><span class="mh">0x2936BAFC</span><span class="p">,</span><span class="mh">0xDE51839B</span><span class="p">,</span><span class="mh">0xE12997F8</span><span class="p">,</span><span class="mh">0x9101F7B0</span><span class="p">,</span><span class="mh">0xD11C1E81</span><span class="p">,</span><span class="mh">0xEBD98778</span><span class="p">,</span><span class="mh">0x8142850A</span><span class="p">,</span><span class="mh">0x64B11620</span><span class="p">,</span><span class="mh">0xB1770C73</span><span class="p">,</span><span class="mh">0x1E6966E8</span><span class="p">,</span><span class="mh">0x99C2B083</span><span class="p">,</span><span class="mh">0x8719014C</span><span class="p">,</span><span class="mh">0xA9F739FA</span><span class="p">,</span><span class="mh">0xFDC17184</span><span class="p">,</span><span class="mh">0xF9A9A271</span><span class="p">,</span><span class="mh">0x72A9E0DC</span><span class="p">,</span><span class="mh">0xC99C2B08</span><span class="p">,</span><span class="mh">0x08719014</span><span class="p">,</span><span class="mh">0x0183060C</span><span class="p">,</span><span class="mh">0x4721E43F</span><span class="p">,</span><span class="mh">0x31B68F75</span><span class="p">,</span><span class="mh">0x3DF994F7</span><span class="p">,</span><span class="mh">0x61E814FE</span><span class="p">,</span><span class="mh">0xB29105AF</span><span class="p">,</span><span class="mh">0x51DD9D87</span><span class="p">,</span><span class="mh">0xC8497567</span><span class="p">,</span><span class="mh">0xF1D64EF6</span><span class="p">,</span><span class="mh">0x2C31EDF8</span><span class="p">,</span><span class="mh">0xC1E3C78F</span><span class="p">,</span><span class="mh">0x56E99D30</span><span class="p">,</span><span class="mh">0x91BD5C04</span><span class="p">,</span><span class="mh">0xD9810C68</span><span class="p">,</span><span class="mh">0xA188D57D</span><span class="p">,</span><span class="mh">0xA3597CA0</span><span class="p">,</span><span class="mh">0x6997F879</span><span class="p">,</span><span class="mh">0xEC09088B</span><span class="p">,</span><span class="mh">0x59A27100</span><span class="p">,</span><span class="mh">0x96D17843</span><span class="p">,</span><span class="mh">0x09FCEA8B</span><span class="p">,</span><span class="mh">0x19B9E91B</span><span class="p">,</span><span class="mh">0x39C963F2</span><span class="p">,</span><span class="mh">0x636199D3</span><span class="p">,</span><span class="mh">0x7A6E2D6F</span><span class="p">,</span><span class="mh">0xDF7ADABD</span><span class="p">,</span><span class="mh">0x4A5BA416</span><span class="p">,</span><span class="mh">0xA5A2AA75</span><span class="p">,</span><span class="mh">0x1A053F9D</span><span class="p">,</span><span class="mh">0x2ACA3B2D</span><span class="p">,</span><span class="mh">0x2A30B6E4</span><span class="p">,</span><span class="mh">0x50124BE5</span><span class="p">,</span><span class="mh">0xE22F9BE0</span><span class="p">,</span><span class="mh">0x1F423FCE</span><span class="p">,</span><span class="mh">0xD21A1299</span><span class="p">,</span><span class="mh">0x659A4F06</span><span class="p">,</span><span class="mh">0x82448912</span><span class="p">,</span><span class="mh">0xEAF2DE5E</span><span class="p">,</span><span class="mh">0xB271006B</span><span class="p">,</span><span class="mh">0x902AAE96</span><span class="p">,</span><span class="mh">0x127AD31A</span><span class="p">,</span><span class="mh">0x74523609</span><span class="p">,</span><span class="mh">0x224F5A63</span><span class="p">,</span><span class="mh">0x0E8A46C1</span><span class="p">,</span><span class="mh">0x7211C1E8</span><span class="p">,</span><span class="mh">0x81E2D799</span><span class="p">,</span><span class="mh">0x42244891</span><span class="p">,</span><span class="mh">0xFB3AA751</span><span class="p">,</span><span class="mh">0x8A3B6595</span><span class="p">,</span><span class="mh">0xB46AD37A</span><span class="p">,</span><span class="mh">0xBA0EECEC</span><span class="p">,</span><span class="mh">0xCEB2A3B2</span><span class="p">,</span><span class="mh">0xEA507767</span><span class="p">,</span><span class="mh">0x41DA32EA</span><span class="p">,</span><span class="mh">0xDA65FE1E</span><span class="p">,</span><span class="mh">0x3B024222</span><span class="p">,</span><span class="mh">0xF2D042EE</span><span class="p">,</span><span class="mh">0xA2722586</span><span class="p">,</span><span class="mh">0xC2E5CB97</span><span class="p">,</span><span class="mh">0xD8AA554E</span><span class="p">,</span><span class="mh">0x92BB501C</span><span class="p">,</span><span class="mh">0x57C2C416</span><span class="p">,</span><span class="mh">0xA28ED965</span><span class="p">,</span><span class="mh">0x2D1AB4DE</span><span class="p">,</span><span class="mh">0x6A91F461</span><span class="p">,</span><span class="mh">0x624AC0F5</span><span class="p">,</span><span class="mh">0x5AA47D18</span><span class="p">,</span><span class="mh">0x1892B03D</span><span class="p">,</span><span class="mh">0x0AFAE693</span><span class="p">,</span><span class="mh">0x97FA2165</span><span class="p">,</span><span class="mh">0x3ACF6FEA</span><span class="p">,</span><span class="mh">0xED2251AD</span><span class="p">,</span><span class="mh">0x9AC4BC9B</span><span class="p">,</span><span class="mh">0x095AC932</span><span class="p">,</span><span class="mh">0xAAF135E2</span><span class="p">,</span><span class="mh">0x7382B9FA</span><span class="p">,</span><span class="mh">0xFAAFAE69</span><span class="p">,</span><span class="mh">0xFCEA28A2</span><span class="p">,</span><span class="mh">0xCA9A2710</span><span class="p">,</span><span class="mh">0x8632586A</span><span class="p">,</span><span class="mh">0x02850A14</span><span class="p">,</span><span class="mh">0xC9622C41</span><span class="p">,</span><span class="mh">0x32B0836D</span><span class="p">,</span><span class="mh">0xB3BA5C89</span><span class="p">,</span><span class="mh">0x62EE18E6</span><span class="p">,</span><span class="mh">0x3CD2CDD1</span><span class="p">,</span><span class="mh">0x52DB919F</span><span class="p">,</span><span class="mh">0x460ABD19</span><span class="p">,</span><span class="mh">0x6B12F26D</span><span class="p">,</span><span class="mh">0x256B24CA</span><span class="p">,</span><span class="mh">0x5B277B14</span><span class="p">,</span><span class="mh">0x5FB35402</span><span class="p">,</span><span class="mh">0x0B79E09F</span><span class="p">,</span><span class="mh">0xD0DBC55A</span><span class="p">,</span><span class="mh">0x3B4C69E6</span><span class="p">,</span><span class="mh">0xAA03B592</span><span class="p">,</span><span class="mh">0xF35344E2</span><span class="p">,</span><span class="mh">0xE553C1B9</span><span class="p">,</span><span class="mh">0xC366CD9B</span><span class="p">,</span><span class="mh">0x9F8BB171</span><span class="p">,</span><span class="mh">0x93385610</span><span class="p">,</span><span class="mh">0x10E32029</span><span class="p">,</span><span class="mh">0xA30DDF69</span><span class="p">,</span><span class="mh">0x6A3B50E1</span><span class="p">,</span><span class="mh">0x03060C18</span><span class="p">,</span><span class="mh">0x8E43C87E</span><span class="p">,</span><span class="mh">0x33338561</span><span class="p">,</span><span class="mh">0xF49BB8B6</span><span class="p">,</span><span class="mh">0x636D1EEA</span><span class="p">,</span><span class="mh">0x7BF329EE</span><span class="p">,</span><span class="mh">0x53589793</span><span class="p">,</span><span class="mh">0x012B5926</span><span class="p">,</span><span class="mh">0x9B47BA97</span><span class="p">,</span><span class="mh">0x4E7B2D0D</span><span class="p">,</span><span class="mh">0xAB7233EE</span><span class="p">,</span><span class="mh">0x34A35DC5</span><span class="p">,</span><span class="mh">0xFB2CA865</span><span class="p">,</span><span class="mh">0xBBCBCC9D</span><span class="p">,</span><span class="mh">0xCB19211C</span><span class="p">,</span><span class="mh">0xC113BC55</span><span class="p">,</span><span class="mh">0xE3AC9DEC</span><span class="p">,</span><span class="mh">0x5863DBF1</span><span class="p">,</span><span class="mh">0xD3991495</span><span class="p">,</span><span class="mh">0x22BBAB39</span><span class="p">,</span><span class="mh">0x83C78F1E</span><span class="p">,</span><span class="mh">0xADD33A61</span><span class="p">,</span><span class="mh">0xB3F20667</span><span class="p">,</span><span class="mh">0xD70B4AA9</span><span class="p">,</span><span class="mh">0x7BED2B63</span><span class="p">,</span><span class="mh">0x985B3E82</span><span class="p">,</span><span class="mh">0x4BD8A21A</span><span class="p">,</span><span class="mh">0xE2834E4A</span><span class="p">,</span><span class="mh">0x1B863991</span><span class="p">,</span><span class="mh">0x6DEBDF12</span><span class="p">,</span><span class="mh">0x2BB3B0E8</span><span class="p">,</span><span class="mh">0x1733AFDA</span><span class="p">,</span><span class="mh">0x8BB86399</span><span class="p">,</span><span class="mh">0xF34B3745</span><span class="p">,</span><span class="mh">0xBB8DEAE0</span><span class="p">,</span><span class="mh">0x8993478D</span><span class="p">,</span><span class="mh">0xEBD3716B</span><span class="p">,</span><span class="mh">0x06FBD6D5</span><span class="p">,</span><span class="mh">0xDBE6F812</span><span class="p">,</span><span class="mh">0x7C23A61D</span><span class="p">,</span><span class="mh">0x13F9D516</span><span class="p">,</span><span class="mh">0x3373D236</span><span class="p">,</span><span class="mh">0x23CC5C6F</span><span class="p">,</span><span class="mh">0x49ABA2FE</span><span class="p">,</span><span class="mh">0x7392C7E4</span><span class="p">,</span><span class="mh">0xC6C333A6</span><span class="p">,</span><span class="mh">0x43A74E9D</span><span class="p">,</span><span class="mh">0xBC1B436E</span><span class="p">,</span><span class="mh">0xAC4BC9B5</span><span class="p">,</span><span class="mh">0x95AC9329</span><span class="p">,</span><span class="mh">0x9C7E40CC</span><span class="p">,</span><span class="mh">0xEF74E3E1</span><span class="p">,</span><span class="mh">0xCC20DB47</span><span class="p">,</span><span class="mh">0x601C72B9</span><span class="p">,</span><span class="mh">0xFC15523E</span><span class="p">,</span><span class="mh">0x1AC40271</span><span class="p">,</span><span class="mh">0x340A7F3A</span><span class="p">,</span><span class="mh">0x5594765A</span><span class="p">,</span><span class="mh">0x043FF643</span><span class="p">,</span><span class="mh">0x2F4C0692</span><span class="p">,</span><span class="mh">0x54616DC8</span><span class="p">,</span><span class="mh">0xA02497CA</span><span class="p">,</span><span class="mh">0x6454E4B1</span><span class="p">,</span><span class="mh">0xDAFCE702</span><span class="p">,</span><span class="mh">0xC45F37C0</span><span class="p">,</span><span class="mh">0x3E847F9D</span><span class="p">,</span><span class="mh">0xF46ABEB9</span><span class="p">,</span><span class="mh">0x445C0F55</span><span class="p">,</span><span class="mh">0xA4342532</span><span class="p">,</span><span class="mh">0xCB349E0D</span><span class="p">,</span><span class="mh">0x9401AC4B</span><span class="p">,</span><span class="mh">0xB1ECEEC5</span><span class="p">,</span><span class="mh">0x5C1E814F</span><span class="p">,</span><span class="mh">0xFEBC9AEE</span><span class="p">,</span><span class="mh">0x6C2B0836</span><span class="p">,</span><span class="mh">0x8464EA26</span><span class="p">,</span><span class="mh">0x3C7593BD</span><span class="p">,</span><span class="mh">0x0B0C7B7E</span><span class="p">,</span><span class="mh">0x0C401AC4</span><span class="p">,</span><span class="mh">0x71D40BB6</span><span class="p">,</span><span class="mh">0x24F5A634</span><span class="p">,</span><span class="mh">0xE8A46C12</span><span class="p">,</span><span class="mh">0x14C02F4D</span><span class="p">,</span><span class="mh">0x927C1CDA</span><span class="p">,</span><span class="mh">0x449EB4C6</span><span class="p">,</span><span class="mh">0x1D148D82</span><span class="p">,</span><span class="mh">0x74AB3DBF</span><span class="p">,</span><span class="mh">0x67CCFD4A</span><span class="p">,</span><span class="mh">0xBCB410BB</span><span class="p">,</span><span class="mh">0x289C8961</span><span class="p">,</span><span class="mh">0x8C8199C2</span><span class="p">,</span><span class="mh">0x5244F9A9</span><span class="p">,</span><span class="mh">0xDCDF0249</span><span class="p">,</span><span class="mh">0xDD2C68F1</span><span class="p">,</span><span class="mh">0xECEA8B30</span><span class="p">,</span><span class="mh">0xA7F41839</span><span class="p">,</span><span class="mh">0x4CE15841</span><span class="p">,</span><span class="mh">0x438C80A6</span><span class="p">,</span><span class="mh">0x7CD4D138</span><span class="p">,</span><span class="mh">0x3954F06E</span><span class="p">,</span><span class="mh">0x2C8A4AB3</span><span class="p">,</span><span class="mh">0xB63C6136</span><span class="p">,</span><span class="mh">0x1CBFC3CA</span><span class="p">,</span><span class="mh">0xCCE411FE</span><span class="p">,</span><span class="mh">0xD4A0EECE</span><span class="p">,</span><span class="mh">0x83B465D5</span><span class="p">,</span><span class="mh">0xE49567B7</span><span class="p">,</span><span class="mh">0xF96C151D</span><span class="p">,</span><span class="mh">0xB4CBFC3C</span><span class="p">,</span><span class="mh">0x76048445</span><span class="p">,</span><span class="mh">0x84FE7545</span><span class="p">,</span><span class="mh">0x0CDCF48D</span><span class="p">,</span><span class="mh">0xBD3716B7</span><span class="p">,</span><span class="mh">0x6FBD6D5E</span><span class="p">,</span><span class="mh">0x8D029FCE</span><span class="p">,</span><span class="mh">0x15651D96</span><span class="p">,</span><span class="mh">0xDD5C0445</span><span class="p">,</span><span class="mh">0x9A0D8CCE</span><span class="p">,</span><span class="mh">0xED698D3C</span><span class="p">,</span><span class="mh">0xE0D5FC06</span><span class="p">,</span><span class="mh">0x2576A038</span><span class="p">,</span><span class="mh">0xAF85882D</span><span class="p">,</span><span class="mh">0x15432941</span><span class="p">,</span><span class="mh">0xD55DF8E5</span><span class="p">,</span><span class="mh">0x451DB2CA</span><span class="p">,</span><span class="mh">0x5A3569BD</span><span class="p">,</span><span class="mh">0x75283BB3</span><span class="p">,</span><span class="mh">0x20ED1975</span><span class="p">,</span><span class="mh">0xD523E8C2</span><span class="p">,</span><span class="mh">0xC49581EA</span><span class="p">,</span><span class="mh">0xE51661BB</span><span class="p">,</span><span class="mh">0xBE4DF122</span><span class="p">,</span><span class="mh">0xB548FA30</span><span class="p">,</span><span class="mh">0x3125607A</span><span class="p">,</span><span class="mh">0x857D7349</span><span class="p">,</span><span class="mh">0x4BFD10B2</span><span class="p">,</span><span class="mh">0x4D625E4D</span><span class="p">,</span><span class="mh">0x04AD6499</span><span class="p">,</span><span class="mh">0x7D57D734</span><span class="p">,</span><span class="mh">0x7E751451</span><span class="p">,</span><span class="mh">0x2D094CBF</span><span class="p">,</span><span class="mh">0xF11D8509</span><span class="p">,</span><span class="mh">0x1D3CC5C6</span><span class="p">,</span><span class="mh">0x8BC5F5C1</span><span class="p">,</span><span class="mh">0x35897936</span><span class="p">,</span><span class="mh">0x12B59265</span><span class="p">,</span><span class="mh">0x05BCF04F</span><span class="p">,</span><span class="mh">0x686DE2AD</span><span class="p">,</span><span class="mh">0x55E26BC4</span><span class="p">,</span><span class="mh">0xE70573F5</span><span class="p">,</span><span class="mh">0x65D7E2BD</span><span class="p">,</span><span class="mh">0x9DDD033D</span><span class="p">,</span><span class="mh">0xADC8CFB9</span><span class="p">,</span><span class="mh">0xD28D7716</span><span class="p">,</span><span class="mh">0x9DFD46C0</span><span class="p">,</span><span class="mh">0xA85507DE</span><span class="p">,</span><span class="mh">0xCDA3DD4B</span><span class="p">,</span><span class="mh">0x273D9686</span><span class="p">,</span><span class="mh">0xFD965432</span><span class="p">,</span><span class="mh">0x5DE5E64E</span><span class="p">,</span><span class="mh">0x5D9D8743</span><span class="p">,</span><span class="mh">0xB99D7ED1</span><span class="p">,</span><span class="mh">0x6DA80E3A</span><span class="p">,</span><span class="mh">0xC3450E19</span><span class="p">,</span><span class="mh">0x3DF695B1</span><span class="p">,</span><span class="mh">0x4C2D9F41</span><span class="p">,</span><span class="mh">0x0DC31CC8</span><span class="p">,</span><span class="mh">0x36F5EF89</span><span class="p">,</span><span class="mh">0xC5DC31CC</span><span class="p">,</span><span class="mh">0x79A59BA2</span><span class="p">,</span><span class="mh">0xF5E9B8B5</span><span class="p">,</span><span class="mh">0x037DEB6A</span><span class="p">,</span><span class="mh">0xA5B7233E</span><span class="p">,</span><span class="mh">0x8C157A32</span><span class="p">,</span><span class="mh">0x9582AA47</span><span class="p">,</span><span class="mh">0xF6CD0AFA</span><span class="p">,</span><span class="mh">0xD625E4DA</span><span class="p">,</span><span class="mh">0x4AD64994</span><span class="p">,</span><span class="mh">0xE6106DA3</span><span class="p">,</span><span class="mh">0x300E395C</span><span class="p">,</span><span class="mh">0xB64EF628</span><span class="p">,</span><span class="mh">0xBF66A804</span><span class="p">,</span><span class="mh">0x867B7F51</span><span class="p">,</span><span class="mh">0xC5BED8CC</span><span class="p">,</span><span class="mh">0x4E645255</span><span class="p">,</span><span class="mh">0x8AEEACE7</span><span class="p">,</span><span class="mh">0x7E51DB2C</span><span class="p">,</span><span class="mh">0xF036DC2F</span><span class="p">,</span><span class="mh">0x2E0F40A7</span><span class="p">,</span><span class="mh">0x7F5E4D77</span><span class="p">,</span><span class="mh">0x1E3AC9DE</span><span class="p">,</span><span class="mh">0x05863DBF</span><span class="p">,</span><span class="mh">0xBE311AAF</span><span class="p">,</span><span class="mh">0xE1FEA520</span><span class="p">,</span><span class="mh">0x8E0493D6</span><span class="p">,</span><span class="mh">0x9B26D5E8</span><span class="p">,</span><span class="mh">0xDE5A085D</span><span class="p">,</span><span class="mh">0x144E44B0</span><span class="p">,</span><span class="mh">0xEE6F8124</span><span class="p">,</span><span class="mh">0x6E963478</span><span class="p">,</span><span class="mh">0x2670AC20</span><span class="p">,</span><span class="mh">0x21C64053</span><span class="p">,</span><span class="mh">0x16452559</span><span class="p">,</span><span class="mh">0x5B1E309B</span><span class="p">,</span><span class="mh">0x461BBED2</span><span class="p">,</span><span class="mh">0xD476A1C3</span><span class="p">,</span><span class="mh">0x762E37AB</span><span class="p">,</span><span class="mh">0xAEAED10B</span><span class="p">,</span><span class="mh">0x5E9B8B5B</span><span class="p">,</span><span class="mh">0x37DEB6AF</span><span class="p">,</span><span class="mh">0x6EAE0222</span><span class="p">,</span><span class="mh">0x4D06C667</span><span class="p">,</span><span class="mh">0x3EF099A9</span><span class="p">,</span><span class="mh">0xC26E573F</span><span class="p">,</span><span class="mh">0x0EC510D0</span><span class="p">,</span><span class="mh">0xB8B627F7</span><span class="p">,</span><span class="mh">0xC6DA3DD4</span><span class="p">,</span><span class="mh">0xF7E653DC</span><span class="p">,</span><span class="mh">0xF6EFB4AD</span><span class="p">,</span><span class="mh">0x8D3E2314</span><span class="p">,</span><span class="mh">0xA6B12F26</span><span class="p">,</span><span class="mh">0x0256B24C</span><span class="p">,</span><span class="mh">0x9684A65F</span><span class="p">,</span><span class="mh">0x788EC284</span><span class="p">,</span><span class="mh">0x368F752E</span><span class="p">,</span><span class="mh">0x9CF65A1B</span><span class="p">,</span><span class="mh">0x06BAFC57</span><span class="p">,</span><span class="mh">0xE62E2AD3</span><span class="p">,</span><span class="mh">0x56E467DC</span><span class="p">,</span><span class="mh">0x6946BB8B</span><span class="p">,</span><span class="mh">0x66D1EEA5</span><span class="p">,</span><span class="mh">0x139ECB43</span><span class="p">,</span><span class="mh">0xAECEC3A1</span><span class="p">,</span><span class="mh">0x5CCEBF68</span><span class="p">,</span><span class="mh">0x9EFB4AD8</span><span class="p">,</span><span class="mh">0x2616CFA0</span><span class="p">,</span><span class="mh">0xCEA5D153</span><span class="p">,</span><span class="mh">0xA97E5EF8</span><span class="p">,</span><span class="mh">0xFE90582A</span><span class="p">,</span><span class="mh">0xD3A62E30</span><span class="p">,</span><span class="mh">0xC7593BD8</span><span class="p">,</span><span class="mh">0xB0C7B7E3</span><span class="p">,</span><span class="mh">0xF76CB2A1</span><span class="p">,</span><span class="mh">0xCA1FC72B</span><span class="p">,</span><span class="mh">0xA732292A</span><span class="p">,</span><span class="mh">0x45775673</span><span class="p">,</span><span class="mh">0x9707A053</span><span class="p">,</span><span class="mh">0x3FAF26BB</span><span class="p">,</span><span class="mh">0x5F188D57</span><span class="p">,</span><span class="mh">0x70FF5290</span><span class="p">,</span><span class="mh">0x6F2D042E</span><span class="p">,</span><span class="mh">0x0A272258</span><span class="p">,</span><span class="mh">0x3F739FA5</span><span class="p">,</span><span class="mh">0x854FB300</span><span class="p">,</span><span class="mh">0x0F4616DC</span><span class="p">,</span><span class="mh">0xFF97C3C8</span><span class="p">,</span><span class="mh">0xAF4DC5AD</span><span class="p">,</span><span class="mh">0x1BEF5B57</span><span class="p">,</span><span class="mh">0x9F784CD4</span><span class="p">,</span><span class="mh">0x61372B9F</span><span class="p">,</span><span class="mh">0xCF26D75F</span><span class="p">,</span><span class="mh">0xEE5FBAC7</span><span class="p">,</span><span class="mh">0xFF135E26</span><span class="p">,</span><span class="mh">0x9487CA0F</span><span class="p">,</span><span class="mh">0x370C7322</span><span class="p">,</span><span class="mh">0xDBD7BE24</span><span class="p">,</span><span class="mh">0x0739FA5B</span><span class="p">,</span><span class="mh">0xA10FCEEC</span><span class="p">,</span><span class="mh">0x576761D0</span><span class="p">,</span><span class="mh">0x2E675FB4</span><span class="p">,</span><span class="mh">0x6752E8A9</span><span class="p">,</span><span class="mh">0x54BF2F7C</span><span class="p">,</span><span class="mh">0x4FE75459</span><span class="p">,</span><span class="mh">0xCDCF48D8</span><span class="p">,</span><span class="mh">0x7FD2DD20</span><span class="p">,</span><span class="mh">0xB7173810</span><span class="p">,</span><span class="mh">0x2F8C46AB</span><span class="p">,</span><span class="mh">0x387FA948</span><span class="p">,</span><span class="mh">0x1FB9CFD2</span><span class="p">,</span><span class="mh">0x42A7D980</span><span class="p">,</span><span class="mh">0xD7A6E2D6</span><span class="p">,</span><span class="mh">0x0DF7ADAB</span><span class="p">,</span><span class="mh">0xE7936BAF</span><span class="p">,</span><span class="mh">0x772FDD63</span><span class="p">,</span><span class="mh">0xB7CDF024</span><span class="p">,</span><span class="mh">0xF8474C3B</span><span class="p">,</span><span class="mh">0x87F8795D</span><span class="p">,</span><span class="mh">0x829F3CF3</span><span class="p">,</span><span class="mh">0x27F3AA2C</span><span class="p">,</span><span class="mh">0x66E7A46C</span><span class="p">,</span><span class="mh">0x17C62355</span><span class="p">,</span><span class="mh">0x1C3FD4A4</span><span class="p">,</span><span class="mh">0x4798B8DE</span><span class="p">,</span><span class="mh">0x935745FC</span><span class="p">,</span><span class="mh">0x77AD31A7</span><span class="p">,</span><span class="mh">0xE98F3534</span><span class="p">,</span><span class="mh">0xBFB21CA3</span><span class="p">,</span><span class="mh">0xA6DF411F</span><span class="p">,</span><span class="mh">0x8F8795DA</span><span class="p">,</span><span class="mh">0xDC0731D7</span><span class="p">,</span><span class="mh">0xDFD90E51</span><span class="p">,</span><span class="mh">0x536FA08F</span><span class="p">,</span><span class="mh">0xEFEC8728</span><span class="p">,</span><span class="mh">0x29B7D047</span><span class="p">]</span>
+
+<span class="n">k</span><span class="o">=</span><span class="p">[</span><span class="mh">0x2175da3a</span><span class="p">,</span><span class="o">-</span><span class="mh">0x4c241d25</span><span class="p">,</span><span class="mh">0x149b411</span><span class="p">,</span><span class="o">-</span><span class="mh">0x2b15395b</span><span class="p">]</span>
+<span class="n">delta</span><span class="o">=</span><span class="mh">0x9e3779b9</span>
+<span class="n">summary</span><span class="o">=</span><span class="mh">0xc6ef3720</span>
+<span class="n">result</span><span class="o">=</span><span class="p">[</span><span class="mh">0x26e17720</span><span class="p">,</span><span class="mh">0x81814336</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">32</span><span class="p">):</span>
+    <span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-=</span><span class="p">((</span><span class="n">summary</span><span class="o">+</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">&amp;</span><span class="mh">0xffffffff</span><span class="p">)</span> <span class="o">^</span> <span class="p">(((</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&gt;&gt;</span><span class="mi">5</span><span class="p">)</span><span class="o">-</span><span class="mh">0x2b15395b</span><span class="p">)</span><span class="o">&amp;</span><span class="mh">0xffffffff</span><span class="p">)</span> <span class="o">^</span> <span class="p">(((</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&lt;&lt;</span><span class="mi">4</span><span class="p">)</span><span class="o">+</span><span class="mh">0x149b411</span><span class="p">)</span><span class="o">&amp;</span><span class="mh">0xffffffff</span><span class="p">)</span>
+    <span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">&amp;=</span><span class="mh">0xffffffff</span>
+    <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-=</span><span class="p">((</span><span class="n">summary</span><span class="o">+</span><span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">&amp;</span><span class="mh">0xffffffff</span><span class="p">)</span> <span class="o">^</span> <span class="p">(((</span><span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;&gt;</span><span class="mi">5</span><span class="p">)</span><span class="o">-</span><span class="mh">0x4c241d25</span><span class="p">)</span><span class="o">&amp;</span><span class="mh">0xffffffff</span><span class="p">)</span> <span class="o">^</span> <span class="p">(((</span><span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">&lt;&lt;</span><span class="mi">4</span><span class="p">)</span><span class="o">+</span><span class="mh">0x2175da3a</span><span class="p">)</span><span class="o">&amp;</span><span class="mh">0xffffffff</span><span class="p">)</span>
+    <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&amp;=</span><span class="mh">0xffffffff</span>
+    <span class="n">summary</span><span class="o">-=</span><span class="n">delta</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ans=&#39;</span><span class="p">,</span><span class="nb">map</span><span class="p">(</span><span class="nb">hex</span><span class="p">,</span><span class="n">result</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">name</span><span class="p">:</span>
+    <span class="n">v14</span><span class="o">=</span><span class="n">origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">^</span><span class="nb">ord</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
+    <span class="n">index</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">v14</span><span class="o">&amp;</span><span class="mh">0xff</span><span class="p">)</span>
+    <span class="n">origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="n">origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&gt;&gt;</span><span class="mi">8</span><span class="p">)</span><span class="o">+</span><span class="p">((</span><span class="n">origin</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">&amp;</span><span class="mh">0xff</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="mi">24</span><span class="p">)</span>
+    <span class="n">origin</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;&gt;=</span><span class="mi">8</span>
+    <span class="n">origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">^=</span><span class="n">data</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+    <span class="n">origin</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">^=</span><span class="n">data</span><span class="p">[</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;origin=&#39;</span><span class="p">,</span><span class="nb">map</span><span class="p">(</span><span class="nb">hex</span><span class="p">,</span><span class="n">origin</span><span class="p">))</span>
+
+<span class="n">blks</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
+    <span class="n">e</span><span class="o">=</span><span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">&amp;</span><span class="mh">0xff000000</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">e</span><span class="o">==</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&amp;</span><span class="mh">0xff000000</span> <span class="ow">and</span> <span class="n">i</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+            <span class="n">blks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+            <span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="p">((((</span><span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">^</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span><span class="o">&lt;&lt;</span><span class="mi">8</span><span class="p">)</span><span class="o">&amp;</span><span class="mh">0xffffffff</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">hex</span><span class="p">,</span><span class="n">result</span><span class="p">))</span>
+            <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">^</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">&amp;</span><span class="mh">0xffffffff</span>
+            <span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+=</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&amp;</span><span class="mh">0xff000000</span><span class="p">)</span><span class="o">&gt;&gt;</span><span class="mi">24</span>
+            <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&lt;&lt;</span><span class="mi">8</span><span class="p">)</span><span class="o">&amp;</span><span class="mh">0xffffffff</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="nb">hex</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">x</span><span class="p">]),</span><span class="n">blks</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">num</span><span class="p">:</span>
+    <span class="n">origin</span><span class="o">=</span><span class="p">[</span><span class="mh">0x424fa357</span><span class="p">,</span> <span class="mh">0x3f6a6fab</span><span class="p">]</span>
+    <span class="n">ind</span><span class="o">=</span><span class="p">[]</span>
+    <span class="n">number</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">blks</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">i</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+            <span class="n">v14</span><span class="o">=</span><span class="n">origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">^</span><span class="nb">ord</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+            <span class="n">index</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">v14</span><span class="o">&amp;</span><span class="mh">0xff</span><span class="p">)</span>
+            <span class="n">number</span><span class="o">+=</span><span class="n">n</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">index</span><span class="o">=</span><span class="n">blks</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">blks</span><span class="p">)</span><span class="o">-</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span>
+            <span class="n">number</span><span class="o">+=</span><span class="p">(</span><span class="nb">chr</span><span class="p">((</span><span class="n">origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">^</span><span class="p">(</span><span class="n">index</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span><span class="o">&amp;</span><span class="mh">0xff</span><span class="p">))</span>
+        <span class="n">origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="n">origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&gt;&gt;</span><span class="mi">8</span><span class="p">)</span><span class="o">+</span><span class="p">((</span><span class="n">origin</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">&amp;</span><span class="mh">0xff</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="mi">24</span><span class="p">)</span>
+        <span class="n">origin</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;&gt;=</span><span class="mi">8</span>
+        <span class="n">origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">^=</span><span class="n">data</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+        <span class="n">origin</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">^=</span><span class="n">data</span><span class="p">[</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;n=&#39;</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="s1">&#39; i=&#39;</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="nb">map</span><span class="p">(</span><span class="nb">hex</span><span class="p">,</span><span class="n">origin</span><span class="p">),</span><span class="n">number</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">hex</span><span class="p">,</span><span class="n">origin</span><span class="p">))</span>
+</pre></div>
+
+<p><img alt="" src="../img/baha_d20.png" />
+可以看到 201914153 是符合条件的输入</p>
+<p>随后 flag 即为<code>scuctf{b@sE2019_scucs_201914153}</code></p>
+                
+                  
+                
+              
+              
+                
+
+
+  <h2 id="__comments">评论</h2>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = "None";
+      this.page.identifier =
+        "None";
+    };
+    (function() {
+      var d = document, s = d.createElement("script");
+      s.src = "//scu-ctf.disqus.com/embed.js";
+      s.setAttribute("data-timestamp", +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Pwn/" title="PWN" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                PWN
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Web/" title="Web" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                Web
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.2ba8dec4.js"></script>
+      
+        
+        
+          
+          <script src="../../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+        <script src="https://cdnjs.loli.net/ajax/libs/pangu/3.3.0/pangu.min.js"></script>
+      
+        <script src="../../../_static/js/extra.js"></script>
+      
+        <script src="https://cdnjs.loli.net/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

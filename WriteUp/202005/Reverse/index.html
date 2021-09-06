@@ -1,0 +1,1778 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.0">
+    
+    
+      
+        <title>Reverse - SCU-CTF HomePage</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.982221ab.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:300,400,400i,700|Source+Code+Pro">
+        <style>body,input{font-family:"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../_static/css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="white" data-md-color-accent="red">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#reverse" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../.." title="SCU-CTF HomePage" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">school</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              SCU-CTF HomePage
+            </span>
+            <span class="md-header-nav__topic">
+              Reverse
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/scu-ctf/scu-ctf.github.io/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../.." title="Introduction" class="md-tabs__link">
+        Introduction
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../0X401-Wiki/" title="0X401 Wiki" class="md-tabs__link">
+          0X401 Wiki
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../2018/Web/" title="WriteUp" class="md-tabs__link">
+          WriteUp
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../比赛信息/" title="比赛信息" class="md-tabs__link">
+          比赛信息
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../.." title="SCU-CTF HomePage" class="md-nav__button md-logo">
+      
+        <i class="md-icon">school</i>
+      
+    </a>
+    SCU-CTF HomePage
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/scu-ctf/scu-ctf.github.io/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      0X401 Wiki
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        0X401 Wiki
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0X401-Wiki/" title="0X401-Wiki" class="md-nav__link">
+      0X401-Wiki
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      Web
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        Web
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0X401-Wiki/Web/Web/" title="Web" class="md-nav__link">
+      Web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-2" type="checkbox" id="nav-2-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2-2">
+      Java
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-2-2">
+        Java
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0X401-Wiki/Web/java/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-3" type="checkbox" id="nav-2-2-3">
+    
+    <label class="md-nav__link" for="nav-2-2-3">
+      Nodejs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-2-3">
+        Nodejs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0X401-Wiki/Web/nodejs/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-4" type="checkbox" id="nav-2-2-4">
+    
+    <label class="md-nav__link" for="nav-2-2-4">
+      Php
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-2-4">
+        Php
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0X401-Wiki/Web/php/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-5" type="checkbox" id="nav-2-2-5">
+    
+    <label class="md-nav__link" for="nav-2-2-5">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-2-5">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0X401-Wiki/Web/python/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      WriteUp
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        WriteUp
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      2018
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        2018
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../2018/Web/" title="Web" class="md-nav__link">
+      Web
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      201905
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        201905
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../201905/Crypto/" title="Crypto" class="md-nav__link">
+      Crypto
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../201905/Misc/" title="MISC" class="md-nav__link">
+      MISC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../201905/Pwn/" title="PWN" class="md-nav__link">
+      PWN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../201905/Reverse/" title="REVERSE" class="md-nav__link">
+      REVERSE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../201905/Web/" title="Web" class="md-nav__link">
+      Web
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" checked>
+    
+    <label class="md-nav__link" for="nav-3-3">
+      202005
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        202005
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Misc/" title="Misc" class="md-nav__link">
+      Misc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Reverse
+      </label>
+    
+    <a href="./" title="Reverse" class="md-nav__link md-nav__link--active">
+      Reverse
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="真正的签到" class="md-nav__link">
+    真正的签到
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="出题思路" class="md-nav__link">
+    出题思路
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="解题方法" class="md-nav__link">
+    解题方法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" title="法1" class="md-nav__link">
+    法1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" title="法2" class="md-nav__link">
+    法2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="太空大战" class="md-nav__link">
+    太空大战
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="出题思路" class="md-nav__link">
+    出题思路
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="解题方法" class="md-nav__link">
+    解题方法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#py" title="PY 交易" class="md-nav__link">
+    PY 交易
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="出题思路" class="md-nav__link">
+    出题思路
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="解题方法" class="md-nav__link">
+    解题方法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" title="法1" class="md-nav__link">
+    法1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" title="法2" class="md-nav__link">
+    法2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#onibase64" title="ONIbase64" class="md-nav__link">
+    ONIbase64
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="出题思路" class="md-nav__link">
+    出题思路
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" title="解题方法" class="md-nav__link">
+    解题方法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easy_reeasy_base" title="easy_re&amp;easy_base" class="md-nav__link">
+    easy_re&amp;easy_base
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" title="出题思路" class="md-nav__link">
+    出题思路
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" title="解题方法" class="md-nav__link">
+    解题方法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" title="小结" class="md-nav__link">
+    小结
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Web/" title="Web" class="md-nav__link">
+      Web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pwn/" title="Pwn" class="md-nav__link">
+      Pwn
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      比赛信息
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        比赛信息
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../比赛信息/" title="比赛信息发布" class="md-nav__link">
+      比赛信息发布
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="真正的签到" class="md-nav__link">
+    真正的签到
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="出题思路" class="md-nav__link">
+    出题思路
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="解题方法" class="md-nav__link">
+    解题方法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" title="法1" class="md-nav__link">
+    法1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" title="法2" class="md-nav__link">
+    法2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="太空大战" class="md-nav__link">
+    太空大战
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="出题思路" class="md-nav__link">
+    出题思路
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="解题方法" class="md-nav__link">
+    解题方法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#py" title="PY 交易" class="md-nav__link">
+    PY 交易
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="出题思路" class="md-nav__link">
+    出题思路
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="解题方法" class="md-nav__link">
+    解题方法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" title="法1" class="md-nav__link">
+    法1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" title="法2" class="md-nav__link">
+    法2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#onibase64" title="ONIbase64" class="md-nav__link">
+    ONIbase64
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="出题思路" class="md-nav__link">
+    出题思路
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" title="解题方法" class="md-nav__link">
+    解题方法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easy_reeasy_base" title="easy_re&amp;easy_base" class="md-nav__link">
+    easy_re&amp;easy_base
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" title="出题思路" class="md-nav__link">
+    出题思路
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" title="解题方法" class="md-nav__link">
+    解题方法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" title="小结" class="md-nav__link">
+    小结
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/scu-ctf/scu-ctf.github.io/edit/master/docs/WriteUp/202005/Reverse.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="reverse">Reverse<a class="headerlink" href="#reverse" title="Permanent link">&para;</a></h1>
+<h2 id="_1">真正的签到<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">出题思路<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>本身作为签到题就没必要太刁难人，主要考察脱压缩壳（re选手基础技能），正好在4月的脱壳分享会也说了要出一道这种题。脱完壳后就打算搞个简单的加减乘除，但是还是出题时候考虑不周，出现了多解的情况。（按照正常思路一般都是一个解。）</p>
+<p>问题主要出在当时做了一个除法的操作，因为C语言中5/2 与4/2都为2。</p>
+<h3 id="_3">解题方法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h4 id="1">法1<a class="headerlink" href="#1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>第一步，查壳，发现为upx。</li>
+</ul>
+<p><img alt="1" src="https://cdn.jsdelivr.net/gh/loveminhal/myblog-picgo/blog/20200526001329.png" /></p>
+<ul>
+<li>
+<p>直接可以用脱壳软件脱壳也可esp定律等手动脱壳。</p>
+</li>
+<li>
+<p>脱壳后分析代码。</p>
+</li>
+</ul>
+<p><img alt="2" src="https://cdn.jsdelivr.net/gh/loveminhal/myblog-picgo/blog/20200526001330.png" /></p>
+<ul>
+<li>直接写脚本</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+      <span class="kt">char</span> <span class="n">fstr</span><span class="p">[</span><span class="mi">17</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;pbm`KkL`dKQ2KeJLd&quot;</span><span class="p">;</span>
+      <span class="kt">char</span> <span class="n">theflag</span><span class="p">[</span><span class="mi">17</span><span class="p">];</span>
+  <span class="kt">char</span> <span class="n">flag</span><span class="p">[</span><span class="mi">17</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;scu_ctf_f4k3_f14g&quot;</span><span class="p">;</span>    
+  <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>       
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">17</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="n">theflag</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">fstr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="mi">2</span><span class="o">-</span><span class="n">flag</span><span class="p">[</span><span class="n">i</span><span class="p">];</span> 
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">17</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c&quot;</span><span class="p">,</span><span class="n">theflag</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>      
+  <span class="p">}</span>
+</pre></div>
+
+<h4 id="2">法2<a class="headerlink" href="#2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>前面步骤一直，后面直接angr梭哈</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">angr</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">angr</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s1">&#39;sign.exe&#39;</span><span class="p">,</span> <span class="n">auto_load_libs</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">st</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">factory</span><span class="o">.</span><span class="n">call_state</span><span class="p">(</span><span class="n">addr</span><span class="o">=</span><span class="mh">0x401520</span><span class="p">,</span> <span class="n">add_options</span><span class="o">=</span><span class="n">angr</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">unicorn</span><span class="p">)</span>
+<span class="n">sim</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">factory</span><span class="o">.</span><span class="n">simgr</span><span class="p">(</span><span class="n">st</span><span class="p">)</span>
+<span class="n">sim</span><span class="o">.</span><span class="n">explore</span><span class="p">(</span><span class="n">find</span><span class="o">=</span><span class="mh">0x40155e</span><span class="p">,</span> <span class="n">avoid</span><span class="o">=</span><span class="mh">0x40156c</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sim</span><span class="o">.</span><span class="n">one_found</span><span class="o">.</span><span class="n">posix</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+</pre></div>
+
+<p>这个地方就可以看出，有多解情况了。</p>
+<h2 id="_4">太空大战<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="_5">出题思路<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>这题是由God sun出的，大概主要考察一个.net，加之让比赛变的更有趣一点，放了个小游戏上去。只要打完180个灰机（一个不落）控制台就会输出flag</p>
+<p>（180个飞机，无需逆向，轻轻松松就可以打败。</p>
+<h3 id="_6">解题方法<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>关键代码在assets/bin/Date/Managed/Assembly-CSharp.dll</li>
+<li>⽤.NET Reflector打开分析</li>
+</ul>
+<p><img alt="3" src="https://cdn.jsdelivr.net/gh/loveminhal/myblog-picgo/blog/20200526001334.jpg" /></p>
+<ul>
+<li>
+<p>经过分析可以得知，每击落一架分级，调用一次这个关键方法。由代码可以看到总共需要摧毁了180个。（其实总共也就180个）</p>
+</li>
+<li>
+<p>写解题脚本</p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">hashlib</span>
+<span class="n">mask</span> <span class="o">=</span><span class="p">[</span><span class="mi">49552</span><span class="p">,</span><span class="mi">26516</span><span class="p">,</span><span class="mi">15988</span><span class="p">,</span><span class="mi">29987</span><span class="p">,</span><span class="mi">52902</span><span class="p">,</span><span class="mi">33151</span><span class="p">,</span><span class="mi">8086</span><span class="p">,</span><span class="mi">39920</span><span class="p">,</span><span class="mi">3604</span><span class="p">,</span><span class="mi">21497</span><span class="p">,</span><span class="mi">19862</span><span class="p">,</span><span class="mi">12268</span><span class="p">,</span><span class="mi">50822</span><span class="p">,</span><span class="mi">26111</span><span class="p">,</span><span class="mi">35391</span><span class="p">,</span><span class="mi">20661</span><span class="p">,</span><span class="mi">6370</span><span class="p">,</span><span class="mi">14029</span><span class="p">,</span><span class="mi">26707</span><span class="p">,</span><span class="mi">42890</span><span class="p">,</span><span class="mi">19391</span><span class="p">,</span><span class="mi">13836</span><span class="p">,</span><span class="mi">61102</span><span class="p">,</span><span class="mi">38705</span><span class="p">,</span><span class="mi">45159</span><span class="p">,</span><span class="mi">12927</span><span class="p">,</span><span class="mi">47794</span><span class="p">,</span><span class="mi">39183</span><span class="p">,</span><span class="mi">20776</span><span class="p">,</span><span class="mi">44532</span><span class="p">,</span><span class="mi">18925</span><span class="p">,</span><span class="mi">4854</span><span class="p">,</span><span class="mi">60596</span><span class="p">,</span><span class="mi">11941</span><span class="p">,</span><span class="mi">28994</span><span class="p">,</span><span class="mi">11166</span><span class="p">,</span><span class="mi">57586</span><span class="p">,</span><span class="mi">48918</span><span class="p">,</span><span class="mi">13199</span><span class="p">,</span><span class="mi">42006</span><span class="p">,</span><span class="mi">62781</span><span class="p">,</span><span class="mi">31480</span><span class="p">,</span><span class="mi">50464</span><span class="p">,</span><span class="mi">53893</span><span class="p">,</span><span class="mi">21233</span><span class="p">,</span><span class="mi">61456</span><span class="p">,</span><span class="mi">55842</span><span class="p">,</span><span class="mi">46591</span><span class="p">,</span><span class="mi">10574</span><span class="p">,</span><span class="mi">45253</span><span class="p">,</span><span class="mi">50991</span><span class="p">,</span><span class="mi">44866</span><span class="p">,</span><span class="mi">45945</span><span class="p">,</span><span class="mi">17105</span><span class="p">,</span><span class="mi">27273</span><span class="p">,</span><span class="mi">18925</span><span class="p">,</span><span class="mi">41001</span><span class="p">,</span><span class="mi">64310</span><span class="p">,</span><span class="mi">51846</span><span class="p">,</span><span class="mi">46279</span><span class="p">,</span><span class="mi">14977</span><span class="p">,</span><span class="mi">61079</span><span class="p">,</span><span class="mi">26330</span><span class="p">,</span><span class="mi">1192</span><span class="p">,</span><span class="mi">61190</span><span class="p">,</span><span class="mi">38989</span><span class="p">,</span><span class="mi">36161</span><span class="p">,</span><span class="mi">17001</span><span class="p">,</span><span class="mi">38576</span><span class="p">,</span><span class="mi">49567</span><span class="p">,</span><span class="mi">55929</span><span class="p">,</span><span class="mi">31759</span><span class="p">,</span><span class="mi">54550</span><span class="p">,</span><span class="mi">12759</span><span class="p">,</span><span class="mi">13756</span><span class="p">,</span><span class="mi">60929</span><span class="p">,</span><span class="mi">36365</span><span class="p">,</span><span class="mi">27308</span><span class="p">,</span><span class="mi">57132</span><span class="p">,</span><span class="mi">42483</span><span class="p">,</span><span class="mi">42263</span><span class="p">,</span><span class="mi">57086</span><span class="p">,</span><span class="mi">55839</span><span class="p">,</span><span class="mi">13568</span><span class="p">,</span><span class="mi">37191</span><span class="p">,</span><span class="mi">18388</span><span class="p">,</span><span class="mi">34592</span><span class="p">,</span><span class="mi">4189</span><span class="p">,</span><span class="mi">65492</span><span class="p">,</span><span class="mi">24673</span><span class="p">,</span><span class="mi">27016</span><span class="p">,</span><span class="mi">6941</span><span class="p">,</span><span class="mi">33229</span><span class="p">,</span>    <span class="mi">4180</span><span class="p">,</span><span class="mi">35454</span><span class="p">,</span><span class="mi">64874</span><span class="p">,</span><span class="mi">36708</span><span class="p">,</span><span class="mi">22948</span><span class="p">]</span>
+<span class="n">l</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
+<span class="n">secret</span> <span class="o">=</span> <span class="s2">&quot;jFEQ6xFkUxKGzUbn&quot;</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">181</span><span class="p">):</span>
+    <span class="n">secret</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">((</span><span class="n">secret</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">mask</span><span class="p">[</span><span class="n">i</span><span class="o">%</span><span class="n">l</span><span class="p">]))</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+    <span class="k">if</span> <span class="s1">&#39;6a37460f25c719a4&#39;</span> <span class="ow">in</span> <span class="n">secret</span><span class="p">:</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="n">secret</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">16</span><span class="p">])</span>
+</pre></div>
+
+<ul>
+<li>注意这里很多选手以为只调用一次，所以直接拿180%98 去处理，算出来的是错的。</li>
+</ul>
+<h2 id="py">PY 交易<a class="headerlink" href="#py" title="Permanent link">&para;</a></h2>
+<h3 id="_7">出题思路<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>这个题目出题主要想考察一下python的逆向，校内打校外比赛的不多，见得题目相对较少。所以本着拓宽学习的目的，出了这道还原字节码的题目。相对来说这道题不是太难，通过相关博客搜索，然后一步步分析还原，还原后dis检验。</p>
+<ul>
+<li>参考文章 <a href="https://bbs.pediy.com/thread-246683.htm">https://bbs.pediy.com/thread-246683.htm</a></li>
+</ul>
+<h3 id="_8">解题方法<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>首先直接还原python代码就好了，还原结果如下</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="n">inputs</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;please your flag:&quot;</span><span class="p">)</span>
+<span class="n">inputs</span> <span class="o">=</span> <span class="n">inputs</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">flag</span> <span class="o">=</span> <span class="s2">&quot;th31_scuctf_eXclus1v3&quot;</span>
+<span class="n">theflag</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">j</span> <span class="o">=</span><span class="mi">0</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">inputs</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error!&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span><span class="o">-</span><span class="mi">14</span><span class="p">):</span>
+    <span class="n">theflag</span> <span class="o">+=</span> <span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">+</span><span class="nb">ord</span><span class="p">(</span><span class="n">inputs</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">8</span><span class="p">])))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span><span class="o">-</span><span class="mi">6</span><span class="p">):</span>
+    <span class="n">theflag</span> <span class="o">+=</span> <span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">+</span><span class="nb">ord</span><span class="p">(</span><span class="n">inputs</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">8</span><span class="p">])))</span>
+    <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">flag</span><span class="p">)):</span>
+    <span class="n">theflag</span> <span class="o">+=</span> <span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">3</span><span class="p">])</span><span class="o">+</span><span class="nb">ord</span><span class="p">(</span><span class="n">inputs</span><span class="p">[</span><span class="n">i</span><span class="p">])))</span>
+<span class="n">flags</span> <span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">theflag</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">flags</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">):</span>
+    <span class="n">flags</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">flags</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">+</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="c1">#Flag scuctf{}</span>
+<span class="c1">#The flag text starts with &quot;d1&quot; and the eighth bit is &quot;3&quot;</span>
+<span class="n">flagt</span> <span class="o">=</span> <span class="n">flags</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">flags</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">flags</span><span class="p">)]</span>
+<span class="n">theflag</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">flagt</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">flags</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">):</span>
+    <span class="n">theflag</span> <span class="o">+=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">flags</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+<span class="k">if</span><span class="p">(</span><span class="n">theflag</span> <span class="o">==</span> <span class="s1">&#39;×</span><span class="se">\x8b</span><span class="s1">ÙÍ</span><span class="se">\x8c</span><span class="s1">ÓÜî¤ú±¬¤¤úÖíÒ&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You win!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error!!!&quot;</span><span class="p">)</span>
+</pre></div>
+
+<ul>
+<li>接着就是逆向分析，写解题脚本</li>
+</ul>
+<h4 id="1_1">法1<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="n">enflag</span> <span class="o">=</span> <span class="s1">&#39;×</span><span class="se">\x8b</span><span class="s1">ÙÍ</span><span class="se">\x8c</span><span class="s1">ÓÜî¤ú±¬¤¤úÖíÒ&#39;</span>
+<span class="n">flag</span> <span class="o">=</span> <span class="s1">&#39;th31_scuctf_eXclus1v3&#39;</span>
+<span class="n">ans</span> <span class="o">=</span> <span class="s1">&#39;d1&#39;</span> <span class="o">+</span> <span class="s1">&#39;*&#39;</span> <span class="o">*</span> <span class="mi">19</span>
+<span class="n">step1</span> <span class="o">=</span> <span class="n">enflag</span><span class="p">[</span><span class="mi">9</span><span class="p">:]</span> <span class="o">+</span> <span class="n">enflag</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">9</span><span class="p">]</span>
+<span class="n">theflag</span> <span class="o">=</span><span class="s1">&#39;&#39;</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">):</span>
+    <span class="n">theflag</span> <span class="o">+=</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">step1</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">-</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">theflag</span> <span class="o">+=</span> <span class="n">step1</span><span class="p">[</span><span class="mi">9</span><span class="p">:]</span>
+<span class="n">inputs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">7</span><span class="p">):</span>
+    <span class="n">inputs</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">8</span><span class="p">]</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">theflag</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">-</span> <span class="nb">ord</span><span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">15</span><span class="p">):</span>
+    <span class="n">inputs</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">8</span><span class="p">]</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">theflag</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">3</span><span class="p">])</span> <span class="o">-</span> <span class="nb">ord</span><span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">21</span><span class="p">):</span>
+    <span class="n">inputs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">theflag</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">3</span><span class="p">])</span> <span class="o">-</span> <span class="nb">ord</span><span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">3</span><span class="p">]))</span>
+<span class="n">inputs</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;3&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;scuctf{&#39;</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;}&#39;</span><span class="p">)</span>
+</pre></div>
+
+<h4 id="2_1">法2<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">z3</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">flag</span> <span class="o">=</span> <span class="s2">&quot;th31_scuctf_eXclus1v3&quot;</span>
+<span class="n">dist</span> <span class="o">=</span> <span class="s2">&quot;×ÙÍÓÜî¤ú±¬¤¤úÖíÒ&quot;</span>
+<span class="n">inp</span> <span class="o">=</span> <span class="p">[</span><span class="n">BitVec</span><span class="p">((</span><span class="s1">&#39;x</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">i</span><span class="p">),</span> <span class="mi">8</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">flag</span><span class="p">))]</span>
+<span class="n">theflag</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span> <span class="o">-</span> <span class="mi">14</span><span class="p">):</span>
+    <span class="n">theflag</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">+</span> <span class="n">inp</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">8</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span> <span class="o">-</span> <span class="mi">6</span><span class="p">):</span>
+    <span class="n">theflag</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">+</span> <span class="n">inp</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">8</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span> <span class="o">-</span> <span class="mi">6</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">flag</span><span class="p">)):</span>
+    <span class="n">theflag</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">3</span><span class="p">])</span> <span class="o">+</span> <span class="n">inp</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="n">flags</span> <span class="o">=</span> <span class="p">[</span><span class="n">_</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">theflag</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">flags</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="n">flags</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">flags</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="mi">20</span>
+
+<span class="n">theflag</span> <span class="o">=</span> <span class="n">theflag</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">flags</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">:]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">flags</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="n">theflag</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">flags</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="n">solver</span> <span class="o">=</span> <span class="n">Solver</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">theflag</span><span class="p">,</span> <span class="n">dist</span><span class="p">):</span>
+    <span class="n">solver</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="n">solver</span><span class="o">.</span><span class="n">check</span><span class="p">()</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">solver</span><span class="o">.</span><span class="n">model</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">inp</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="n">model</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">.</span><span class="n">as_long</span><span class="p">()),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+
+<ul>
+<li>题目前两位和第八位无法解除，题目中已经提示具体字符</li>
+</ul>
+<h2 id="onibase64">ONIbase64<a class="headerlink" href="#onibase64" title="Permanent link">&para;</a></h2>
+<h3 id="_9">出题思路<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>本道题主要就是考察一个ollvm平坦化。也没想到这么惨烈。</p>
+<h3 id="_10">解题方法<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>文件拉到最后就可以看到编译器地址，直接把它pull下来，编译.s文件得到可执行文件。</p>
+</li>
+<li>
+<p>拖入IDA分析，是个标准的平坦化。</p>
+</li>
+</ul>
+<p><img alt="6" src="https://cdn.jsdelivr.net/gh/loveminhal/myblog-picgo/blog/20200526001331.png" /></p>
+<ul>
+<li>
+<p>参考<a href="https://github.com/pcy190/deflat ">https://github.com/pcy190/deflat </a>去除平坦化</p>
+</li>
+<li>
+<p>然后直接F5写解密脚本</p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">z3</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
+<span class="n">table</span> <span class="o">=</span> <span class="s1">&#39;ZAnUX1W2oPNQ4sBMOd/+ChfGI5r8Hvt3uaLkbDgcyJYTipez6mxF0SEqRjVKwl97&#39;</span>
+<span class="n">coding</span> <span class="o">=</span> <span class="s1">&#39;5auRs6a4A2lEUObG5+uoPGuWHnimZLXtvkyEHxCFoal5&#39;</span>
+<span class="n">dist</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">BitVecVal</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="mi">6</span><span class="p">),</span> <span class="n">coding</span><span class="p">)</span>
+<span class="n">flag</span> <span class="o">=</span> <span class="p">[</span><span class="n">BitVec</span><span class="p">(</span><span class="s1">&#39;c</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">i</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">32</span><span class="p">)]</span>
+<span class="n">total</span> <span class="o">=</span> <span class="n">Concat</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="n">Extract</span><span class="p">(</span><span class="mi">32</span> <span class="o">*</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">32</span> <span class="o">*</span> <span class="n">i</span><span class="p">,</span> <span class="n">total</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">)]</span>
+<span class="n">temps</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">^</span> <span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="o">^</span> <span class="n">temps</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">s</span><span class="p">]</span>
+<span class="n">s</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+<span class="n">total</span> <span class="o">=</span> <span class="n">Concat</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="n">bits</span> <span class="o">=</span> <span class="p">[</span><span class="n">Extract</span><span class="p">(</span><span class="mi">8</span> <span class="o">*</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">i</span><span class="p">,</span> <span class="n">total</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">32</span><span class="p">)]</span>
+<span class="n">bits</span> <span class="o">=</span> <span class="n">bits</span> <span class="o">+</span> <span class="p">[</span><span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">^</span> <span class="n">y</span><span class="p">,</span> <span class="n">bits</span><span class="p">)]</span>
+<span class="n">tup</span> <span class="o">=</span> <span class="p">[</span><span class="n">bits</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="mi">3</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">bits</span><span class="p">),</span> <span class="mi">3</span><span class="p">)]</span>
+<span class="n">outs</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">padding</span> <span class="o">=</span> <span class="n">BitVecVal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">tup</span><span class="p">):</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">Concat</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+    <span class="n">s1</span> <span class="o">=</span> <span class="n">Extract</span><span class="p">(</span><span class="mi">23</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+    <span class="n">s2</span> <span class="o">=</span> <span class="n">Extract</span><span class="p">(</span><span class="mi">17</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+    <span class="n">s3</span> <span class="o">=</span> <span class="n">Extract</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+    <span class="n">s4</span> <span class="o">=</span> <span class="n">Extract</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+    <span class="n">outs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span>
+    <span class="n">outs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span>
+    <span class="n">outs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s3</span><span class="p">)</span>
+    <span class="n">outs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s4</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">v2</span> <span class="ow">in</span> <span class="n">tup</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:]:</span>
+        <span class="n">v2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">v2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">^</span> <span class="n">Concat</span><span class="p">(</span><span class="n">padding</span><span class="p">,</span> <span class="n">s1</span><span class="p">)</span>
+        <span class="n">v2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">v2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">^</span> <span class="n">Concat</span><span class="p">(</span><span class="n">padding</span><span class="p">,</span> <span class="n">s2</span><span class="p">)</span>
+        <span class="n">v2</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">v2</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">^</span> <span class="n">Concat</span><span class="p">(</span><span class="n">padding</span><span class="p">,</span> <span class="n">s3</span><span class="p">)</span>
+<span class="n">solve</span> <span class="o">=</span> <span class="n">Solver</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">dist</span><span class="p">):</span>
+    <span class="n">solve</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">outs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">v</span><span class="p">)</span>
+<span class="n">solve</span><span class="o">.</span><span class="n">check</span><span class="p">()</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">solve</span><span class="o">.</span><span class="n">model</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">chr</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span><span class="o">.</span><span class="n">as_long</span><span class="p">()),</span>
+<span class="nb">reversed</span><span class="p">(</span><span class="n">flag</span><span class="p">))))</span>
+</pre></div>
+
+<h2 id="easy_reeasy_base">easy_re&amp;easy_base<a class="headerlink" href="#easy_reeasy_base" title="Permanent link">&para;</a></h2>
+<h3 id="_11">出题思路<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>既然要搞花样，当然少不当今最火的iot。采用腾讯TencentOS tiny 官方定制IoT开发板EVB_LX(暂时是限量的)编译环境： <a href="https://github.com/Tencent/TencentOS-tiny">https://github.com/Tencent/TencentOS-tiny</a>两个题目，都是考察找到被替换的base64密码表，由于考虑到直接上base有点难，所以出了一个easy_re过渡。</p>
+<p>两个题目替换都涉及四段字符如下（把初始密码表拆分为四段）：</p>
+<blockquote>
+<div class="codehilite"><pre><span></span>  &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;
+  &quot;abcdefghijklmnopqrstuvwxyz&quot;
+  &quot;0123456789&quot;
+  &quot;+/&quot;
+</pre></div>
+
+
+</blockquote>
+<p>easy_re是改变了这四段字符压栈顺序。没想到ida太过于智能化，显示结果即是正确压栈顺序。</p>
+<p>easy_base考察偏难了，主要是对这四段字符进行了一些变换，如果逆向分析的话需要学习risc-v指令集。</p>
+<p>当然，这两个题最简单的方法是把程序放入对应开发板里，他相应的串口也会输出字母表。</p>
+<p>做题过程中也发现一些选手拿到题目直接猜测arm架构，拿着ida 当arm分析，还原的内容是错的，无从下手。如果拿到文件后File一下也会知道是risc-v架构。不至于走偏。</p>
+<h3 id="_12">解题方法<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>首先，ida默认不支持risc-v，所以需要下载相关插件。<a href="https://github.com/lcq2/riscv-ida">https://github.com/lcq2/riscv-ida</a></p>
+</li>
+<li>
+<p>然后，ida打开分析，直接就有正确的字母表压栈顺序，（原本是想让选手分析简单指令来确定或者爆破）</p>
+</li>
+</ul>
+<p><img alt="4" src="https://cdn.jsdelivr.net/gh/loveminhal/myblog-picgo/blog/20200526001332.png" /></p>
+<ul>
+<li>得到 字母表就很容易解出来了</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">base64</span>
+<span class="n">str1</span> <span class="o">=</span> <span class="s2">&quot;PalXPrhnOrLZT6PVQJ1oNr9dSqDVTbo==&quot;</span>
+<span class="n">string1</span> <span class="o">=</span>
+<span class="s2">&quot;0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ+/abcdefghijklmnopqrstuvwxyz&quot;</span>
+<span class="n">string2</span> <span class="o">=</span>
+<span class="s2">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">base64</span><span class="o">.</span><span class="n">b64decode</span><span class="p">(</span><span class="n">str1</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">maketrans</span><span class="p">(</span><span class="n">string1</span><span class="p">,</span> <span class="n">string2</span><span class="p">))))</span>
+</pre></div>
+
+<ul>
+<li>
+<p>easy_base 的话就需要分析指令得出具体操作或者直接开发板跑一下得到输出</p>
+</li>
+<li>
+<p>看到大多数人解题无果，比赛最后放出了一个risc-v 64位的附件（代码一样），通过docker跑即可得到table。</p>
+</li>
+</ul>
+<p><img alt="5" src="https://cdn.jsdelivr.net/gh/loveminhal/myblog-picgo/blog/20200526001333.jpg" /></p>
+<ul>
+<li>然后直接解密得到flag</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">base64</span>
+<span class="n">str1</span> <span class="o">=</span> <span class="s2">&quot;UoH+U/DJV/YlQdUOU94JPYxJgdHMUWK=&quot;</span>
+<span class="n">string1</span> <span class="o">=</span>
+<span class="s2">&quot;a0b1c2d3e4f5g6h7i8j9ZYXWVUTSRQPON+klmnopqrABCDEFGHIJKLM/stuvwxyz&quot;</span>
+<span class="n">string2</span> <span class="o">=</span>
+<span class="s2">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">base64</span><span class="o">.</span><span class="n">b64decode</span><span class="p">(</span><span class="n">str1</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">maketrans</span><span class="p">(</span><span class="n">string1</span><span class="p">,</span> <span class="n">string2</span><span class="p">))))</span>
+</pre></div>
+
+<ul>
+<li>如果对题目感兴趣的，可以之后再研究。我附上题目主文件源代码</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;mcu_init.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;tos_k.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#define TASK_SIZE 1024</span>
+<span class="n">k_task_t</span> <span class="n">k_task_task1</span><span class="p">;</span>
+<span class="n">k_task_t</span> <span class="n">k_task_task2</span><span class="p">;</span>
+<span class="kt">uint8_t</span> <span class="n">k_task1_stk</span><span class="p">[</span><span class="n">TASK_SIZE</span><span class="p">];</span>
+<span class="kt">uint8_t</span> <span class="n">k_task2_stk</span><span class="p">[</span><span class="n">TASK_SIZE</span><span class="p">];</span>
+
+<span class="kt">int</span> <span class="n">share</span> <span class="o">=</span> <span class="mh">0xCBA7F9</span><span class="p">;</span>
+<span class="n">k_sem_t</span> <span class="n">sem</span><span class="p">;</span>
+<span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">scuctf_flag_base64</span><span class="o">=</span><span class="s">&quot;UoH+U/DJV/YlQdUOU94JPYxJgdHMUWK=&quot;</span><span class="p">;</span>
+<span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">base64_right</span><span class="p">[</span><span class="mi">65</span><span class="p">]</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">scuctf_base64</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">base64_1</span><span class="p">[</span><span class="mi">26</span><span class="p">]</span><span class="o">=</span><span class="s">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span><span class="p">;</span>
+    <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">base64_2</span><span class="p">[</span><span class="mi">26</span><span class="p">]</span><span class="o">=</span><span class="s">&quot;abcdefghijklmnopqrstuvwxyz&quot;</span><span class="p">;</span>
+    <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">base64_3</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">=</span><span class="s">&quot;0123456789&quot;</span><span class="p">;</span>
+    <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">base64_4</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="s">&quot;+/&quot;</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">k</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">q</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span><span class="n">r</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">n</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">20</span><span class="p">;)</span>
+    <span class="p">{</span>
+        <span class="n">base64_right</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">base64_2</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+        <span class="n">j</span><span class="o">++</span><span class="p">;</span>
+        <span class="n">base64_right</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">base64_3</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>
+        <span class="n">k</span><span class="o">++</span><span class="p">;</span>
+        <span class="n">i</span><span class="o">+=</span><span class="mi">2</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">20</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">33</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">base64_right</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">base64_1</span><span class="p">[</span><span class="n">q</span><span class="p">];</span>
+        <span class="n">q</span><span class="o">--</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">33</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">42</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">33</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">base64_right</span><span class="p">[</span><span class="mi">33</span><span class="p">]</span><span class="o">=</span><span class="n">base64_4</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="n">base64_right</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">base64_2</span><span class="p">[</span><span class="n">r</span><span class="p">];</span>
+            <span class="n">r</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">42</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">64</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="o">&lt;</span><span class="mi">13</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">base64_right</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">base64_1</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
+            <span class="n">n</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">55</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">base64_right</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">base64_4</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+            <span class="p">}</span>
+            <span class="k">else</span>
+            <span class="p">{</span>
+                <span class="n">base64_right</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">base64_2</span><span class="p">[</span><span class="n">r</span><span class="p">];</span>
+                <span class="n">r</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">task1</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">pdata</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">task_cnt1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;welcome scuctf from %s cnt: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">__func__</span><span class="p">,</span> <span class="n">task_cnt1</span><span class="o">++</span><span class="p">);</span>
+        <span class="n">tos_sem_pend</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sem</span><span class="p">,</span> <span class="o">~</span><span class="mi">0U</span><span class="p">);</span>
+        <span class="n">gpio_bit_write</span><span class="p">(</span><span class="n">GPIOA</span><span class="p">,</span> <span class="n">GPIO_PIN_7</span><span class="p">,</span> <span class="n">share</span> <span class="o">%</span> <span class="mi">2</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">task2</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">pdata</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">task_cnt2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">scuctf_base64</span><span class="p">();</span>
+    <span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">share</span><span class="o">++</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Where is scuctf_base64? %s cnt: %08x</span><span class="se">\n</span><span class="s">%s&quot;</span><span class="p">,</span> <span class="n">__func__</span><span class="p">,</span> <span class="n">task_cnt2</span><span class="o">--</span><span class="p">,</span><span class="n">base64_right</span><span class="p">);</span>
+            <span class="n">tos_task_delay</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">tos_sem_post</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sem</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+
+<span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">board_init</span><span class="p">();</span>
+
+    <span class="n">usart0_init</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+
+    <span class="n">tos_knl_init</span><span class="p">();</span>
+
+
+    <span class="n">tos_task_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">k_task_task1</span><span class="p">,</span> <span class="s">&quot;task1&quot;</span><span class="p">,</span> <span class="n">task1</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">k_task1_stk</span><span class="p">,</span> <span class="n">TASK_SIZE</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">tos_task_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">k_task_task2</span><span class="p">,</span> <span class="s">&quot;task2&quot;</span><span class="p">,</span> <span class="n">task2</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">k_task2_stk</span><span class="p">,</span> <span class="n">TASK_SIZE</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">k_err_t</span> <span class="n">err</span> <span class="o">=</span> <span class="n">tos_sem_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sem</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">err</span> <span class="o">!=</span> <span class="n">K_ERR_NONE</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">goto</span> <span class="n">die</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">tos_knl_start</span><span class="p">();</span>
+<span class="nl">die</span><span class="p">:</span>
+    <span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">asm</span><span class="p">(</span><span class="s">&quot;wfi;&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">_put_char</span><span class="p">(</span><span class="kt">int</span> <span class="n">ch</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">usart_data_transmit</span><span class="p">(</span><span class="n">USART0</span><span class="p">,</span> <span class="p">(</span><span class="kt">uint8_t</span><span class="p">)</span> <span class="n">ch</span> <span class="p">);</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">usart_flag_get</span><span class="p">(</span><span class="n">USART0</span><span class="p">,</span> <span class="n">USART_FLAG_TBE</span><span class="p">)</span><span class="o">==</span> <span class="n">RESET</span><span class="p">){</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">ch</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<ul>
+<li>参考<a href="https://github.com/riscv/riscv-isa-manual/releases">https://github.com/riscv/riscv-isa-manual/releases</a></li>
+</ul>
+<h2 id="_13">小结<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<p>由于是普通校赛，题目也没出过分难，个人感觉难以把握还算可以。这次题目主要也本着打破传统scuctf 常规题目，一丢丢小小的创新。 .NET，risc-v，ollvm，apk，python等。即使这些可能在全国ctf中是常见题目，但是感觉校内还是几乎没出的。比赛过程中也发生了很多趣味东西，比如第一题一题多解，flag设置时候多加了空格导致选手提交报错等好多问题。</p>
+<p>总之希望scuctf越来越有趣，参与人数越来越多吧！</p>
+                
+                  
+                
+              
+              
+                
+
+
+  <h2 id="__comments">评论</h2>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = "None";
+      this.page.identifier =
+        "None";
+    };
+    (function() {
+      var d = document, s = d.createElement("script");
+      s.src = "//scu-ctf.disqus.com/embed.js";
+      s.setAttribute("data-timestamp", +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Misc/" title="Misc" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                Misc
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Web/" title="Web" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                Web
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.2ba8dec4.js"></script>
+      
+        
+        
+          
+          <script src="../../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+        <script src="https://cdnjs.loli.net/ajax/libs/pangu/3.3.0/pangu.min.js"></script>
+      
+        <script src="../../../_static/js/extra.js"></script>
+      
+        <script src="https://cdnjs.loli.net/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

