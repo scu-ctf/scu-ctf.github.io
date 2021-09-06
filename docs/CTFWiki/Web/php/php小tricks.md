@@ -1,4 +1,4 @@
-# 函数
+# 函数Tricks
 
 ## is_numeric
 
