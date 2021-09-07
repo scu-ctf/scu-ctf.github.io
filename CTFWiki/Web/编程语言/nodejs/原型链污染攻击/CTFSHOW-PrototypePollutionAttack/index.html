@@ -490,11 +490,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1-3" type="checkbox" id="nav-2-1-3">
     
     <label class="md-nav__link" for="nav-2-1-3">
-      SQLI
+      RCE
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-2-1-3">
-        SQLI
+        RCE
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -505,8 +505,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../SQLI/MySQL字符串函数详解/" title="MySQL字符串函数详解" class="md-nav__link">
-      MySQL字符串函数详解
+    <a href="../../../../RCE/命令执行Bypass/" title="命令执行Bypass" class="md-nav__link">
+      命令执行Bypass
     </a>
   </li>
 
@@ -517,8 +517,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../SQLI/mysql慢查询日志getshell/" title="原理" class="md-nav__link">
-      原理
+    <a href="../../../../RCE/命令执行其他好文推荐/" title="命令执行好文推荐" class="md-nav__link">
+      命令执行好文推荐
     </a>
   </li>
 
@@ -529,8 +529,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../SQLI/mysql注入绕过技巧/" title="mysql注入绕过技巧" class="md-nav__link">
-      mysql注入绕过技巧
+    <a href="../../../../RCE/异或取反或绕过/" title="异或、取反、或绕过" class="md-nav__link">
+      异或、取反、或绕过
     </a>
   </li>
 
@@ -541,8 +541,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../SQLI/中转注入/" title="SQL注入技巧-配合Python-Flask的中转注入" class="md-nav__link">
-      SQL注入技巧-配合Python-Flask的中转注入
+    <a href="../../../../RCE/绕过disable_functions/" title="绕过disable_functions" class="md-nav__link">
+      绕过disable_functions
     </a>
   </li>
 
@@ -553,20 +553,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../SQLI/过滤concat/" title="过滤concat" class="md-nav__link">
-      过滤concat
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../../SQLI/过滤逗号/" title="过滤逗号" class="md-nav__link">
-      过滤逗号
+    <a href="../../../../RCE/限制长度命令执行/" title="限制长度命令执行" class="md-nav__link">
+      限制长度命令执行
     </a>
   </li>
 
@@ -1427,7 +1415,7 @@ module.exports = router;
 </pre></div>
 
 <p>通过调试我发现污染到了this,在nodejs当中其指向module.exports，最外层调用的时候会指向global，具体原因还不知道，未来希望能够破解，暂时水平受限，反正看到query到了全局变量里面</p>
-<p><img alt="CTFSHOW-WEB339" src="./pic/CTFSHOW-WEB339.png" /></p>
+<p><img alt="CTFSHOW-WEB339" src="../pic/CTFSHOW-WEB339.png" /></p>
 <p>之后我们前往<code>url/api</code>界面发起post包即可获得flag</p>
 <h1 id="web342-343">Web342-343<a class="headerlink" href="#web342-343" title="Permanent link">&para;</a></h1>
 <p>这是我的exp，过程不讲自己研究</p>
