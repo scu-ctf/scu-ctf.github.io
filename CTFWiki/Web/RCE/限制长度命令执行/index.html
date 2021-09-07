@@ -563,64 +563,9 @@
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        限制长度命令执行
-      </label>
-    
     <a href="./" title="限制长度命令执行" class="md-nav__link md-nav__link--active">
       限制长度命令执行
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">目录</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tricks" title="一些 tricks" class="md-nav__link">
-    一些 tricks
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" title="正文" class="md-nav__link">
-    正文
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#linux" title="linux中命令换行" class="md-nav__link">
-    linux中命令换行
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-        <li class="md-nav__item">
-          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
-            评论
-          </a>
-        </li>
-      
-    </ul>
-  
-</nav>
     
   </li>
 
@@ -1353,48 +1298,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">目录</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tricks" title="一些 tricks" class="md-nav__link">
-    一些 tricks
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" title="正文" class="md-nav__link">
-    正文
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#linux" title="linux中命令换行" class="md-nav__link">
-    linux中命令换行
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-        <li class="md-nav__item">
-          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
-            评论
-          </a>
-        </li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1409,23 +1312,9 @@
                 
                 
                 <h1 id="_1">限制长度命令执行<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="tricks">一些 tricks<a class="headerlink" href="#tricks" title="Permanent link">&para;</a></h2>
-<p>Linux 下可以用 <code>\</code> 来拼接命令，实现命令续行，生成文件的话文件名要双写 <code>\\</code>，比如 <code>&gt;ls\\</code>。</p>
-<p>注意不要用 <code>.</code> 作为文件名的开头，因为 Linux 下 <code>.</code> 会作为隐藏文件，直接用 <code>ls</code> 列不出来。</p>
-<p>为了不按照默认顺序排序，可以用 <code>ls -t</code>，按照时间顺序，后执行的排前面，于是可以拆分命令再拼接来实现。</p>
-<p>用 <code>*</code> 可以得到当前目录下的所有目录及文件名，而且能用文件名执行命令。</p>
-<h2 id="_2">正文<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="linux">linux中命令换行<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h3>
-<p>在linux中，当我们执行文件中的命令的时候，我们通过在没有写完的命令后面加 "\"，可以将一条命令写在多行
-比如我们有一个test文件内容如下：</p>
-<div class="codehilite"><pre><span></span>ec\
-ho \
-hello \
-world!
-</pre></div>
-
-<p><a href="https://miaotony.xyz/2021/01/31/CTF_web_CommandExecutionLimitedLength/">https://miaotony.xyz/2021/01/31/CTF_web_CommandExecutionLimitedLength/</a></p>
-<p><a href="https://xz.aliyun.com/t/2748#toc-2">https://xz.aliyun.com/t/2748#toc-2</a></p>
+<p>看看这两篇文章就足够了</p>
+<p><a href="https://xz.aliyun.com/t/2748#toc-2">从一道ctf题目学到的绕过长度执行命令姿势</a></p>
+<p><a href="https://miaotony.xyz/2021/01/31/CTF_web_CommandExecutionLimitedLength/">CTF | 限制长度下的命令执行 技巧汇总</a></p>
                 
                   
                 
