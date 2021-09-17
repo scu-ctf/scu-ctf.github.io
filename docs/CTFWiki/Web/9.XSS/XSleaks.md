@@ -1,6 +1,6 @@
-# **XSleaks**
+# XSleaks
 
-## **什么是 XS-Leaks**
+## 什么是 XS-Leaks
 
 XS-Leaks 全称 Cross-site leaks，可以用来 **探测用户敏感信息**。利用方式、利用条件等都和 csrf 较为相似。
 
