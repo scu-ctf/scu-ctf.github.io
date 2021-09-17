@@ -36,7 +36,7 @@
     
     
       
-        <title>**XSleaks** - SCU-CTF HomePage</title>
+        <title>XSleaks - SCU-CTF HomePage</title>
       
     
     
@@ -129,7 +129,7 @@
               SCU-CTF HomePage
             </span>
             <span class="md-header-nav__topic">
-              **XSleaks**
+              XSleaks
             </span>
           
         </div>
@@ -1080,11 +1080,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        **XSleaks**
+        XSleaks
       </label>
     
-    <a href="./" title="**XSleaks**" class="md-nav__link md-nav__link--active">
-      **XSleaks**
+    <a href="./" title="XSleaks" class="md-nav__link md-nav__link--active">
+      XSleaks
     </a>
     
       
@@ -1468,8 +1468,8 @@
                   <a href="https://github.com/scu-ctf/scu-ctf.github.io/edit/master/docs/CTFWiki/Web/9.XSS/XSleaks.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="xsleaks"><strong>XSleaks</strong><a class="headerlink" href="#xsleaks" title="Permanent link">&para;</a></h1>
-<h2 id="xs-leaks"><strong>什么是 XS-Leaks</strong><a class="headerlink" href="#xs-leaks" title="Permanent link">&para;</a></h2>
+                <h1 id="xsleaks">XSleaks<a class="headerlink" href="#xsleaks" title="Permanent link">&para;</a></h1>
+<h2 id="xs-leaks">什么是 XS-Leaks<a class="headerlink" href="#xs-leaks" title="Permanent link">&para;</a></h2>
 <p>XS-Leaks 全称 Cross-site leaks，可以用来 <strong>探测用户敏感信息</strong>。利用方式、利用条件等都和 csrf 较为相似。</p>
 <p>说到探测用户敏感信息，是如何进行探测的？和csrf 相似在哪？</p>
 <p>设想网站存在一个模糊查找功能（若前缀匹配则返回对应结果）例如 <code>http://localhost/search?query=</code>，页面是存在 xss 漏洞，并且有一个类似 flag 的字符串，并且只有不同用户查询的结果集不同。这时你可能会尝试 csrf，但是由于网站正确配置了 CORS，导致无法通过 xss 结合 csrf 获取到具体的响应。这个时候就可以尝试 XS-Leaks。</p>
