@@ -37,7 +37,7 @@ objdump -S example1.exe > dump.txt
 
 得到的`dump.txt`里面反汇编了不少启动函数，不管，直接找到`main()`主函数。
 
-![1](C:\Users\任昊\Desktop\ctftraining\blog\逆向工程入门简介\1.PNG)
+![1](1.PNG)
 
 这个就是我们编译出来的代码的汇编语言。
 
