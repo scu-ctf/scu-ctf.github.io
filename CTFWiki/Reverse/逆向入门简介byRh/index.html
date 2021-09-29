@@ -1,0 +1,2789 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.0">
+    
+    
+      
+        <title>逆向入门简介byRh - SCU-CTF HomePage</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.982221ab.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:300,400,400i,700|Source+Code+Pro">
+        <style>body,input{font-family:"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../_static/css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="white" data-md-color-accent="red">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#0x00" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../.." title="SCU-CTF HomePage" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">school</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              SCU-CTF HomePage
+            </span>
+            <span class="md-header-nav__topic">
+              逆向入门简介byRh
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/scu-ctf/scu-ctf.github.io/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../.." title="Introduction" class="md-tabs__link">
+        Introduction
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Pwn/" title="CTFWiki" class="md-tabs__link">
+          CTFWiki
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../WriteUp/2018/Web/" title="WriteUp" class="md-tabs__link">
+          WriteUp
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../比赛信息/" title="比赛信息" class="md-tabs__link">
+          比赛信息
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../.." title="SCU-CTF HomePage" class="md-nav__button md-logo">
+      
+        <i class="md-icon">school</i>
+      
+    </a>
+    SCU-CTF HomePage
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/scu-ctf/scu-ctf.github.io/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      CTFWiki
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        CTFWiki
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Pwn
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        Pwn
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Pwn/" title="CTF PWN 入门" class="md-nav__link">
+      CTF PWN 入门
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2" checked>
+    
+    <label class="md-nav__link" for="nav-2-2">
+      Reverse
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        Reverse
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        逆向入门简介byRh
+      </label>
+    
+    <a href="./" title="逆向入门简介byRh" class="md-nav__link md-nav__link--active">
+      逆向入门简介byRh
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0x00" title="0x00 什么是逆向工程" class="md-nav__link">
+    0x00 什么是逆向工程
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="举个例子" class="md-nav__link">
+    举个例子
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x01" title="0x01 前置技能" class="md-nav__link">
+    0x01 前置技能
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x02-ctf-re" title="0x02 CTF-Re快速入门" class="md-nav__link">
+    0x02 CTF-Re快速入门
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x03" title="0x03 推荐书籍" class="md-nav__link">
+    0x03 推荐书籍
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x04" title="0x04 推荐资源" class="md-nav__link">
+    0x04 推荐资源
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="教程类" class="md-nav__link">
+    教程类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="刷题类" class="md-nav__link">
+    刷题类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="比赛类" class="md-nav__link">
+    比赛类
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x05" title="0x05 工具" class="md-nav__link">
+    0x05 工具
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="反汇编工具" class="md-nav__link">
+    反汇编工具
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ida" title="IDA" class="md-nav__link">
+    IDA
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ghidra" title="Ghidra" class="md-nav__link">
+    Ghidra
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ollydbg" title="Ollydbg" class="md-nav__link">
+    Ollydbg
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x64dbgx32dbg" title="x64dbg/x32dbg" class="md-nav__link">
+    x64dbg/x32dbg
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gdb" title="gdb" class="md-nav__link">
+    gdb
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jeb3" title="jeb3" class="md-nav__link">
+    jeb3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windbg" title="Windbg" class="md-nav__link">
+    Windbg
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dnspy" title="dnspy" class="md-nav__link">
+    dnspy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="实用脚本工具" class="md-nav__link">
+    实用脚本工具
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#z3" title="z3" class="md-nav__link">
+    z3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capstone" title="capstone" class="md-nav__link">
+    capstone
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keystone" title="keystone" class="md-nav__link">
+    keystone
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#angr" title="angr" class="md-nav__link">
+    angr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#triton" title="triton" class="md-nav__link">
+    triton
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unicorn" title="unicorn" class="md-nav__link">
+    unicorn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#miasm" title="miasm" class="md-nav__link">
+    miasm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qemu" title="qemu" class="md-nav__link">
+    qemu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qiling" title="qiling" class="md-nav__link">
+    qiling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crypto" title="Crypto库" class="md-nav__link">
+    Crypto库
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fridaxposed" title="Frida/xposed" class="md-nav__link">
+    Frida/xposed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="其他" class="md-nav__link">
+    其他
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pin" title="pin" class="md-nav__link">
+    pin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="程序性质检查工具" class="md-nav__link">
+    程序性质检查工具
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windowspe" title="WindowsPE文件分析工具" class="md-nav__link">
+    WindowsPE文件分析工具
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x02" title="0x02 理论" class="md-nav__link">
+    0x02 理论
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="程序分析理论" class="md-nav__link">
+    程序分析理论
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" title="静态分析" class="md-nav__link">
+    静态分析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" title="动态分析" class="md-nav__link">
+    动态分析
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#satsmt" title="SAT/SMT理论" class="md-nav__link">
+    SAT/SMT理论
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x04_1" title="0x04 目前遇到的题目类型" class="md-nav__link">
+    0x04 目前遇到的题目类型
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" title="虚拟机" class="md-nav__link">
+    虚拟机
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" title="现代密码学加密" class="md-nav__link">
+    现代密码学加密
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" title="Python" class="md-nav__link">
+    Python
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#py" title="Py脚本" class="md-nav__link">
+    Py脚本
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyc" title="Pyc字节码" class="md-nav__link">
+    Pyc字节码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyd" title="Pyd编译文件" class="md-nav__link">
+    Pyd编译文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyinstaller" title="Pyinstaller打包程序" class="md-nav__link">
+    Pyinstaller打包程序
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#go" title="Go" class="md-nav__link">
+    Go
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rust" title="Rust" class="md-nav__link">
+    Rust
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" title="算法谜题" class="md-nav__link">
+    算法谜题
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#net" title=".Net" class="md-nav__link">
+    .Net
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#android" title="Android" class="md-nav__link">
+    Android
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#java" title="Java逆向" class="md-nav__link">
+    Java逆向
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jni-native" title="JNI Native" class="md-nav__link">
+    JNI Native
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" title="Windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" title="Linux" class="md-nav__link">
+    Linux
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" title="架构" class="md-nav__link">
+    架构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" title="代码混淆" class="md-nav__link">
+    代码混淆
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      Web
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        Web
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/" title="Web学习路线" class="md-nav__link">
+      Web学习路线
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3-2" type="checkbox" id="nav-2-3-2">
+    
+    <label class="md-nav__link" for="nav-2-3-2">
+      0.php
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-3-2">
+        0.php
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/0.php/php小tricks/" title="函数Tricks" class="md-nav__link">
+      函数Tricks
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3-3" type="checkbox" id="nav-2-3-3">
+    
+    <label class="md-nav__link" for="nav-2-3-3">
+      1.nodejs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-3-3">
+        1.nodejs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/1.nodejs/nodejs/" title="Nodejs" class="md-nav__link">
+      Nodejs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3-3-2" type="checkbox" id="nav-2-3-3-2">
+    
+    <label class="md-nav__link" for="nav-2-3-3-2">
+      Nodejs沙盒逃逸
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-3-3-2">
+        Nodejs沙盒逃逸
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/1.nodejs/nodejs沙盒逃逸/readme/" title="NodeJs沙盒逃逸分析及原型链的简单学习" class="md-nav__link">
+      NodeJs沙盒逃逸分析及原型链的简单学习
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3-3-3" type="checkbox" id="nav-2-3-3-3">
+    
+    <label class="md-nav__link" for="nav-2-3-3-3">
+      原型链污染攻击
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-3-3-3">
+        原型链污染攻击
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/1.nodejs/原型链污染攻击/CTFSHOW-PrototypePollutionAttack/" title="原型链污染攻击" class="md-nav__link">
+      原型链污染攻击
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3-4" type="checkbox" id="nav-2-3-4">
+    
+    <label class="md-nav__link" for="nav-2-3-4">
+      2.Java安全
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-3-4">
+        2.Java安全
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3-4-1" type="checkbox" id="nav-2-3-4-1">
+    
+    <label class="md-nav__link" for="nav-2-3-4-1">
+      Java反序列化
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-3-4-1">
+        Java反序列化
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/2.Java安全/Java反序列化/1.反序列化工具推荐/" title="1.反序列化工具推荐" class="md-nav__link">
+      1.反序列化工具推荐
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/2.Java安全/Java反序列化/2.URLDNS/" title="2.URLDNS" class="md-nav__link">
+      2.URLDNS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/2.Java安全/Java反序列化/3.CommonCollections1/" title="3.CommonCollections1" class="md-nav__link">
+      3.CommonCollections1
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3-4-2" type="checkbox" id="nav-2-3-4-2">
+    
+    <label class="md-nav__link" for="nav-2-3-4-2">
+      Fastjson
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-3-4-2">
+        Fastjson
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/2.Java安全/fastjson/fastjson/" title="Fastjson" class="md-nav__link">
+      Fastjson
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3-5" type="checkbox" id="nav-2-3-5">
+    
+    <label class="md-nav__link" for="nav-2-3-5">
+      3.RCE
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-3-5">
+        3.RCE
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/3.RCE/命令执行Bypass/" title="命令执行Bypass" class="md-nav__link">
+      命令执行Bypass
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/3.RCE/命令执行其他好文推荐/" title="命令执行好文推荐" class="md-nav__link">
+      命令执行好文推荐
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/3.RCE/异或取反或绕过/" title="异或、取反、或绕过" class="md-nav__link">
+      异或、取反、或绕过
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/3.RCE/绕过disable_functions/" title="绕过disable_functions" class="md-nav__link">
+      绕过disable_functions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/3.RCE/限制长度命令执行/" title="限制长度命令执行" class="md-nav__link">
+      限制长度命令执行
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3-6" type="checkbox" id="nav-2-3-6">
+    
+    <label class="md-nav__link" for="nav-2-3-6">
+      4.SSRF
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-3-6">
+        4.SSRF
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/4.SSRF/CTFSHOW-SSRF-WP/" title="例题分析" class="md-nav__link">
+      例题分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/4.SSRF/SSRF简要介绍/" title="SSRF介绍" class="md-nav__link">
+      SSRF介绍
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3-7" type="checkbox" id="nav-2-3-7">
+    
+    <label class="md-nav__link" for="nav-2-3-7">
+      5.Unserialize
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-3-7">
+        5.Unserialize
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/5.Unserialize/Java反序列化/" title="Java反序列化" class="md-nav__link">
+      Java反序列化
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/5.Unserialize/php反序列化/" title="PHP反序列化" class="md-nav__link">
+      PHP反序列化
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3-8" type="checkbox" id="nav-2-3-8">
+    
+    <label class="md-nav__link" for="nav-2-3-8">
+      6.XXE
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-3-8">
+        6.XXE
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/6.XXE/XXE/" title="XXE" class="md-nav__link">
+      XXE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/6.XXE/无回显/" title="XXE解决无回显" class="md-nav__link">
+      XXE解决无回显
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/6.XXE/编码绕过/" title="XXE介绍与绕过" class="md-nav__link">
+      XXE介绍与绕过
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3-9" type="checkbox" id="nav-2-3-9">
+    
+    <label class="md-nav__link" for="nav-2-3-9">
+      7.JWT
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-3-9">
+        7.JWT
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/7.JWT/JWT简要介绍/" title="JWT简要介绍" class="md-nav__link">
+      JWT简要介绍
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/7.JWT/一个简单的无加密题目/" title="一个简单的无加密题目" class="md-nav__link">
+      一个简单的无加密题目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/7.JWT/公私钥泄露/" title="公私钥泄露" class="md-nav__link">
+      公私钥泄露
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/7.JWT/密钥弱口令/" title="密钥弱口令" class="md-nav__link">
+      密钥弱口令
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/7.JWT/密钥混淆攻击/" title="密钥混淆攻击" class="md-nav__link">
+      密钥混淆攻击
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/7.JWT/爆破密钥/" title="爆破密钥" class="md-nav__link">
+      爆破密钥
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/7.JWT/签名算法可被修改为none/" title="签名算法可被修改为none" class="md-nav__link">
+      签名算法可被修改为none
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3-10" type="checkbox" id="nav-2-3-10">
+    
+    <label class="md-nav__link" for="nav-2-3-10">
+      8.安全研究
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-3-10">
+        8.安全研究
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/8.安全研究/PDO的ATTR_EMULATE_PREPARES属性带来的安全问题/" title="PDO的ATTR EMULATE PREPARES属性带来的安全问题" class="md-nav__link">
+      PDO的ATTR EMULATE PREPARES属性带来的安全问题
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3-11" type="checkbox" id="nav-2-3-11">
+    
+    <label class="md-nav__link" for="nav-2-3-11">
+      9.XSS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-3-11">
+        9.XSS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/9.XSS/XSS/" title="XSS" class="md-nav__link">
+      XSS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/9.XSS/XSS工具/" title="XSS工具推荐" class="md-nav__link">
+      XSS工具推荐
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/9.XSS/XSleaks/" title="XSleaks" class="md-nav__link">
+      XSleaks
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      WriteUp
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        WriteUp
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      2018
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        2018
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../WriteUp/2018/Web/" title="Web" class="md-nav__link">
+      Web
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      201905
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        201905
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../WriteUp/201905/Crypto/" title="Crypto" class="md-nav__link">
+      Crypto
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../WriteUp/201905/Misc/" title="MISC" class="md-nav__link">
+      MISC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../WriteUp/201905/Pwn/" title="PWN" class="md-nav__link">
+      PWN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../WriteUp/201905/Reverse/" title="REVERSE" class="md-nav__link">
+      REVERSE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../WriteUp/201905/Web/" title="Web" class="md-nav__link">
+      Web
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      202005
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        202005
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../WriteUp/202005/Misc/" title="Misc" class="md-nav__link">
+      Misc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../WriteUp/202005/Reverse/" title="Reverse" class="md-nav__link">
+      Reverse
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../WriteUp/202005/Web/" title="Web" class="md-nav__link">
+      Web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../WriteUp/202005/pwn/" title="Pwn" class="md-nav__link">
+      Pwn
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      比赛信息
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        比赛信息
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../比赛信息/" title="比赛信息发布" class="md-nav__link">
+      比赛信息发布
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0x00" title="0x00 什么是逆向工程" class="md-nav__link">
+    0x00 什么是逆向工程
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="举个例子" class="md-nav__link">
+    举个例子
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x01" title="0x01 前置技能" class="md-nav__link">
+    0x01 前置技能
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x02-ctf-re" title="0x02 CTF-Re快速入门" class="md-nav__link">
+    0x02 CTF-Re快速入门
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x03" title="0x03 推荐书籍" class="md-nav__link">
+    0x03 推荐书籍
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x04" title="0x04 推荐资源" class="md-nav__link">
+    0x04 推荐资源
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="教程类" class="md-nav__link">
+    教程类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="刷题类" class="md-nav__link">
+    刷题类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="比赛类" class="md-nav__link">
+    比赛类
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x05" title="0x05 工具" class="md-nav__link">
+    0x05 工具
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="反汇编工具" class="md-nav__link">
+    反汇编工具
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ida" title="IDA" class="md-nav__link">
+    IDA
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ghidra" title="Ghidra" class="md-nav__link">
+    Ghidra
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ollydbg" title="Ollydbg" class="md-nav__link">
+    Ollydbg
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x64dbgx32dbg" title="x64dbg/x32dbg" class="md-nav__link">
+    x64dbg/x32dbg
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gdb" title="gdb" class="md-nav__link">
+    gdb
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jeb3" title="jeb3" class="md-nav__link">
+    jeb3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windbg" title="Windbg" class="md-nav__link">
+    Windbg
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dnspy" title="dnspy" class="md-nav__link">
+    dnspy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="实用脚本工具" class="md-nav__link">
+    实用脚本工具
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#z3" title="z3" class="md-nav__link">
+    z3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capstone" title="capstone" class="md-nav__link">
+    capstone
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keystone" title="keystone" class="md-nav__link">
+    keystone
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#angr" title="angr" class="md-nav__link">
+    angr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#triton" title="triton" class="md-nav__link">
+    triton
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unicorn" title="unicorn" class="md-nav__link">
+    unicorn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#miasm" title="miasm" class="md-nav__link">
+    miasm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qemu" title="qemu" class="md-nav__link">
+    qemu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qiling" title="qiling" class="md-nav__link">
+    qiling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crypto" title="Crypto库" class="md-nav__link">
+    Crypto库
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fridaxposed" title="Frida/xposed" class="md-nav__link">
+    Frida/xposed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="其他" class="md-nav__link">
+    其他
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pin" title="pin" class="md-nav__link">
+    pin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="程序性质检查工具" class="md-nav__link">
+    程序性质检查工具
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windowspe" title="WindowsPE文件分析工具" class="md-nav__link">
+    WindowsPE文件分析工具
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x02" title="0x02 理论" class="md-nav__link">
+    0x02 理论
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="程序分析理论" class="md-nav__link">
+    程序分析理论
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" title="静态分析" class="md-nav__link">
+    静态分析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" title="动态分析" class="md-nav__link">
+    动态分析
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#satsmt" title="SAT/SMT理论" class="md-nav__link">
+    SAT/SMT理论
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x04_1" title="0x04 目前遇到的题目类型" class="md-nav__link">
+    0x04 目前遇到的题目类型
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" title="虚拟机" class="md-nav__link">
+    虚拟机
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" title="现代密码学加密" class="md-nav__link">
+    现代密码学加密
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" title="Python" class="md-nav__link">
+    Python
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#py" title="Py脚本" class="md-nav__link">
+    Py脚本
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyc" title="Pyc字节码" class="md-nav__link">
+    Pyc字节码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyd" title="Pyd编译文件" class="md-nav__link">
+    Pyd编译文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyinstaller" title="Pyinstaller打包程序" class="md-nav__link">
+    Pyinstaller打包程序
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#go" title="Go" class="md-nav__link">
+    Go
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rust" title="Rust" class="md-nav__link">
+    Rust
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" title="算法谜题" class="md-nav__link">
+    算法谜题
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#net" title=".Net" class="md-nav__link">
+    .Net
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#android" title="Android" class="md-nav__link">
+    Android
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#java" title="Java逆向" class="md-nav__link">
+    Java逆向
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jni-native" title="JNI Native" class="md-nav__link">
+    JNI Native
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" title="Windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" title="Linux" class="md-nav__link">
+    Linux
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" title="架构" class="md-nav__link">
+    架构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" title="代码混淆" class="md-nav__link">
+    代码混淆
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/scu-ctf/scu-ctf.github.io/edit/master/docs/CTFWiki/Reverse/逆向入门简介byRh.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>逆向入门简介byRh</h1>
+                
+                <p>简简单单以我的理解写一下逆向工程的入门方法。</p>
+<h2 id="0x00">0x00 什么是逆向工程<a class="headerlink" href="#0x00" title="Permanent link">&para;</a></h2>
+<p>什么是逆向？ 通俗来讲，计算机科学中的逆向工程就是将机器才能够懂的机器代码（二进制代码）<strong>翻译成人能够读懂的代码</strong>（汇编代码，C语言代码），并在此基础上分析出程序的<strong>工作流程</strong>。</p>
+<h3 id="_1">举个例子<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>先从一开始最先接触的C语言开始。</p>
+<p>写一个C语言程序</p>
+<div class="codehilite"><pre><span></span><span class="c1">//example1.c</span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
+    <span class="n">puts</span><span class="p">(</span><span class="s">&quot;Welcome to the world of Re&quot;</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>使用<code>gcc</code>或者其他编译器或者IDE编译</p>
+<div class="codehilite"><pre><span></span>gcc example1.c -o example1.exe
+</pre></div>
+
+<p><code>gcc</code>实际上主要是<code>Linux</code>等类<code>Unix</code>平台的开源编译器，但是<code>Windows</code>平台上也有阉割版<code>gcc</code>，又称<code>mingw</code>。我这里使用的就是<code>mingw</code>。</p>
+<p>然后用<code>objdump</code>把程序进行反汇编：</p>
+<div class="codehilite"><pre><span></span>objdump -S example1.exe &gt; dump.txt
+</pre></div>
+
+<p>得到的<code>dump.txt</code>里面反汇编了不少启动函数，不管，直接找到<code>main()</code>主函数。</p>
+<p><img alt="1" src="C:\Users\任昊\Desktop\ctftraining\blog\逆向工程入门简介\1.PNG" /></p>
+<p>这个就是我们编译出来的代码的汇编语言。</p>
+<p>虽然现在有<code>ghidra</code>，<code>ida</code>这种高级反汇编工具能生成和源码很接近的伪C代码，但是作为逆向工程的基础，汇编语言还是很重要的，还是需要尝试去阅读，分析这种格式的汇编代码。</p>
+<p>仅仅简单扯一下，这里详细的知识点就不讲了。</p>
+<h2 id="0x01">0x01 前置技能<a class="headerlink" href="#0x01" title="Permanent link">&para;</a></h2>
+<p>入门需要的技能：</p>
+<ol>
+<li>C语言代码审计能力（入门时期最重要的技能）</li>
+<li>调试能力</li>
+<li>汇编语言能力：通常是x86-64架构指令，毕竟大部分用户笔记本电脑，Windows系统都是基于这个架构的CPU的。</li>
+</ol>
+<h2 id="0x02-ctf-re">0x02 CTF-Re快速入门<a class="headerlink" href="#0x02-ctf-re" title="Permanent link">&para;</a></h2>
+<p><strong>刷题！！！！</strong></p>
+<p>刷题平台：buuoj，攻防世界，ctfshow。。。</p>
+<p>入门期间，最好保持每天1题的频率。在刷题的时候，顺便学习知识。</p>
+<p>实在做不出来，可以在网上查别人的write up（简称wp），也就是解题思路。可以多查几个wp，毕竟不同人写的wp的详细程度层次不齐。</p>
+<p>就我个人而言，我在buuoj上暂时刷了5-6页的题目。后面开始慢慢地正式的打比赛，于是buuoj上面的老题也就不刷了。</p>
+<h2 id="0x03">0x03 推荐书籍<a class="headerlink" href="#0x03" title="Permanent link">&para;</a></h2>
+<p>入门时期，书籍其实是不怎么推荐的。深入研究的时候就很重要了。</p>
+<p>不过我还是跟风推荐一下我喜欢/看过的书籍。</p>
+<ol>
+<li>CSAPP: 理论上应该是大一上学期《计算机导论》的教科书的，不少高质量高校用的都是这本书，而不是给外行人看的某《计算机文化》。讲的很全，但是书很厚，我猜友友们应该没这么多时间细读。bilibili上面有一个up主在做CSAPP的教学视频，叫做<strong>九曲阑干</strong>，有兴趣就去学学。</li>
+<li>x86从实模式到保护模式：前一大半写16位汇编知识，也就是DOS时代的<strong>实模式</strong>汇编；后面开始写32位以及64位<strong>保护模式</strong>的汇编</li>
+<li>程序员的自我修养——链接、装载与库：介绍了 C 源代码如何经过一系列的操作最终变为二进制程序。</li>
+<li><strong>C primer plus</strong>：C语言学习书籍。讲的比较详细。对于一些比较偏的语法，或者比较新的语法特性，就没必要看了。</li>
+<li>C++反汇编与逆向分析：经典的一本书籍，江湖人称<strong>小黄书</strong>，因为封面是很亮的黄色。第一版书籍中的C++代码，都是基于VC++6.0编译器的。最近新出第二版，建议过一会儿等京东打折后入手。</li>
+<li>逆向工程核心原理：Windows逆向书籍，里面详细介绍了dll注入，PE文件结构等内容。</li>
+<li>Intel Developer Manual：x86CPU架构全集，百科全书，详细的描述了x86架构。我上次下载下来，用于查一些比较偏的指令。Intel官方网上有pdf，直接下载来看就好了。</li>
+</ol>
+<h2 id="0x04">0x04 推荐资源<a class="headerlink" href="#0x04" title="Permanent link">&para;</a></h2>
+<h3 id="_2">教程类<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ol>
+<li><a href="https://ctf-wiki.org/">ctf-wiki</a>：入门知识快速了解。</li>
+<li>bilibili上面应该有不少CTF逆向的解题视频。当然一堆时长超级长的什么游戏逆向，Windows逆向什么的视频，虽然属于是逆向工程，但是与CTF没什么关系，就别看了，专注于CTF题解。</li>
+<li>谷歌上多搜搜别人的博客。（百度就算了，避坑CSDN）</li>
+</ol>
+<h3 id="_3">刷题类<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ol>
+<li><a href="https://adworld.xctf.org.cn/task">攻防世界</a>：有很多适合新手的题</li>
+<li><a href="https://buuoj.cn/">buuoj</a>：有大量比赛题。这个平台还会每月举办月赛，可以关注一下。</li>
+</ol>
+<h3 id="_4">比赛类<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ol>
+<li><a href="https://ctftime.org/">ctftime</a>：国际的高质量赛事</li>
+<li><a href="https://www.ctfhub.com/#/calendar">ctfhub</a>：国内外赛事，可以订阅一下日历</li>
+<li>ctfshow：一大堆各个方向的入门题，非常非常适合入门。</li>
+</ol>
+<h2 id="0x05">0x05 工具<a class="headerlink" href="#0x05" title="Permanent link">&para;</a></h2>
+<p>先讲一下我经常用到的工具吧。</p>
+<h3 id="_5">反汇编工具<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h4 id="ida">IDA<a class="headerlink" href="#ida" title="Permanent link">&para;</a></h4>
+<p>现在已知最好的商业用户态反编译器。单人直接购置比较昂贵。可以选择组团购买（有钱佬或者追求最新版本的人可以考虑）。或者选择网上的破解过的老版本。</p>
+<p><code>IDA</code>支持多种架构，在主流架构中，比如<code>x86</code>,<code>x64</code>,<code>arm</code>,<code>arm64</code>等都支持反编译，即将汇编代码还原回C伪代码。较新的7.5版本也支持了对<code>mips</code>架构的反汇编。</p>
+<p><code>IDA</code>支持插件拓展，以提升工作效率。我个人觉得比较好的有<code>Keypatch</code>插件，用于快速对代码进行打补丁；<code>PyIDA</code>插件，提供了一个基于<code>IPython</code>的交互式界面，写<code>IDAPython</code>代码更有效率；<code>FindCrypt</code>，根据密码算法的特征码识别主流加密算法。</p>
+<p>如上所述<code>IDA</code>有一个<code>IDAPython</code>脚本语言环境作为额外支持，这能够使得用户快速写出便捷的脚本，实现自动化。</p>
+<h4 id="ghidra">Ghidra<a class="headerlink" href="#ghidra" title="Permanent link">&para;</a></h4>
+<p>NSA美国国家安全局的开源用户态反编译器。在<code>Github</code>上面能找到。功能也很强大，而且开源，想深入研究反编译原理的可以考虑去阅读<code>Ghidra</code>的源码。（没试过但大为震撼）</p>
+<p>而且<code>Ghidra</code>早已支持<code>mips</code>架构的反编译，非常有优势。</p>
+<h4 id="ollydbg">Ollydbg<a class="headerlink" href="#ollydbg" title="Permanent link">&para;</a></h4>
+<p>Windows平台下祖传的32位程序用户态<strong>动态</strong>调试器。在<code>IDA</code>还没有因为泄露版而爆火之前，<code>Od</code>是最常用的反汇编工具。<code>Ollydbg</code>因为有良好的社区以及众多的用户支撑，所以它有很多插件可供使用。</p>
+<p>可以选择在<strong>吾爱破解</strong>网站上下载由各位大佬魔改，加过插件后的<code>Ollydbg</code>版本。</p>
+<h4 id="x64dbgx32dbg">x64dbg/x32dbg<a class="headerlink" href="#x64dbgx32dbg" title="Permanent link">&para;</a></h4>
+<p>也是Windows平台下的用户态调试器。其<code>x64dbg</code>弥补了<code>Ollydbg</code>只能调试32位程序而无法调试64位程序的缺陷。</p>
+<h4 id="gdb">gdb<a class="headerlink" href="#gdb" title="Permanent link">&para;</a></h4>
+<p>Linux平台上最常用的调试器。功能强大，是pwn👴的最爱。</p>
+<p>调试Linux程序的时候可以选择使用该工具。</p>
+<p>当然其特点是，它是一个命令行工具，而刚刚介绍的都是Windows平台上的图形化调试器，所以可能需要一段时间熟悉操作指令。</p>
+<p>调试Linux程序，也可以使用<code>IDA</code>远程调试。</p>
+<h4 id="jeb3">jeb3<a class="headerlink" href="#jeb3" title="Permanent link">&para;</a></h4>
+<p>这其实也是一个全能型商业反汇编器，但是由于其他架构的支持有点拉跨，所以通常用于分析<strong>安卓应用</strong>。</p>
+<p>付费软件。</p>
+<h4 id="windbg">Windbg<a class="headerlink" href="#windbg" title="Permanent link">&para;</a></h4>
+<p>Windows专业调试器。有内核态和用户态两种模式。十分万能。内核态调试器也不算多，所以windbg算是十分厉害的工具了。</p>
+<p>对于内核态和用户态两类调试器的区别，可以暂且简单认为内核态更厉害，速度也更快，毕竟需要管理员权限才能使用；而用户态调试器仅仅调用了系统允许使用的普通API，有不少局限性。</p>
+<h4 id="dnspy">dnspy<a class="headerlink" href="#dnspy" title="Permanent link">&para;</a></h4>
+<p>.Net程序分析工具。很好用。</p>
+<h3 id="_6">实用脚本工具<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>Github上面有很多工具可供使用。谈谈我经常用的。</p>
+<p>这些工具通常都是基于python的，可以快速写出一个解题脚本。</p>
+<h4 id="z3">z3<a class="headerlink" href="#z3" title="Permanent link">&para;</a></h4>
+<p>微软实验室推出的SMT求解器。近年来开源了，可以在GitHub上面找到。</p>
+<p>z3简单来说就是一个用于解方程的工具。</p>
+<p>虽然也有局限性，但是z3确实能够解决挺多的基于算法的CTF题。z3自带的例子就有八皇后问题，幻方等经典算法谜题求解脚本。</p>
+<p>z3也是angr和triton底层的约束求解器。</p>
+<p><a href="https://www.wuuuudle.cn/2020/07/23/z3py-api-guide/">z3py api guide | (<em>´∇｀</em>) Wuuuudle Blog</a>吴师傅的博客，可以作为学习参考。</p>
+<h4 id="capstone">capstone<a class="headerlink" href="#capstone" title="Permanent link">&para;</a></h4>
+<p>开源反汇编器。支持多个架构。</p>
+<p>有利于快速获得一些小片字节码的汇编代码。</p>
+<p>capstone算是支持指令集最多的反汇编器了。<code>IDA</code>有些会识别错误的指令，capstone都能正常反汇编出来。</p>
+<h4 id="keystone">keystone<a class="headerlink" href="#keystone" title="Permanent link">&para;</a></h4>
+<p>开源编译器。支持多个架构。</p>
+<p>有利于快速从小片汇编代码中编译出字节码，而不需要像<code>gcc</code>编译器那样需要一个完整的程序声明。</p>
+<p>keystone也是IDA插件keypatch的底层。</p>
+<h4 id="angr">angr<a class="headerlink" href="#angr" title="Permanent link">&para;</a></h4>
+<p>虽然是一个比较全能的二进制分析框架，但是对于大部分使用人员来说，它还是用于”符号执行“的工具。</p>
+<p>利用”符号执行“，<code>angr</code>能够解决不少简单的CTF逆向题。</p>
+<p>符号执行是一个程序分析理论，后面会讲。</p>
+<h4 id="triton">triton<a class="headerlink" href="#triton" title="Permanent link">&para;</a></h4>
+<p>triton是一位法国佬写的，一开始是基于pintools的<strong>动态</strong>符号执行二进制程序分析框架。</p>
+<p>是一个比较新兴的工具，作者也在积极更新。有兴趣的话可以去看看他的博客。</p>
+<p>作者的名字叫做Jonathan Salwan。</p>
+<h4 id="unicorn">unicorn<a class="headerlink" href="#unicorn" title="Permanent link">&para;</a></h4>
+<p>一个基于qemu的CPU模拟器，支持x64，x86，powerpc，mips，arm，arm64等多个平台。用于模拟执行程序，能够弥补很多动态调试器的缺陷。</p>
+<h4 id="miasm">miasm<a class="headerlink" href="#miasm" title="Permanent link">&para;</a></h4>
+<p>一个二进制分析框架。稍微老了一点，但还是挺好用的。</p>
+<h4 id="qemu">qemu<a class="headerlink" href="#qemu" title="Permanent link">&para;</a></h4>
+<p>架构模拟器。可以跨平台模拟程序。比如可以在x86平台的Linux上模拟arm Linux程序。</p>
+<h4 id="qiling">qiling<a class="headerlink" href="#qiling" title="Permanent link">&para;</a></h4>
+<p>基于Unicorn的工具。Unicorn作为单纯的CPU模拟器，不能处理系统调用，异常处理等一些基于系统的功能；而qiling在Unicorn的基础上尝试模拟系统调用等功能，实现了一个真正的对程序的模拟运行。</p>
+<p>比较新兴的工具，好像还是国人写的工具。</p>
+<h4 id="crypto">Crypto库<a class="headerlink" href="#crypto" title="Permanent link">&para;</a></h4>
+<p>密码学库，内含多个现代密码学算法。可以用于解不魔改情况下的现代密码学加密题。</p>
+<p>Re出密码题通常只出现代密码学题，但通常少不了魔改，在魔改情况下就无法使用了，只能用自己写的解密脚本去解题。</p>
+<h4 id="fridaxposed">Frida/xposed<a class="headerlink" href="#fridaxposed" title="Permanent link">&para;</a></h4>
+<p>安卓方向比较常用的分析框架。</p>
+<h3 id="_7">其他<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<h4 id="pin">pin<a class="headerlink" href="#pin" title="Permanent link">&para;</a></h4>
+<p>Intel提供的一个插桩工具。其内核的实现方式不开源，但是Intel提供了编写pintools的API。</p>
+<p>pin和pintools是两个概念。pin是底层，由Intel提供，本质是一个虚拟机；pintools是由用户编写的，基于pin的工具。具体的描述比较复杂，编写pintools也需要一定技巧，所以不再赘述。以后我会继续更新关于pintools的博客。</p>
+<p>最常用的pintools是指令计数工具，能够根据指令数分析程序效率。基于<strong>侧信道攻击理论</strong>，指令计数工具能用于爆破CTF的简单题flag，或者猜测输入字符串长度。</p>
+<p>triton作者对于pintools编写是有一手的。可以看看它的博客。</p>
+<h4 id="_8">程序性质检查工具<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<p>遇到题目，通常先要知道这是什么架构的，什么位数的，可能加过什么壳。</p>
+<p>DIE，PEiD就是这种Windows平台上的检查工具。</p>
+<p>我通常用的是DIE，能应付大多数要求，但是有些老的保护壳还是有可能查不出来。</p>
+<h4 id="windowspe">WindowsPE文件分析工具<a class="headerlink" href="#windowspe" title="Permanent link">&para;</a></h4>
+<p>CFF explorer, DIE, lord PE...</p>
+<p>吾爱破解上有个工具库，这些都有。</p>
+<p>不过由于我还没很深入的分析Windows程序文件，大多数工具也仅仅是了解,或者用过一两次，不够熟练。</p>
+<h2 id="0x02">0x02 理论<a class="headerlink" href="#0x02" title="Permanent link">&para;</a></h2>
+<h3 id="_9">程序分析理论<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>程序分析通常分为<strong>静态分析</strong>和<strong>动态分析</strong>。</p>
+<h4 id="_10">静态分析<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<p>使用IDA等工具直接嗯看伪代码，来观察其大致的总体逻辑。</p>
+<p><strong>优势：</strong>静态分析能够快速探索多个分支（反正是肉眼看，想跳到哪里就跳到哪儿），获得大致的程序流程。</p>
+<p><strong>缺点：</strong>没法获得CPU的实际内容，有可能存在误分析的情况；在被加壳，代码混淆，程序流混淆的情况下，静态分析变得尤其困难。</p>
+<h4 id="_11">动态分析<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<p>使用ollydbg等调试器，在调试状态下，对一个实际的程序路径进行分析。</p>
+<p><strong>优势：</strong>能获得实际的CPU内容，便于了解真正的程序状态。动态分析可以获得内存中的实际内容，比静态分析中的静态字节码更有真实性：加壳程序，混淆程序的实际程序流程大都可以在调试的过程中摸清。动态调试脱壳也是一种常见手法。</p>
+<p><strong>缺点：</strong>只能局限于一个程序执行流；遇到反调试，异常处理等手段下难以动态调试。</p>
+<p>实际分析中，都是动静态同时使用的。</p>
+<h3 id="satsmt">SAT/SMT理论<a class="headerlink" href="#satsmt" title="Permanent link">&para;</a></h3>
+<p>z3的底层理论，十分的离散数学。</p>
+<p>入门时不需要了解，只要会使用z3梭哈题目就行了。</p>
+<h2 id="0x04_1">0x04 目前遇到的题目类型<a class="headerlink" href="#0x04_1" title="Permanent link">&para;</a></h2>
+<p>本节谈谈现在比赛里遇到的各种题型。</p>
+<h3 id="_12">虚拟机<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p>虚拟机的简单理解，就是机器套机器，一种套娃行为。</p>
+<p>其本质就是实现一个作者自己实现的迫真指令集，然后基于这个指令集实现操作。</p>
+<p>虚拟机这个理念，最有名的实现，就是一个很恶俗的壳，叫做VMP。</p>
+<p>buuoj上经典题目就是<code>EzMachine</code>，有兴趣可以去查查。</p>
+<h3 id="_13">现代密码学加密<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>入门时最容易遇到的加密题就是基于base64及其变体的题目。不过base64实际上不是加密，其实就是一个编码方式。</p>
+<p>正经比赛里的现代密码学加密题，包括但不局限于：TEA家族算法，RC4流密码，AES及其变体，DES及其变体。。。</p>
+<p>偶尔还会出一些少见的密码，比如Chacha20，Salsa20，ECC非对称椭圆加密，甚至用gmp大数运算库实现RSA。非对称加密算法通常都是标准的，不会有什么魔改，也没有什么攻击要求，不像密码方向的题目。</p>
+<p>面对现代密码学加密，最好要提前，一个密码类型一个密码类型的去了解这个密码的加密流程，并尝试自己本地写一份能快速编译通过，快速使用的密码算法样本。这样能让你在比赛时节省不少时间。</p>
+<h3 id="python">Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h3>
+<h4 id="py">Py脚本<a class="headerlink" href="#py" title="Permanent link">&para;</a></h4>
+<p>这个比较简单，入门时可能会遇到。可能会配合代码混淆，或者虚拟机一起出现。</p>
+<h4 id="pyc">Pyc字节码<a class="headerlink" href="#pyc" title="Permanent link">&para;</a></h4>
+<p>Py脚本编译成Pyc字节码文件。最好了解一下<strong>Python栈虚拟机实现</strong>，以及Python的汇编语言。</p>
+<p>由Pyc字节码得到汇编，可以使用python自带的Pydisasm程序进行反汇编。</p>
+<p>Github上面也有不少反编译工具，能够直接将Pyc反编译成Py源代码。但是貌似没几个支持3.9及其以上的高版本的，所以学会读Python汇编还是一个很重要的技能。</p>
+<p>哦对，还要了解Pyc字节码文件的结构。反正很简单。</p>
+<h4 id="pyd">Pyd编译文件<a class="headerlink" href="#pyd" title="Permanent link">&para;</a></h4>
+<p>这是最恶心的题目，需要你读Cython自动生成的代码。Windows平台下用mingw编译出来的Pyd是最恶心的，没有调试信息。Linux平台下编译出so文件，至少还是有调试信息的。遇到这种题目，建议放到最后去看，因为大概率会看自闭。</p>
+<h4 id="pyinstaller">Pyinstaller打包程序<a class="headerlink" href="#pyinstaller" title="Permanent link">&para;</a></h4>
+<p>利用Pyinstaller打包后的exe程序。Github上面有几个解包工具，解包后，会得到一大坨的库文件，以及关键的程序文件。</p>
+<p>通常解包后会得到Pyc文件，但是是缺损头部信息的，需要使用配套的struct文件进行复原。</p>
+<p>具体不细说，反正就是要去了解Pyc字节码文件结构。</p>
+<h3 id="go">Go<a class="headerlink" href="#go" title="Permanent link">&para;</a></h3>
+<p>Go语言也是一个很恶俗的语言。IDA的反编译器生成的代码不精确，最多作为参考。</p>
+<p>需要了解Go语言的内存模型，调用约定等东西。以后我会整理一下知识点的。</p>
+<h3 id="rust">Rust<a class="headerlink" href="#rust" title="Permanent link">&para;</a></h3>
+<p>纯纯的不会，和Go一样恶俗。</p>
+<h3 id="_14">算法谜题<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p>一些小游戏一样的感觉。</p>
+<p>八皇后谜题，跳棋，走迷宫。。。</p>
+<p>建议学习DFS，BFS或者A*走迷宫算法，或者尝试用z3解题。</p>
+<h3 id="net">.Net<a class="headerlink" href="#net" title="Permanent link">&para;</a></h3>
+<p>用dnspy去分析.Net题。核心是C#。</p>
+<h3 id="android">Android<a class="headerlink" href="#android" title="Permanent link">&para;</a></h3>
+<p>安卓apk逆向题。这是一个很大的方向，且一些混淆，加壳方法在apk上都能用。</p>
+<h4 id="java">Java逆向<a class="headerlink" href="#java" title="Permanent link">&para;</a></h4>
+<p>jeb3逆向apk，审计java代码分析主体流程。</p>
+<h4 id="jni-native">JNI Native<a class="headerlink" href="#jni-native" title="Permanent link">&para;</a></h4>
+<p>恶俗的出题壬会将一些重要函数写成C语言，然后基于架构（通常是arm）编译；然后在java层调用这个函数。这个逆向就得用IDA去看了。</p>
+<h3 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
+<p>基于Windows特性的一些题目。比如SEH异常调用，一大堆API调用，驱动通信机制等等。也是一个很大的面。</p>
+<h3 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h3>
+<p>基于Linux特性的一些题目。ptrace反调试，fork创造子进程等等。对Linux API要有一定的了解。</p>
+<h3 id="_15">架构<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<p>除了常见的x86-64架构，还有其他架构。</p>
+<p>常见的有arm，mips。</p>
+<p>更恶心的就是一些很偏的riscv架构。比如一些单片机的架构。</p>
+<p>常见架构，要了解常见指令集。</p>
+<h3 id="_16">代码混淆<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<p>简单的比如有：变量名混淆，函数名混淆。这都是在有调试信息的情况下搞的恶俗事情。</p>
+<p>Re中比较常见的是真正的对程序执行流进行调整，变形而实现的混淆。</p>
+<p>比如ollvm，虚假控制流等。这些混淆在GitHub上面都有复原工具。</p>
+                
+                  
+                
+              
+              
+                
+
+
+  <h2 id="__comments">评论</h2>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = "None";
+      this.page.identifier =
+        "None";
+    };
+    (function() {
+      var d = document, s = d.createElement("script");
+      s.src = "//scu-ctf.disqus.com/embed.js";
+      s.setAttribute("data-timestamp", +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../Pwn/" title="CTF PWN 入门" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                CTF PWN 入门
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../Web/" title="Web学习路线" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                Web学习路线
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.2ba8dec4.js"></script>
+      
+        
+        
+          
+          <script src="../../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+        <script src="https://cdnjs.loli.net/ajax/libs/pangu/3.3.0/pangu.min.js"></script>
+      
+        <script src="../../../_static/js/extra.js"></script>
+      
+        <script src="https://cdnjs.loli.net/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
