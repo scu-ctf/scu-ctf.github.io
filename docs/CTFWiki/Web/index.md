@@ -32,11 +32,11 @@ AWD+：
 
 1.[攻防世界](https://adworld.xctf.org.cn/)
 
-- 只需要刷一刷Web新手区即可，学习时需要你百度搜索解法并了解，这个接断主要是培养对Web的基本感觉
+- 只需要刷一刷Web新手区即可，学习时需要你百度搜索解法并了解，这个阶段主要是培养对Web的基本感觉
 
 2.[CTFHub](https://www.ctfhub.com/)
 
-- 开始进入系统学习截断，注册刷技能树Web分类，涉及信息泄露、密码口令、SQL注入、XSS、XSS、文件上传、RCE、SSRF等
+- 开始进入系统学习阶段，注册刷技能树Web分类，涉及信息泄露、密码口令、SQL注入、XSS、XSS、文件上传、RCE、SSRF等
 
 3.[BUUCTF](https://buuoj.cn/)
 
